@@ -58,7 +58,9 @@ Return to the github repo page, where you'll notice a new green button requestin
 
 Contributors names and contact info
  
-[Cynthia Iradukunda](https://github.com/ciradu2204)
+[Cynthia Iradukunda](https://github.com/ciradu2204) 
+[Celine Ishimwe](https://github.com/celinish)
+
 
 ## Acknowledgments
 
