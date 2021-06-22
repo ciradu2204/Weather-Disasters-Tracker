@@ -59,6 +59,7 @@ Return to the github repo page, where you'll notice a new green button requestin
 Contributors names and contact info
  
 [Cynthia Iradukunda](https://github.com/ciradu2204)
+[Rudo Togara](https://github.com/Rudo-Courtney)
 
 ## Acknowledgments
 
