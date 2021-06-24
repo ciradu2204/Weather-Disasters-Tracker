@@ -60,8 +60,8 @@ Contributors names and contact info
  
 [Cynthia Iradukunda](https://github.com/ciradu2204) 
 [Celine Ishimwe](https://github.com/celinish)
-
-
+[Rudo Togara](https://github.com/Rudo-Courtney)
+ 
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
