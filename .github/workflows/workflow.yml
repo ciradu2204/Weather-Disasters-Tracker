@@ -23,4 +23,4 @@ jobs:
       with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages # The branch the action should deploy to.
-          folder: /index.html # The folder the action should deploy.
+          folder: index.html # The folder the action should deploy.
