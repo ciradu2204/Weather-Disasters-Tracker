@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
 body,
 html {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 /** Nav bar styling**/
@@ -22,7 +26,7 @@ nav {
     align-content: center;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: white;
     font-size: 0.7em;
@@ -105,11 +109,12 @@ a {
         position: absolute;
         grid-template-columns: auto;
         grid-template-rows: 4em 4em 4em 4em;
-        top: 3.5em;
         height: 100%;
         background-color: rgba(55, 65, 64, 0.8);
         text-align: center;
+        top: 50px;
         right: -112px;
+        bottom: 0;
     }
 
     .content:hover #pages {
@@ -143,4 +148,233 @@ a {
     .bars i {
         color: #d9cb9e;
     }
+}
+
+/*** Overview page - mission section **/
+
+.missionDetails {
+    display: grid;
+    grid-template-columns: 21em 30em;
+    grid-template-rows: auto;
+    align-items: flex-end;
+    padding: 0 60px;
+}
+
+.missionImage img {
+    width: 270px;
+    box-shadow: 31px -31px rgb(189 195 199 / 29%);
+}
+
+.missionContent h1 {
+    font-size: 22px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.missionContent h2 {
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.missionContent p {
+    font-weight: normal;
+    line-height: 31px;
+    color: #000000;
+    padding-bottom: 4em;
+}
+@media only screen and (max-width: 800px) {
+    .missionDetails {
+        grid-template-columns: auto auto;
+        column-gap: 44px;
+    }
+
+    .missionImage img {
+        width: 222px;
+    }
+
+    .missionContent p {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .missionImage {
+        display: none;
+    }
+
+    .missionDetails {
+        grid-template-columns: auto;
+
+        text-align: center;
+    }
+
+    .missionContent h2 {
+        text-align: center;
+    }
+}
+
+/** Main topics section  **/
+
+ 
+
+#main h1 {
+    font-size: 22px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#main h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.mainDetails {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0 30px;
+  }
+
+.topic {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   font-size: 0px;
+}
+ 
+.topic img, .topic p {
+    display: inline-block;
+    font-size: 16px;
+    width: 300px;
+}
+
+.topic .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(189, 195, 199, 0.5);
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+}
+
+.topic .content a {
+    position: relative;
+    right: 0.5em;
+    align-self: center;
+    font-size: 30px;
+    color: #d9cb9e;
+}
+
+.topic .content p {
+    padding-right: 1.5em;
+    position: relative;
+    left: 1em;
+    padding-bottom: 50px;
+    padding-top:20px;
+}
+
+.topic .mainImage {
+    position: relative;
+    z-index: -1;
+}
+
+.topic .mainImage h3 {
+    color: #ffecad;
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 1em;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .mainDetails {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        justify-content: center;
+        row-gap: 5em;
+        padding: 0 0;
+    }
+
+    .topic .content {
+        width: auto;
+    }
+    .topic img {
+        width: 100%;
+    }
+}
+
+/*** Latest news Api**/
+
+#latestNews h1 {
+    font-size: 22px;
+    line-height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+
+#latestNews h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+     letter-spacing: 1px;
+}
+
+#latestNews .news{
+    display:  flex;
+    flex-direction: row;
+    padding: 1em 5em;
+ }
+ #latestNews .news .div2{
+     padding-left:20px;
+  }
+#latestNews .news img{
+    width: 300px;
+    border-radius: 0 0 15px 15px;
+}
+
+#latestNews .news a{
+    text-decoration: none;
+    background-color: #d9cb9e;
+    border-radius: 15px;
+    padding:10px;
+    color: white;
+ }
+
+ .news .div2 span{
+     padding-top: 100px;
+ }
+ 
+ .news span i{
+    color: #d9cb9e;
+    font-size: 20px;
+  }
+
+  .news .div2 div{
+  padding: 10px;
+  }
+
+
+@media only screen and (max-width: 1020px) {
+  
+#latestNews .news{
+    flex-direction: column;
+    padding: 1em 0;
+     align-items: center;
+     }
+
+     #latestNews .news .div2{
+         padding-left: 0;
+         width: 300px;
+         
+     }
 }
