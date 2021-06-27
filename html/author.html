@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Natural Disasters Tracker">
+    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+    <Link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="authors.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="author.js"></script>
+      </head>
+
+<body>
+
+    <nav>
+        <div id="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <div class="content">
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="pages">
+                <a class=" homePage" href="#">HOME</a>
+                <a class="active authorPage" href="#">AUTHOR</a>
+                <a class="weatherPage" href="#">WEATHER</a>
+                <div class="dropDown">
+                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
+                    <div class="dropdownContent">
+                        <a href="#">EARTHQUAKE</a>
+                        <a href="#">CYCLONE</a>
+                        <a href="#">FLOOD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<main>
+<div class="first-heading">
+    <h1 style="text-align: center;">Meet Our Team</h1>
+</div>
+<div class="sub-heading">
+    <h3>The people behind the great things you see!</h3>
+</div>
+<br>
+<br>
+
+
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="rudo.jpg" alt="Cynthia" style="width:100%">
+        <div class="container">
+          <h2>Cynthia Iradukunda</h2>
+          <p class="title">Software Engineer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>c.iradukunda@alustudent.com</p>
+          <p><button class="button"  class="open-button" onclick="openForm()">Contact</button></p>
+          <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Connect with Cynthia</h1>
+          
+              <label for="email"><b>Email Address</b></label>
+              <input type="text" placeholder="Enter Your Email" name="email" required><br>
+          
+              <label for="msg"><b>Message</b></label>
+              <input type="text" placeholder="Write Your Message" name="msg" required><br>
+          
+              <button type="submit" class="btn">Connect</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="rudo.jpg" alt="Celine" style="width:100%">
+        <div class="container">
+          <h2>Celine Ishimwe</h2>
+          <p class="title">UI/UX Designer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>c.ishimwe@alustudent.com</p>
+
+          <p><button class="button"  class="open-button" onclick="openForm1()">Contact</button></p>
+          <div class="form-popup2" id="myForm2">
+            <form action="/action_page.php" class="form-container2">
+              <h1>Connect with Celine</h1>
+          
+              <label for="email"><b>Email Address</b></label>
+              <input type="text" placeholder="Enter Your Email" name="email" required><br>
+          
+              <label for="msg"><b>Message</b></label>
+              <input type="text" placeholder="Write Your Message" name="msg" required><br>
+          
+              <button type="submit" class="btn">Connect</button>
+              <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="rudo.jpg" alt="Reynald" style="width:100%">
+        <div class="container">
+          <h2>Reynald Joabet</h2>
+          <p class="title">Full Stack Developer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>.com</p>
+          <p><button class="button"  class="open-button" onclick="openForm2()">Contact</button></p>
+        <div class="form-popup3" id="myForm3">
+          <form action="/action_page.php" class="form-container3">
+            <h1>Connect with Reynald</h1>
+        
+            <label for="email"><b>Email Address</b></label>
+            <input type="text" placeholder="Enter Your Email" name="email" required><br>
+        
+            <label for="msg"><b>Message</b></label>
+            <input type="text" placeholder="Write Your Message" name="msg" required><br>
+        
+            <button type="submit" class="btn">Connect</button>
+            <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="rudo.jpg" alt="Rudo" style="width:100%">
+      <div class="container">
+        <h2>Rudo Togara</h2>
+        <p class="title">Front-end Developer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>r.togara@alustudent.com</p>
+        <p><button class="button"  class="open-button" onclick="openForm3()">Contact</button></p>
+        <div class="form-popup4" id="myForm4">
+          <form action="/action_page.php" class="form-container4">
+            <h1>Connect with Rudo</h1>
+        
+            <label for="email"><b>Email Address</b></label>
+            <input type="text" placeholder="Enter Your Email" name="email" required><br>
+        
+            <label for="msg"><b>Message</b></label>
+            <input type="text" placeholder="Write Your Message" name="msg" required><br>
+        
+            <button type="submit" class="btn">Connect</button>
+            <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+
+<div class="third-heading">
+    <h1>Get in touch with us</h1>
+
+</div>
+<div class="sub-heading2">
+    <h3 style="text-align: center;">For any enquiries, please reach out by filling out the form</h3>
+</div>
+<div class="container1">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Full Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="fullname" placeholder="Your full name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email Address</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="message">Message</label>
+      </div>
+      <div class="col-75">
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</main>
+<footer>
+  <hr>
+  <div class="footer-content">
+    <p>Natural disaster tracker, 2021. All Rights Reserved</p>
+  </div>
+
+  <div class="footer-content1">
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Authors</a></li>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Disasters</a></li>
+
+    
+    </ul>
+  </div>
+</footer>
+</body>
+
+</html>

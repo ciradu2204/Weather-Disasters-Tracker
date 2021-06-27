@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/** Nav bar styling**/
+
+nav {
+    display: grid;
+    background-color: #374140;
+    height: 3.5em;
+    font-style: normal;
+    font: 6.25em;
+    font-weight: bold;
+    line-height: 2.3125em;
+    letter-spacing: 0.3em;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.7em;
+}
+
+#pages {
+    display: grid;
+    grid-template-columns: 8em 8em 8em 8em;
+    grid-template-rows: auto;
+    justify-content: end;
+    margin-right: 7em;
+}
+
+#logo {
+    margin-left: 7em;
+}
+
+#logo a {
+    font-size: 1em;
+    letter-spacing: 1em;
+    color: #d9cb9e;
+}
+
+#pages .active {
+    color: #d9cb9e;
+}
+
+.disastersPage .fa-angle-down {
+    font-size: 1.4em;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownContent {
+    position: absolute;
+    top: 1.8em;
+    display: none;
+    text-align: center;
+    margin-top: 0.8em;
+    width: 8em;
+    background: rgba(55, 65, 64, 0.8);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    z-index: 1;
+}
+.dropdownContent a:nth-child(1)::after,
+.dropdownContent a:nth-child(2)::after {
+    content: "";
+    display: block;
+    height: 0.05em;
+    background-color: #f3f3f36e;
+}
+
+.dropdownContent a {
+    display: block;
+}
+.dropdownContent a:hover {
+    background-color: #f3f3f36e;
+}
+
+.dropDown:hover .dropdownContent {
+    display: block;
+}
+
+.bars {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .bars {
+        display: block;
+        margin-right: 1em;
+        position: relative;
+    }
+
+    #pages {
+        display: none;
+        position: absolute;
+        grid-template-columns: auto;
+        grid-template-rows: 4em 4em 4em 4em;
+        top: 3.5em;
+        height: 100%;
+        background-color: rgba(55, 65, 64, 0.8);
+        text-align: center;
+        right: -112px;
+    }
+
+    .content:hover #pages {
+        display: block;
+    }
+
+    #pages a {
+        padding: 5px;
+    }
+    #pages > a::after,
+    .dropDown a.disastersPage::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.05em;
+        background-color: #f3f3f36e;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .dropDown:hover a.disastersPage::after {
+        display: none;
+    }
+
+    #logo {
+        margin-left: 1em;
+    }
+
+    .bars i {
+        color: #d9cb9e;
+    }
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 20.3%;
+    margin-bottom: 16px;
+    padding: 0 30px;
+  }
+  
+  @media screen and (max-width: 350px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+.first-header h1{
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 5px;
+}
+.sub-heading h3{
+    font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 1px;
+text-align: center;
+
+}
+.third-heading h1{
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 5px;
+text-align: center;
+
+}
+.sub-heading h3{
+font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 1px;
+}
+
+input[type=email], select, textarea {
+    width: 50%;
+    margin-left: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  input[type=text], select, textarea {
+    width: 50%;
+    margin-left: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display:inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #D9CB9E;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left:55%;
+  }
+  
+  input[type=submit]:hover {
+    background-color: white;
+  }
+  
+  .container1 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left:20%;
+    margin-right: 20%;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  .footer-content{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+  }
+  .footer-content1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+      }
+
+  ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: white;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "|\00a0";
+  }
+  ul.breadcrumb li a {
+    color: black;
+    text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  .form-popup2{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  .form-popup3{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  .form-popup4{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  .form-container2{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  .form-container3{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  .form-container4{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=msg] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container2 input[type=text], .form-container2 input[type=msg] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container3 input[type=text], .form-container3 input[type=msg] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container4 input[type=text], .form-container4 input[type=msg] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=msg]:focus {
+    background-color: #ddd;
+    outline: none;
+    
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #d9cb9e;
+    color: white;
+    padding: 16px 20px;
+    border: 2px;
+    cursor: pointer;
+    width: 50%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin-left: 50px;
+  }
+  .form-container2 .btn {
+    background-color: #d9cb9e;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin-left: 50px;
+  }
+  .form-container3 .btn {
+    background-color: #d9cb9e;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin-left: 50px;
+  }
+  .form-container4 .btn {
+    background-color: #d9cb9e;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin-left: 50px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: black;
+  }
+  .form-container2 .cancel {
+    background-color: black;
+  }
+  .form-container3 .cancel {
+    background-color: black;
+  }
+  .form-container4 .cancel {
+    background-color: black;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  .form-container2 .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  .form-container3 .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  .form-container4 .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
