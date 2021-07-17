@@ -4,10 +4,35 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
+/** General **/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1 {
+    font-size: 22px;
+    line-height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+
+ h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+     letter-spacing: 1px;
+}
+
+p{ 
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 31px;
+padding: 10px;
 }
 
 /** Nav bar styling**/
@@ -104,6 +129,10 @@ nav a {
         position: relative;
     }
 
+    body{
+        position: relative;
+    }
+
     #pages {
         display: none;
         position: absolute;
@@ -165,25 +194,7 @@ nav a {
     box-shadow: 31px -31px rgb(189 195 199 / 29%);
 }
 
-.missionContent h1 {
-    font-size: 22px;
-    line-height: 45px;
-    text-align: center;
-    letter-spacing: 4px;
-}
-.missionContent h2 {
-    font-size: 16px;
-    line-height: 45px;
-    text-align: center;
-    letter-spacing: 4px;
-}
-
-.missionContent p {
-    font-weight: normal;
-    line-height: 31px;
-    color: #000000;
-    padding-bottom: 4em;
-}
+ 
 @media only screen and (max-width: 800px) {
     .missionDetails {
         grid-template-columns: auto auto;
@@ -193,10 +204,7 @@ nav a {
     .missionImage img {
         width: 222px;
     }
-
-    .missionContent p {
-        padding-bottom: 0;
-    }
+ 
 }
 
 @media only screen and (max-width: 600px) {
@@ -219,20 +227,7 @@ nav a {
 
  
 
-#main h1 {
-    font-size: 22px;
-    line-height: 45px;
-    text-align: center;
-    letter-spacing: 5px;
-}
 
-#main h2 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 37px;
-    text-align: center;
-    letter-spacing: 1px;
-}
 
 .mainDetails {
   display: grid;
@@ -247,7 +242,7 @@ nav a {
    font-size: 0px;
 }
  
-.topic img, .topic p {
+.topic img{
     display: inline-block;
     font-size: 16px;
     width: 300px;
@@ -270,15 +265,7 @@ nav a {
     font-size: 30px;
     color: #d9cb9e;
 }
-
-.topic .content p {
-    padding-right: 1.5em;
-    position: relative;
-    left: 1em;
-    padding-bottom: 50px;
-    padding-top:20px;
-}
-
+ 
 .topic .mainImage {
     position: relative;
     z-index: -1;
@@ -313,20 +300,15 @@ nav a {
 
 /*** Latest news Api**/
 
-#latestNews h1 {
-    font-size: 22px;
-    line-height: 45px;
-    text-align: center;
-    padding-top: 10px;
-    letter-spacing: 5px;
+#latestNews h3{
+font-weight: 600;
+font-size: 17px;
+line-height: 45px;
+letter-spacing: 2px;
 }
 
-#latestNews h2 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 37px;
-    text-align: center;
-     letter-spacing: 1px;
+#latestNews p{
+padding: 0;
 }
 
 #latestNews .news{
@@ -348,7 +330,7 @@ nav a {
     border-radius: 15px;
     padding:10px;
     color: white;
- }
+}
 
  .news .div2 span{
      padding-top: 100px;
@@ -362,6 +344,27 @@ nav a {
   .news .div2 div{
   padding: 10px;
   }
+
+
+  .current:before{
+      content: "";
+      width: 15px;
+      height:15px; 
+      border-radius: 15px;
+      background-color: red;
+      display: inline-block;
+      margin-right: 5px;
+  }
+
+  .alert:before{
+    content: "";
+    width: 15px;
+    height:15px; 
+    border-radius: 15px;
+    background-color:rgb(255, 153, 0) ;
+    display: inline-block;
+    margin-right: 5px;
+}
 
 
 @media only screen and (max-width: 1020px) {
@@ -378,3 +381,90 @@ nav a {
          
      }
 }
+
+/** Footer Css **/ 
+
+footer{
+    background-color: #374140;
+    border:1px solid rgba(55, 65, 64, 0.85);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+ }
+
+footer a{
+    text-decoration: none;
+}
+
+ footer .data{
+    flex-basis: 35%;
+}
+
+footer p{
+    padding: 0;
+}
+
+footer .explore{
+    flex-basis: 28%;
+}
+
+footer .pageDetails{
+    flex-basis: 24%;
+}
+
+footer span{
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 34px;
+letter-spacing: 5px;
+color: white;
+}
+
+footer ul li, footer p{
+list-style-type: none;
+font-weight: 600;
+font-size: 15px;
+line-height: 30px;
+letter-spacing: 5px;
+color: rgba(170, 169, 128, 0.6);
+}
+
+
+@media only screen and (max-width: 450px) {
+    footer{
+        flex-direction: column;
+        flex-basis: unset;
+        text-align: center;
+    }
+
+    footer div{
+        padding: 10px;
+    }
+    
+}
+
+/** Loader **/ 
+
+.loader{
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #374140;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+
+}
+
+#loaderContainer{
+    padding: 20px;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

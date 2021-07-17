@@ -1,17 +1,18 @@
+let loading = true; 
+if(loading)document.getElementById("loaderContainer").style.display= "block";
+
 const fetchData = (async () => {
       await fetch("https://api.reliefweb.int/v1/disasters?appname=rwint-user-0&profile=list&preset=latest&slim=1&query[value]=%22earthquake%22%20OR%20%22flood%22%20OR%20%22Tropical%20Cylone%22&query[operator]=AND")
         .then((response) =>{
            return response.json()
         })
         .then((data) => {
-            console.log(data.data)
             let count = 0; 
             data.data.forEach(disaster =>{
-                if(disaster.fields.status === "current" && count<=2){
+                if(count<2){
                     let types = disaster.fields.type.map(value =>{
                         return value.name;
                    });
-                   console.log(types);
                    let countries = disaster.fields.country.map(value =>{
                     return value.name;
                    }).join(",");
@@ -25,14 +26,16 @@ const fetchData = (async () => {
                     let img = document.createElement("img");
                     img.src= (types[0] == "Flood")? "./images/Flood.png": (types[0]== "Earthquake")? "./images/earthquakes.png":"./images/Cyclone.png"
                     div1.appendChild(img);
+                    let status = capitalizeFirstLetter(disaster.fields.status);
                     let h3 = document.createElement('h3');
                     let p = document.createElement('p');
                     let date = new Date(disaster.fields.date.created);
                     h3.innerHTML = `${disaster.fields.name}`
-                    p.innerHTML = `<span><i class="fa fa-flag"></i> Countries Affected:${countries}</span></br>
-                                    <span><i class="fa fa-bolt"></i> Disaster Type:${types}</span></br>
+                    p.innerHTML = `<span><i class="fa fa-flag"></i> Countries Affected: ${countries}</span></br>
+                                    <span class=${disaster.fields.status} == "current"? "current":${disaster.fields.status} == "alert"? "alert": "past">Status: ${status}</span></br>
+                                    <span><i class="fa fa-bolt"></i> Disaster Type: ${types}</span></br>
                                     <span><i class="fa fa-clock-o"></i> Time: ${date}</span></br>
-                                    <div><a href="${disaster.fields.url}">Read More</a></div>`
+                                    <div><a href="${disaster.fields.url}" target="_blank">Read More</a></div>`
                     div2.appendChild(h3);
                     div2.appendChild(p);
                     div.appendChild(div1);
@@ -46,6 +49,14 @@ const fetchData = (async () => {
         .catch((error)=> {
             console.log(error)
         })
+        loading = false;
+        if(loading == false) document.getElementById("loaderContainer").style.display= "none";
 });
 
-fetchData();
+setTimeout(() => {
+    fetchData()
+}, 5000);
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
