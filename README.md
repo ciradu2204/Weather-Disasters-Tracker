@@ -12,7 +12,7 @@ Contributing to an open source project for the first time can be confusing for a
 
 ### Clone the repository
 
- ![clone](./images/readme/clone.png)
+<img src="./images/readme/clone.png" width="300">
 
  1. Click the code button.
  2. Copy the url.
