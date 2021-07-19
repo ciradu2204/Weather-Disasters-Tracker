@@ -58,18 +58,11 @@ Return to the github repo page. You'll notice a new green button requesting a co
 
 Contributors names and contact info
  
-<<<<<<< HEAD
 [Cynthia Iradukunda](https://github.com/ciradu2204)\
 [Celine Ishimwe](https://github.com/celinish)\
 [Rudo Courtney](https://github.com/Rudo-Courtney)
 
 
-=======
-[Cynthia Iradukunda](https://github.com/ciradu2204) 
-[Celine Ishimwe](https://github.com/celinish)
-[Rudo Togara](https://github.com/Rudo-Courtney)
- 
->>>>>>> 6b06f6e575a2ea2c7fc0078bcf2acd7c3dda380d
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
