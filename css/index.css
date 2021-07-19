@@ -4,7 +4,7 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
-/** General **/
+/** General Css **/
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ h1 {
     font-size: 20px;
     line-height: 37px;
     text-align: center;
-     letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 p{ 
