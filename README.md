@@ -12,7 +12,7 @@ Contributing to an open source project for the first time can be confusing for a
 
 ### Clone the repository
 
- ![clone](../images/readme)
+ ![clone](../images/clone.png)
 
  1. Click the code button.
  2. Copy the url.
@@ -37,29 +37,31 @@ Create a branch using `git checkout -b "name of the branch"`. For example `git c
 
 ### Commit changes 
 
- Use `git commit -m "message" ` command to commit your changes. Ensure that your short message clearly describes the changes you have made to the code base. For example `git commit -m "added my name to the author page`. 
+ Use `git commit -m "message" ` command to commit your changes. Ensure that your short message clearly describes the changes you have made to the code base. For example `git commit -m "added my name to the author page"`. 
 
 ### Push changes 
 
-Use `git push -u` command to push changes. 
+Use `git push -u` command to push changes. Incase it's your first branch use `git push --set-upstream name-of-the-branch`.
 
 
 ### Make a pull request 
 
-Return to the github repo page, where you'll notice a new green button requesting a comparison and  pull request (PR). Make a PR by clicking the button, filling out the PR template, and submitting it.
+Return to the github repo page. You'll notice a new green button requesting a comparison and  pull request (PR). Make a PR by clicking the button, filling out the PR template, and submitting it.
 
 ### Request for review 
 
  Request all the team members to review your code. After approving the PR, you will click the merge button to add it to the code base.  
 
- Congs on making your first PR :boom:
+ Congratulations on making your first PR :boom:
 
 ## Authors
 
 Contributors names and contact info
  
-[Cynthia Iradukunda](https://github.com/ciradu2204)
-[Rudo Togara](https://github.com/Rudo-Courtney)
+[Cynthia Iradukunda](https://github.com/ciradu2204)\
+[Celine Ishimwe](https://github.com/celinish)\
+[Rudo Courtney](https://github.com/Rudo-Courtney)
+
 
 ## Acknowledgments
 
