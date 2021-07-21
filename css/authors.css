@@ -236,43 +236,57 @@ letter-spacing: 1px;
 
 input[type=email], select, textarea {
     width: 50%;
-    margin-left: 20%;
+    margin-left: 7%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0;
     resize: vertical;
+    background-color: rgba(170, 169, 128, 0.17)
+    ;
+    border: 1px;
+    border-color: #D9CB9E;
+  }
+  #fname, #email, #message{
+    width: 450px;
+    border: 1px;
+    border-color: #D9CB9E;
+    margin-left: 1%;
   }
   input[type=text], select, textarea {
     width: 50%;
-    margin-left: 20%;
+    margin-left: 7%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0;
     resize: vertical;
+    background-color: rgba(170, 169, 128, 0.17)
+    ;
+    border: 1px;
+    border-color: #D9CB9E;
   }
+ 
   
   label {
-    padding: 12px 12px 12px 0;
+    padding: 0 0 0 0;
     display:inline-block;
   }
   
   input[type=submit] {
     background-color: #D9CB9E;
     color: black;
-    padding: 12px 20px;
+    width: 80px;
+    padding: 10px 18px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    margin-left:55%;
+    margin-left:53%;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+
+
   }
-  
-  input[type=submit]:hover {
-    background-color: white;
-  }
-  
+ 
   .container1 {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: white;
     padding: 20px;
     margin-left:20%;
     margin-right: 20%;
@@ -280,14 +294,16 @@ input[type=email], select, textarea {
   
   .col-25 {
     float: left;
-    width: 25%;
+    width: 15%;
     margin-top: 6px;
+    margin-left: 10%;
   }
   
   .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
+   
   }
   
   /* Clear floats after the columns */
@@ -305,19 +321,21 @@ input[type=email], select, textarea {
     }
   }
   .footer-content{
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 26px;
-text-align: center;
+    font-family: Roboto Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+    
   }
   .footer-content1{
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 10px;
     text-align: center;
       }
 
@@ -344,182 +362,83 @@ text-align: center;
     color: #01447e;
     text-decoration: underline;
   }
-  .open-button {
-    background-color: #555;
+  
+  
+  .column1 {
+    float: left;
+    width: 50%;
+    padding: 0px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container {
+    position: relative;
+    margin-left: 15%;
+  }
+  .text-block {
+    position: absolute;
+    bottom: -60px;
+    height: 70%;
+    width: 75%;
+    left: 80px;
+    background-color: black;
+    opacity: 70%;
     color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
   }
   
-  /* The popup form - hidden by default */
-  .form-popup{
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 20px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  .form-popup2{
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 20px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  .form-popup3{
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 20px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  .form-popup4{
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 20px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form-container{
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  .form-container2{
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  .form-container3{
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  .form-container4{
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=msg] {
-    width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  .form-container2 input[type=text], .form-container2 input[type=msg] {
-    width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  .form-container3 input[type=text], .form-container3 input[type=msg] {
-    width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  .form-container4 input[type=text], .form-container4 input[type=msg] {
-    width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=msg]:focus {
-    background-color: #ddd;
-    outline: none;
+  .fa-facebook{
+    margin-left: 35%;
+    padding: 8px;
+    font-size: 25px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color:  #D5D5D5;
+    opacity: 70%;
+    color: black;
+    border-radius: 50%;
     
   }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #d9cb9e;
-    color: white;
-    padding: 16px 20px;
-    border: 2px;
-    cursor: pointer;
-    width: 50%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    margin-left: 50px;
+  .fa-linkedin{
+    text-align: center;
+    padding: 8px;
+    font-size: 25px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 3px;
+    background-color:  #D5D5D5;
+    color: black;
+    opacity: 70%;
+    border-radius: 50%;
+    
   }
-  .form-container2 .btn {
-    background-color: #d9cb9e;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    margin-left: 50px;
+  .fa-twitter{
+    padding: 8px;
+    font-size: 25px;
+    width: 10px;
+    opacity: 70%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 3px;
+    background-color:  #D5D5D5;
+    color: black;
+    border-radius: 50%;
+    
   }
-  .form-container3 .btn {
-    background-color: #d9cb9e;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    margin-left: 50px;
+  .btn1{
+    margin-left: 5%;
+
   }
-  .form-container4 .btn {
-    background-color: #d9cb9e;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    margin-left: 50px;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: black;
-  }
-  .form-container2 .cancel {
-    background-color: black;
-  }
-  .form-container3 .cancel {
-    background-color: black;
-  }
-  .form-container4 .cancel {
-    background-color: black;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
-  .form-container2 .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
-  .form-container3 .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
-  .form-container4 .btn:hover, .open-button:hover {
-    opacity: 1;
+  .btn2{
+    margin-left: 95%;
+
   }
