@@ -27,7 +27,7 @@
             </div>
             <div id="pages">
                 <a class=" homePage" href="#">HOME</a>
-                <a class="active authorPage" href="#">AUTHOR</a>
+                <a class="active authorPage" href="">AUTHOR</a>
                 <a class="weatherPage" href="#">WEATHER</a>
                 <div class="dropDown">
                     <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
@@ -42,27 +42,30 @@
     </nav>
 <main>
 <div class="first-heading">
-    <h1 style="text-align: center;"><strong>MEET OUT TEAM</strong></h1>
+    <h1 style="text-align: center;"> MEET OUT TEAM</h1>
 </div>
 <div class="sub-heading">
     <h2>The people behind the great things you see!</h2>
 </div>
 <div class="team">
+  <div class="dirIcon">
   <div onclick="leftSide()" class="leftIcon"><a><i class="fa fa-caret-left"></i></a></div>
+  <div onclick="rightSide()" class="rightIcon1"><a><i class="fa fa-caret-right"></i></a></div>
+  </div>
   <div id="profiles">
 
   </div>
-  <div onclick="rightSide()"><a><i class="fa fa-caret-right"></i></a></div>
+  <div onclick="rightSide()" class="rightIcon2"><a><i class="fa fa-caret-right"></i></a></div>
 </div>
 
 <div class="third-heading">
-    <h1 style="font-size: 28px;"><strong>GET IN TOUCH</strong></h1>
+    <h1>GET IN TOUCH</h1>
 
 </div>
 <div class="sub-heading2">
-    <h2 style="text-align: center;font-weight: 400;">For any enquiries, please reach out by filling out the form</h2>
+    <h2 >For any enquiries, please reach out by filling out the form</h2>
 </div>
-<div class="container1" >
+<div>
   <form action="/action_page.php">
     <div class="row">
       <div class="col-25">
