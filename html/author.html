@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Natural Disasters Tracker">
+    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+    <Link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="..\css\authors.css">
+        <link rel="stylesheet" href="../css/general.css">
+      <script defer src="../javaScript/author.js"></script>
+     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+
+      </head>
+
+<body>
+
+    <nav>
+        <div id="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <div class="content">
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="pages">
+                <a class=" homePage" href="#">HOME</a>
+                <a class="active authorPage" href="">AUTHOR</a>
+                <a class="weatherPage" href="#">WEATHER</a>
+                <div class="dropDown">
+                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
+                    <div class="dropdownContent">
+                        <a href="#">EARTHQUAKE</a>
+                        <a href="#">CYCLONE</a>
+                        <a href="#">FLOOD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<main>
+<div class="first-heading">
+    <h1 style="text-align: center;"> MEET OUT TEAM</h1>
+</div>
+<div class="sub-heading">
+    <h2>The people behind the great things you see!</h2>
+</div>
+<div class="team">
+  <div class="dirIcon">
+  <div onclick="leftSide()" class="leftIcon"><a><i class="fa fa-caret-left"></i></a></div>
+  <div onclick="rightSide()" class="rightIcon1"><a><i class="fa fa-caret-right"></i></a></div>
+  </div>
+  <div id="profiles">
+
+  </div>
+  <div onclick="rightSide()" class="rightIcon2"><a><i class="fa fa-caret-right"></i></a></div>
+</div>
+
+<div class="third-heading">
+    <h1>GET IN TOUCH</h1>
+
+</div>
+<div class="sub-heading2">
+    <h2 >For any enquiries, please reach out by filling out the form</h2>
+</div>
+<div>
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Full Name: </strong></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="fullname" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email"><strong>Email: </strong></label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" >
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="message"><strong>Message: </strong></label>
+      </div>
+      <div class="col-75">
+        <textarea id="message" name="message"  style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="SEND">
+    </div>
+  </form>
+</div>
+<br>
+
+
+
+
+
+</main>
+<footer>
+  <hr>
+  <div class="footer-content">
+    <p>Natural disaster tracker, 2021. All Rights Reserved</p>
+  </div>
+
+  <div class="footer-content1">
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Authors</a></li>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Disasters</a></li>
+
+    
+    </ul>
+  </div>
+</footer>
+</body>
+
+</html>
