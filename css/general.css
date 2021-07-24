@@ -11,27 +11,11 @@ html {
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 22px;
-    line-height: 45px;
-    text-align: center;
-    padding-top: 10px;
-    letter-spacing: 5px;
-}
 
- h2 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 37px;
-    text-align: center;
-    letter-spacing: 1px;
-}
 
 p{ 
 font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 31px;
+
 padding: 10px;
 }
 

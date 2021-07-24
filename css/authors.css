@@ -1,149 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-/** Nav bar styling**/
-
-nav {
-    display: grid;
-    background-color: #374140;
-    height: 3.5em;
-    font-style: normal;
-    font: 6.25em;
-    font-weight: bold;
-    line-height: 2.3125em;
-    letter-spacing: 0.3em;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    align-content: center;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.7em;
-}
-
-#pages {
-    display: grid;
-    grid-template-columns: 8em 8em 8em 8em;
-    grid-template-rows: auto;
-    justify-content: end;
-    margin-right: 7em;
-}
-
-#logo {
-    margin-left: 7em;
-}
-
-#logo a {
-    font-size: 1em;
-    letter-spacing: 1em;
-    color: #d9cb9e;
-}
-
-#pages .active {
-    color: #d9cb9e;
-}
-
-.disastersPage .fa-angle-down {
-    font-size: 1.4em;
-}
-
-.dropDown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdownContent {
-    position: absolute;
-    top: 1.8em;
-    display: none;
-    text-align: center;
-    margin-top: 0.8em;
-    width: 8em;
-    background: rgba(55, 65, 64, 0.8);
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    z-index: 1;
-}
-.dropdownContent a:nth-child(1)::after,
-.dropdownContent a:nth-child(2)::after {
-    content: "";
-    display: block;
-    height: 0.05em;
-    background-color: #f3f3f36e;
-}
-
-.dropdownContent a {
-    display: block;
-}
-.dropdownContent a:hover {
-    background-color: #f3f3f36e;
-}
-
-.dropDown:hover .dropdownContent {
-    display: block;
-}
-
-.bars {
-    display: none;
-}
-
-@media only screen and (max-width: 800px) {
-    .bars {
-        display: block;
-        margin-right: 1em;
-        position: relative;
-    }
-
-    #pages {
-        display: none;
-        position: absolute;
-        grid-template-columns: auto;
-        grid-template-rows: 4em 4em 4em 4em;
-        top: 3.5em;
-        height: 100%;
-        background-color: rgba(55, 65, 64, 0.8);
-        text-align: center;
-        right: -112px;
-    }
-
-    .content:hover #pages {
-        display: block;
-    }
-
-    #pages a {
-        padding: 5px;
-    }
-    #pages > a::after,
-    .dropDown a.disastersPage::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 0.05em;
-        background-color: #f3f3f36e;
-    }
-
-    nav {
-        justify-content: space-between;
-    }
-
-    .dropDown:hover a.disastersPage::after {
-        display: none;
-    }
-
-    #logo {
-        margin-left: 1em;
-    }
-
-    .bars i {
-        color: #d9cb9e;
-    }
-}
 
 
 *, *:before, *:after {
@@ -168,9 +22,7 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   
-  .container {
-    padding: 0 16px;
-  }
+ 
   
   .container::after, .row::after {
     content: "";
@@ -197,46 +49,10 @@ a {
   .button:hover {
     background-color: #555;
   }
-.first-header h1{
-font-family: Poppins;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: 45px;
-letter-spacing: 5px;
-}
-.sub-heading h3{
-    font-family: Poppins;
-font-size: 25px;
-font-style: normal;
-font-weight: 500;
-line-height: 38px;
-letter-spacing: 1px;
-text-align: center;
 
-}
-.third-heading h1{
-font-family: Poppins;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: 45px;
-letter-spacing: 5px;
-text-align: center;
-
-}
-.sub-heading h3{
-font-family: Poppins;
-font-size: 25px;
-font-style: normal;
-font-weight: 500;
-line-height: 38px;
-letter-spacing: 1px;
-}
-
+ 
 input[type=email], select, textarea {
     width: 50%;
-    margin-left: 7%;
     padding: 12px;
     border-radius: 0;
     resize: vertical;
@@ -246,78 +62,84 @@ input[type=email], select, textarea {
     border-color: #D9CB9E;
   }
   #fname, #email, #message{
-    width: 450px;
+    width: 100%;
     border: 1px;
     border-color: #D9CB9E;
-    margin-left: 1%;
   }
+  
+  @media screen and (min-width: 1024px) {
+    #fname, #email, #message{
+      width: 80%;
+      margin-left: 1%;
+    }
+  }
+  
   input[type=text], select, textarea {
     width: 50%;
-    margin-left: 7%;
     padding: 12px;
     border-radius: 0;
     resize: vertical;
-    background-color: rgba(170, 169, 128, 0.17)
-    ;
+    background-color: rgba(170, 169, 128, 0.17);
     border: 1px;
     border-color: #D9CB9E;
   }
  
   
   label {
-    padding: 0 0 0 0;
     display:inline-block;
   }
-  
+ 
+ 
+  form{
+    width: 100%;
+    padding: 20px;
+  }
+     
   input[type=submit] {
     background-color: #D9CB9E;
     color: black;
-    width: 80px;
     padding: 10px 18px;
     border: none;
     cursor: pointer;
-    margin-left:53%;
-    font-family: Poppins;
-font-style: normal;
-font-weight: 600;
-
+    font-style: normal;
+    font-weight: 600;
+    align-self: center;
 
   }
- 
-  .container1 {
-    border-radius: 5px;
-    background-color: white;
-    padding: 20px;
-    margin-left:20%;
-    margin-right: 20%;
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
   }
-  
   .col-25 {
-    float: left;
-    width: 15%;
-    margin-top: 6px;
-    margin-left: 10%;
-  }
+     margin-top: 6px;
+    margin-left: 0;
+   }
   
   .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
+     margin-top: 6px;
    
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+ 
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
+  @media screen and (min-width: 1024px) {
+    .col-25{
+      width: 9%;
       margin-top: 0;
+      margin-left: 10%;
+
+    }
+    .col-75{
+      width: 75%;
+      margin-top: 0;
+    }
+    .row{
+      flex-direction: row;
+    }
+
+    form {
+        width: 100%;
     }
   }
   .footer-content{
@@ -363,77 +185,105 @@ font-weight: 600;
     text-decoration: underline;
   }
   
-  
-  .column1 {
-    float: left;
-    width: 50%;
-    padding: 0px;
+  /** team section css **/
+
+  .team{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
   }
-  
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+  .team a{
+    color:#D9CB9E;
+    font-size: 40px;
   }
-  
-  .container {
+
+  .dirIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .rightIcon2{
+    display: none;
+  }
+ 
+
+  #profiles {
     position: relative;
-    margin-left: 15%;
-  }
-  .text-block {
-    position: absolute;
-    bottom: -60px;
-    height: 70%;
-    width: 75%;
-    left: 80px;
-    background-color: black;
-    opacity: 70%;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 20px;
+    display: flex;
+    gap:40px;
+     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+   }
+
+   .profile img{
+     width: 350px;
+     height: 350px;
+     position: absolute;
+     z-index: -1;
+   }
+
+  
+   .profile p{
+    width: 18rem;
+     }
+
+    @media screen and (max-width: 450px) {
+      .profile p{
+        width: 15.5rem;
+         }
+     }
+   .profile h3{
+      color: #D9CB9E;
+      padding-left: 10px;
+
+     }
+
+   
+   .profile > div{
+    background: rgba(55, 65, 64, 0.85);
+    color: #F3F3F3;
+    margin-top: 180px;
+    margin-left: 80px;
+    padding: 20px;
+   }
+  
+  .socialIcons{
+    text-align: center;
   }
   
-  .fa-facebook{
-    margin-left: 35%;
-    padding: 8px;
-    font-size: 25px;
-    width: 10px;
-    text-align: center;
+  .socialIcons a{
+    padding: 5px;
+    color: #D5D5D5;
     text-decoration: none;
-    background-color:  #D5D5D5;
-    opacity: 70%;
-    color: black;
-    border-radius: 50%;
-    
+    font-size: 15px;
   }
-  .fa-linkedin{
-    text-align: center;
-    padding: 8px;
-    font-size: 25px;
-    width: 10px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 3px;
-    background-color:  #D5D5D5;
-    color: black;
-    opacity: 70%;
-    border-radius: 50%;
-    
+ 
+
+  .btn1{
+    margin-left: 5%;
+
   }
-  .fa-twitter{
-    padding: 8px;
-    font-size: 25px;
-    width: 10px;
-    opacity: 70%;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 3px;
-    background-color:  #D5D5D5;
-    color: black;
-    border-radius: 50%;
-    
+  .btn2{
+    margin-left: 95%;
+
   }
-  section{
-    height:50%;
-  }
+
+  @media screen and (min-width: 1024px) {
+    .rightIcon1{
+      display: none;
+    }
+    .rightIcon2{
+      display: block;
+    }
+
+    .team{
+      align-items: center;
+      flex-direction: row;
+
+    }
+   }
