@@ -7,8 +7,11 @@
     <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors</title>
-    <Link rel="stylesheet" href="index.css">
+   
+      <Link rel="stylesheet" href="..\css\general.css">
+        <Link rel="stylesheet" href="..\css\index.css">  
         <link rel="stylesheet" href="..\css\authors.css">
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="../javaScript/author.js"></script>
       </head>
@@ -24,13 +27,13 @@
                 <i class="fa fa-bars"></i>
             </div>
             <div id="pages">
-                <a class=" homePage" href="#">HOME</a>
+                <a class=" homePage" href="..\index.html">HOME</a>
                 <a class="active authorPage" href="#">AUTHOR</a>
                 <a class="weatherPage" href="#">WEATHER</a>
                 <div class="dropDown">
                     <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
                     <div class="dropdownContent">
-                        <a href="#">EARTHQUAKE</a>
+                        <a href="..\html\earthquake.html">EARTHQUAKE</a>
                         <a href="#">CYCLONE</a>
                         <a href="#">FLOOD</a>
                     </div>
@@ -39,6 +42,7 @@
         </div>
     </nav>
 <main>
+  <section>
 <div class="first-heading">
     <h1 style="text-align: center;"><strong>MEET OUT TEAM</strong></h1>
 </div>
@@ -85,7 +89,7 @@
 <br>
 <br>
 <br>
-
+</section>
 <div class="third-heading">
     <h1 style="font-size: 28px;"><strong>GET IN TOUCH</strong></h1>
 
@@ -133,21 +137,27 @@
 
 </main>
 <footer>
-  <hr>
-  <div class="footer-content">
-    <p>Natural disaster tracker, 2021. All Rights Reserved</p>
+  <div class="explore">
+  <span>EXPLORE</span>
+      <ul>
+          <a href="..\index.html"><li>HOME</li></a>
+          <a href=""><li>AUTHOR</li></a>
+          <a href=""><li>WEATHER</li></a>
+          <a href=""><li>DISASTERS</li></a>
+       </ul>
   </div>
+  <div class="data">
+      <span>DATA RETRIEVED FROM</span>
+           <ul>
+           <a href="https://reliefweb.int/" target="_blank"><li>RELIEF WEB</li></a>
+            </ul>
+   </div>
+ <div class="pageDetails">
+  <span>PAGE DETAILS</span>
 
-  <div class="footer-content1">
-    <ul class="breadcrumb">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Authors</a></li>
-      <li><a href="#">Weather</a></li>
-      <li><a href="#">Disasters</a></li>
+     <p>This page provides you with an overview of what the web application provides.</p>
 
-    
-    </ul>
-  </div>
+ </div>
 </footer>
 </body>
 

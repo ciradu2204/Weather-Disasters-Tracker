@@ -434,11 +434,6 @@ font-weight: 600;
     border-radius: 50%;
     
   }
-  .btn1{
-    margin-left: 5%;
-
-  }
-  .btn2{
-    margin-left: 95%;
-
+  section{
+    height:50%;
   }
