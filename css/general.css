@@ -34,12 +34,13 @@ h3{
 
 }
 
-
-p{ 
-font-style: normal;
-
-padding: 10px;
-}
+ p{ 
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 10px;
+        }
 
 /** Nav bar styling**/
 
