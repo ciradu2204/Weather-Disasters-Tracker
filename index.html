@@ -7,8 +7,10 @@
     <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natural Disasters Tracker</title>
-    <Link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="javaScript/index.js"></script>
 </head>
 
 <body>
@@ -18,17 +20,17 @@
             <a href="#">LOGO</a>
         </div>
         <div class="content">
-            <div class="bars">
+            <div id="bars">
                 <i class="fa fa-bars"></i>
             </div>
             <div id="pages">
                 <a class="active homePage" href="#">HOME</a>
                 <a class="authorPage" href="../html/author.html">AUTHOR</a>
                 <a class="weatherPage" href="#">WEATHER</a>
-                <div class="dropDown">
+                <div id="dropDown">
                     <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
-                    <div class="dropdownContent">
-                        <a href="#">EARTHQUAKE</a>
+                    <div id="dropdownContent">
+                        <a href="./html/earthquake.html">EARTHQUAKE</a>
                         <a href="#">CYCLONE</a>
                         <a href="#">FLOOD</a>
                     </div>

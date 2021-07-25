@@ -90,47 +90,45 @@ nav a {
     font-size: 1.4em;
 }
 
-.dropDown {
+.disastersPage {
     position: relative;
     display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.dropdownContent {
+#dropdownContent {
     position: absolute;
-    top: 1.8em;
+    top: 2.7em;
     display: none;
     text-align: center;
     margin-top: 0.8em;
-    width: 8em;
+    width: 8.5em;
     background: rgba(55, 65, 64, 0.8);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     z-index: 1;
 }
-.dropdownContent a:nth-child(1)::after,
-.dropdownContent a:nth-child(2)::after {
+#dropdownContent a:nth-child(1)::after,
+#dropdownContent a:nth-child(2)::after {
     content: "";
     display: block;
     height: 0.05em;
     background-color: #f3f3f36e;
 }
 
-.dropdownContent a {
+#dropdownContent a {
     display: block;
 }
-.dropdownContent a:hover {
-    background-color: #f3f3f36e;
-}
+ 
 
-.dropDown:hover .dropdownContent {
-    display: block;
-}
-
-.bars {
+#bars {
     display: none;
 }
 
 @media only screen and (max-width: 800px) {
-    .bars {
+    
+    #bars {
         display: block;
         margin-right: 1em;
         position: relative;
@@ -151,17 +149,11 @@ nav a {
         top: 50px;
         right: -112px;
         bottom: 0;
+        z-index: 1;
     }
-
-    .content:hover #pages {
-        display: block;
-    }
-
-    #pages a {
-        padding: 5px;
-    }
-    #pages > a::after,
-    .dropDown a.disastersPage::after {
+    
+ 
+    #pages > a::after{
         content: "";
         display: block;
         width: 100%;
@@ -169,19 +161,25 @@ nav a {
         background-color: #f3f3f36e;
     }
 
+    .disastersPage {
+        display: block;
+    
+    }
+
     nav {
         justify-content: space-between;
     }
 
-    .dropDown:hover a.disastersPage::after {
-        display: none;
-    }
 
     #logo {
         margin-left: 1em;
     }
 
-    .bars i {
+    #dropdownContent {
+       top:8.7em;
+    }
+
+    #bars i {
         color: #d9cb9e;
     }
 }

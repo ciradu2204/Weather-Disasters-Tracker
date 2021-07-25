@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Natural Disasters Tracker">
+    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eathquake</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/earthquake.css">
+     <link rel="stylesheet" href="../css/general.css">
+     <script defer src="../javaScript/earthquake.js"></script>
+     <script defer src="../javaScript/index.js"></script>
+     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+    <nav>
+        <div id="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <div id="content">
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="pages">
+                <a class="homePage" href="#">HOME</a>
+                <a class="authorPage" href="../html/author.html">AUTHOR</a>
+                <a class="weatherPage" href="#">WEATHER</a>
+                <div id="dropDown">
+                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
+                    <div id="dropdownContent">
+                        <a class="active" href="#">EARTHQUAKE</a>
+                        <a href="#">CYCLONE</a>
+                        <a href="#">FLOOD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div id="map"> </div>
+    <form>
+        <select names="time" id="time">
+            <option value="PAST DAY">PAST DAY</option>
+            <option value="PAST 7 DAYS">PAST 7 DAYS</option>
+            <option value="PAST 30 DAYS">PAST 30 DAYS</option>
+        </select>
+
+        <select names="earthquakeTypes" id="earthquakeTypes">
+            <option value="ALL EARTHQUAKES">ALL EARTHQUAKES</option>
+            <option value="M4.5+ Earthquakes">M4.5+ EARTHQUAKES</option>
+            <option value="Significant Earthquakes">SIGNIFICANT EARTHQUAKES</option>
+            <option value="M2.5+ Earthquakes">M2.5+ EARTHQUAKES</option>
+            <option value="M1.0+ Earthquakes">M1.0+ EARTHQUAKES</option>
+        </select>
+        </select>
+    </form>
+ 
+    </body>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYxOGno7CylknPl_yL5vZF8a3pSISXy6c&callback=initMap"></script>
+</html>
