@@ -80,8 +80,7 @@ input[type=email], select, textarea {
     border-radius: 0;
     resize: vertical;
     background-color: rgba(170, 169, 128, 0.17);
-    border: 1px;
-    border-color: #D9CB9E;
+    border: 1px solid #D9CB9E;
   }
  
   
