@@ -80,8 +80,7 @@ input[type=email], select, textarea {
     border-radius: 0;
     resize: vertical;
     background-color: rgba(170, 169, 128, 0.17);
-    border: 1px;
-    border-color: #D9CB9E;
+    border: 1px solid #D9CB9E;
   }
  
   
@@ -287,3 +286,67 @@ input[type=email], select, textarea {
 
     }
    }
+   /** Footer Css **/ 
+
+footer{
+  background-color: #374140;
+  border:1px solid rgba(55, 65, 64, 0.85);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer .data{
+  flex-basis: 35%;
+}
+
+footer p{
+  padding: 0;
+}
+
+footer .explore{
+  flex-basis: 28%;
+}
+
+footer .pageDetails{
+  flex-basis: 24%;
+}
+
+footer span{
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 34px;
+letter-spacing: 5px;
+color: white;
+}
+
+footer ul li, footer p{
+list-style-type: none;
+font-weight: 600;
+font-size: 15px;
+line-height: 30px;
+letter-spacing: 5px;
+color: rgba(170, 169, 128, 0.6);
+}
+
+
+@media only screen and (max-width: 450px) {
+  footer{
+      flex-direction: column;
+      flex-basis: unset;
+      text-align: center;
+  }
+
+  footer div{
+      padding: 10px;
+  }
+  
+}
+

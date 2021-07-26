@@ -39,24 +39,41 @@
         </div>
     </nav>
     
+    <div class="container">
+        <div id="openBar">
+            <i class="fas fa-bars"></i>          
+        </div>
+        <div id="drawer"> 
+        <div id="closeBar">
+            <i class="fas fa-times-circle"></i>         
+        </div>
+        <div class="drawerInfo">
+         <form id="form">
+             <div class="formItem">
+            <label>Period</label>
+            <select names="time" id="time">
+                <option value="day">PAST DAY</option>
+                <option value="week">PAST 7 DAYS</option>
+                <option value="month">PAST 30 DAYS</option>
+            </select>
+        </div>
 
-    <div id="map"> </div>
-    <form>
-        <select names="time" id="time">
-            <option value="PAST DAY">PAST DAY</option>
-            <option value="PAST 7 DAYS">PAST 7 DAYS</option>
-            <option value="PAST 30 DAYS">PAST 30 DAYS</option>
-        </select>
-
-        <select names="earthquakeTypes" id="earthquakeTypes">
-            <option value="ALL EARTHQUAKES">ALL EARTHQUAKES</option>
-            <option value="M4.5+ Earthquakes">M4.5+ EARTHQUAKES</option>
-            <option value="Significant Earthquakes">SIGNIFICANT EARTHQUAKES</option>
-            <option value="M2.5+ Earthquakes">M2.5+ EARTHQUAKES</option>
-            <option value="M1.0+ Earthquakes">M1.0+ EARTHQUAKES</option>
-        </select>
-        </select>
-    </form>
+            <div class="formItem">
+            <label>Earthquake Type</label>
+            <select names="earthquakeTypes" id="earthquakeTypes">
+                <option value="all">ALL EARTHQUAKES</option>
+                <option value="4.5">M4.5+ EARTHQUAKES</option>
+                <option value="significant">SIGNIFICANT EARTHQUAKES</option>
+                <option value="2.5">M2.5+ EARTHQUAKES</option>
+                <option value="1.0">M1.0+ EARTHQUAKES</option>
+            </select>
+            </div>
+        </form>
+            </div>
+        </div>
+        <div id="map"> </div>
+    </div>
+  
  
     </body>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYxOGno7CylknPl_yL5vZF8a3pSISXy6c&callback=initMap"></script>

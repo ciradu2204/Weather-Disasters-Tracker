@@ -6,62 +6,74 @@ html, body {
  }
 #map{
      height: 100%;
-  }
-
- form{
-     position: absolute;
-     top:3.5rem;
-     display: flex;
-     flex-direction: column;
-      justify-content: start;
-     align-items: center ;
-
  }
-select{
-     height:54px;
-     background: #374140;
-     color: #D9CB9E;
-     font-size: 13px;
-     font-style: normal;
-     font-weight: bold;
-     letter-spacing: 2px;
-     outline-color: #D9CB9E;
-     outline-width: 2px;
-     text-align: center;
-     text-align-last: center;
-     -moz-text-align-last: center;
- }
- 
- 
- #time{
-    padding: 0 2em 0 7.2em;
-  }
 
-  @media screen and (min-width: 1024px) {
-    form{
-        flex-direction: row;
-    }
-    #time{
-        padding-right: 86px;
-        padding-left: 0;
-      }
-  }
-  
- /** apply on Safari Only **/
-  @media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-        select{
-            background-image : url('../images/earthquake/drpDownIcon.svg')!important;
-            background-repeat: no-repeat, repeat !important;
-            background-position: right .7em top 50%, 0 0 !important;
-            background-size: 1.5em auto, 100% !important;
-            text-indent: 15%;
-            outline: #D9CB9E ;
-            border-radius: 0px;
-            -webkit-appearance:none;
-        }
- 
-        
-     }
+.container{
+    height: 100%;
+ }
+
+#drawer{
+    position: absolute;
+    display: none;
+    top:3.5rem;
+    background-color: rgba(55, 65, 64,0.85);
+    z-index: 1;
+    height: 100%;
 }
+
+#openBar{
+  padding: 20px;
+  font-size: 25px;
+  color: #374140;
+  position: absolute;
+  top:3.5rem;
+  z-index: 1;
+
+}
+
+#closeBar{
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end ;
+ margin: 10px;
+font-size: 25px;
+color:#d9cb9e;
+}
+
+
+form{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:20px;
+ }
+
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+ }
+
+.formItem label{
+    font-size: 12px;
+    padding-left: 6px;
+    color:white;
+    font-weight: bolder;
+}
+
+select{
+    background-image:-webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+    margin-bottom: 1em;
+    padding: .25em;
+    border: none;
+    color: white;
+    background-color: transparent;
+    border-bottom: 2px solid #d9cb9e; 
+    font-weight: bold;
+    letter-spacing: .15em;
+    border-radius: 0;   
+    outline: none;
+}
+ 
  
