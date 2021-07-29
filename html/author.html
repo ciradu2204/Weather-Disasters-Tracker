@@ -7,40 +7,49 @@
     <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors</title>
-    <Link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="..\css\authors.css">
-        <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="..\css\authors.css">
+      <link rel="stylesheet" href="../css/general.css">
+      <script defer src="../javaScript/general.js"></script>
       <script defer src="../javaScript/author.js"></script>
      <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
 
       </head>
 
 <body>
-
-    <nav>
-        <div id="logo">
-            <a href="#">LOGO</a>
+  <nav>
+    <div id="logo">
+        <a href="#">LOGO</a>
+    </div>
+    <div id="content">
+        <div id="bars">
+            <i class="fa fa-bars"></i>
         </div>
-        <div class="content">
-            <div class="bars">
-                <i class="fa fa-bars"></i>
+        <div id="pages">
+            <div id="close">
+                <i class="fas fa-times"></i>
             </div>
-            <div id="pages">
-                <a class=" homePage" href="../index.html">HOME</a>
-                <a class="active authorPage" href="">AUTHOR</a>
-                <a class="weatherPage" href="#">WEATHER</a>
-                <div class="dropDown">
-                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
-                    <div class="dropdownContent">
-                        <a href="#">EARTHQUAKE</a>
-                        <a href="#">CYCLONE</a>
-                        <a href="#">FLOOD</a>
-                    </div>
+            <a class=" homePage" href="/index.html">HOME</a>
+            <a class="active authorPage" href="../html/author.html">AUTHOR</a>
+            <a class="weatherPage" href="#">WEATHER</a>
+            <div id="dropDown">
+                <div>
+                <a class="disastersPage" href="#">DISASTERS</a>
+                <a class="fa fa-angle-down" id="iconDown"></a>
+                <a class="fa fa-angle-up" id="iconUp"></a>
+               </div>
+                <div id="dropdownContent">
+                    <a href="./html/earthquake.html">EARTHQUAKE</a>
+                    <a href="#">CYCLONE</a>
+                    <a href="#">FLOOD</a>
+ 
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 <main>
+  <section>
 <div class="first-heading">
     <h1 style="text-align: center;"> MEET OUT TEAM</h1>
 </div>
@@ -102,10 +111,12 @@
   <div class="explore">
   <span>EXPLORE</span>
       <ul>
-          <a href=""><li>HOME</li></a>
-          <a href=""><li>AUTHOR</li></a>
-          <a href=""><li>WEATHER</li></a>
-          <a href=""><li>DISASTERS</li></a>
+         <a href="..\html\index.html"><li>HOME</li></a>
+            <a href="..\html\authors.html"><li>AUTHOR</li></a>
+            <a href=""><li>WEATHER</li></a>
+            <a href="#"><li>DISASTERS</li></a>
+            <a href="..\html\geojson.html"><li>GEOJSON</li></a>
+ 
        </ul>
   </div>
   <div class="data">
@@ -117,8 +128,9 @@
  <div class="pageDetails">
   <span>PAGE DETAILS</span>
 
+ 
      <p>This page provides you with an overview of what the web application provides.</p>
-
+ 
  </div>
 </footer>
 </body>

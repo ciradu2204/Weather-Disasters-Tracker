@@ -9,8 +9,9 @@
     <title>Natural Disasters Tracker</title>
     <Link rel="stylesheet" href="./css/index.css">
     <Link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer type='text/javascript' src="./javaScript/index.js"></script>
+     <script defer type='text/javascript' src="./javaScript/index.js"></script>
+    <script defer type='text/javascript' src="./javaScript/general.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -20,18 +21,25 @@
         <div id="logo">
             <a href="#">LOGO</a>
         </div>
-        <div class="content">
-            <div class="bars">
+        <div id="content">
+            <div id="bars">
                 <i class="fa fa-bars"></i>
             </div>
             <div id="pages">
+                <div id="close">
+                    <i class="fas fa-times"></i>
+                </div>
                 <a class="active homePage" href="#">HOME</a>
                 <a class="authorPage" href="../html/author.html">AUTHOR</a>
                 <a class="weatherPage" href="#">WEATHER</a>
-                <div class="dropDown">
-                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
-                    <div class="dropdownContent">
-                        <a href="#">EARTHQUAKE</a>
+                <div id="dropDown">
+                    <div>
+                    <a class="disastersPage" href="#">DISASTERS</a>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                   </div>
+                    <div id="dropdownContent">
+                        <a href="./html/earthquake.html">EARTHQUAKE</a>
                         <a href="#">CYCLONE</a>
                         <a href="#">FLOOD</a>
                     </div>
@@ -133,7 +141,7 @@
     <section id="latestNews">
         <h1>LATEST NEWS</h1>
         <h2>Latest news on weather and other related topic bellow</h2>
-        <div id="loaderContainer">
+        <div id="loaderDiv">
         <div class="loader"></div>
         </div>
     </section>
@@ -142,10 +150,11 @@
         <div class="explore">
         <span>EXPLORE</span>
             <ul>
-                <a href=""><li>HOME</li></a>
-                <a href=""><li>AUTHOR</li></a>
+                <a href="#"><li>HOME</li></a>
+                <a href="./html/author.html"><li>AUTHOR</li></a>
                 <a href=""><li>WEATHER</li></a>
                 <a href=""><li>DISASTERS</li></a>
+                <a href="./html/geojson.html"><li>GEOJSON</li></a>
              </ul>
         </div>
         <div class="data">
@@ -162,7 +171,5 @@
        </div>
     </footer>
 
-
 </body>
-
 </html>

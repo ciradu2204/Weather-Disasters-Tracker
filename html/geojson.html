@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Natural Disasters Tracker">
+    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON</title>
+    
+        <link rel="stylesheet" href="..\css\geojson.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <script defer src = "../javaScript/general.js"></script>
+     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+
+      </head>
+<body>
+   
+    <nav>
+        <div id="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <div id="content">
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="pages">
+                <div id="close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <a class="active homePage" href="../index.html">HOME</a>
+                <a class="authorPage" href="../html/author.html">AUTHOR</a>
+                <a class="weatherPage" href="#">WEATHER</a>
+                <div id="dropDown">
+                    <div>
+                    <a class="disastersPage" href="#">DISASTERS</a>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                   </div>
+                    <div id="dropdownContent">
+                        <a href="./html/earthquake.html">EARTHQUAKE</a>
+                        <a href="#">CYCLONE</a>
+                        <a href="#">FLOOD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<main>
+<div class="main-section">
+<div>
+    <h1 style="font-weight: bolder;">WHAT IS GEOJSON?</h1>
+    <h2>GeoJSON is a format for encoding a variety of geographic data structures</h2>
+    <div class="sub-sections">
+        <div class="subsection-1">
+        <img src="..\images\geojson\codes.png"  class="code-image">
+        </div>
+        <div class="subsection-2">
+    <p>It defines several types of JSON objects and the manner in which
+        they are combined to represent data about geographic features, their properties, and their spatial extents.
+    </p>
+    <p>GeoJSON supports the following geometry types: Point, lineString, Polygon, MultiPoint, 
+        MultiLineString and MultiPolygon. Geometric objects with additional
+        properties are Feature objects. Sets of features are contained by FeatureCollection objects.
+    </p>
+</div>
+</div>
+</div>
+<br>
+
+    <div>
+    <h1 style="font-weight: bolder;">GEOJSON TUTORIAL VIDEOS</h1>
+</div>
+<br>
+<div class=videos>
+<div class="video-1"> <iframe width="400" height="310"
+    src="https://www.youtube.com/embed/W8gZa2gAXQM">
+    </iframe> </div>
+
+    <div class="video-2"> <iframe width="400" height="310"
+        src="https://www.youtube.com/embed/8RPfrhzRw2s&t=2s">
+        </iframe> </div>
+
+        <div class="video-3"> <iframe width="400" height="310"
+            src="https://www.youtube.com/embed/045-bsOsbJc">
+            </iframe> </div>
+</div>
+</div>
+<br>
+
+
+</main>
+
+
+
+
+</body>
+<footer>
+    <div class="explore">
+    <span>EXPLORE</span>
+        <ul>
+            <a href="..\html\index.html"><li>HOME</li></a>
+            <a href="..\html\author.html"><li>AUTHOR</li></a>
+            <a href=""><li>WEATHER</li></a>
+            <a href=""><li>DISASTERS</li></a>
+            <a href="..\html\geojson.html"><li>GEOJSON</li></a>
+         </ul>
+    </div>
+    <div class="data">
+        <span>DATA RETRIEVED FROM</span>
+             <ul>
+             <a href="https://weatherstack.com/" target="_blank"><li>weatherstack.com</li></a>
+             <a href="https://reliefweb.int/" target="_blank"><li>earthquake.usgs.com</li></a>
+             <a href="https://reliefweb.int/" target="_blank"><li>cloud.google.com/maps-platform-</li></a>
+              </ul>
+     </div>
+   <div class="pageDetails">
+    <span>PAGE DETAILS</span>
+
+       <p>GEOJSON Page provides with the information needed to understand the concepts behind 
+           geojson
+       </p>
+
+   </div>
+</footer>
+
+
+      </html>
