@@ -11,12 +11,36 @@ html {
     box-sizing: border-box;
 }
 
+h1 {
+    
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 18px;
+     text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
 
 
 p{ 
-font-style: normal;
-
-padding: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 10px;
 }
 
 /** Nav bar styling**/
@@ -59,20 +83,28 @@ nav a {
     color: #d9cb9e;
 }
 
+#dropDown div:first-child{
+    display: flex;
+    align-items: baseline;
+}
+
 #pages .active {
     color: #d9cb9e;
 }
 
-.disastersPage .fa-angle-down {
-    font-size: 1.4em;
+#iconUp{
+    cursor: pointer;
+
+}
+
+#iconDown {
+    display: none;
+    cursor: pointer;
 }
 
 .disastersPage {
     position: relative;
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: inline;
 }
 
 #dropdownContent {
@@ -81,7 +113,7 @@ nav a {
     display: none;
     text-align: center;
     margin-top: 0.8em;
-    width: 8.5em;
+    padding: 5px;
     background: rgba(55, 65, 64, 0.8);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     z-index: 1;
@@ -103,22 +135,40 @@ nav a {
     display: none;
 }
 
+#close {
+    display: none;
+}
+
 @media only screen and (max-width: 800px) {
     
     #bars {
         display: block;
         margin-right: 1em;
         position: relative;
+        cursor: pointer;
+    }
+
+    #close {
+        display: block;
+        color: #d9cb9e;
+        cursor: pointer;
+        text-align: right;
+        padding: 5px;
     }
 
     body{
         position: relative;
     }
 
+    #dropdownContent{
+        padding: 0;
+    }
+
     #pages {
         display: none;
         position: absolute;
         grid-template-columns: auto;
+        padding: 5px;
         grid-template-rows: 4em 4em 4em 4em;
         height: 100%;
         background-color: rgba(55, 65, 64, 0.8);
@@ -139,7 +189,7 @@ nav a {
     }
 
     .disastersPage {
-        display: block;
+        display: inline;
     
     }
 
@@ -153,32 +203,78 @@ nav a {
     }
 
     #dropdownContent {
-       top:8.7em;
+       top:11.7em;
     }
 
     #bars i {
         color: #d9cb9e;
     }
 }
-h1 {
+
+
+
+/** Footer Css **/ 
+
+footer{
+    background-color: #374140;
+    border:1px solid rgba(55, 65, 64, 0.85);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+ }
+
+footer a{
+    text-decoration: none;
+}
+
+ footer .data{
+    flex-basis: 35%;
+}
+
+footer p{
+    padding: 0;
+}
+
+footer .explore{
+    flex-basis: 28%;
+}
+
+footer .pageDetails{
+    flex-basis: 24%;
+}
+
+footer span{
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 34px;
+letter-spacing: 5px;
+color: white;
+}
+
+footer ul li, footer p{
+list-style-type: none;
+font-weight: 600;
+font-size: 11px;
+line-height: 30px;
+letter-spacing: 5px;
+color: rgba(170, 169, 128, 0.6);
+}
+
+
+@media only screen and (max-width: 450px) {
+    footer{
+        flex-direction: column;
+        flex-basis: unset;
+        text-align: center;
+    }
+
+    footer div{
+        padding: 10px;
+    }
     
-    font-size: 20px;
-    text-align: center;
-    padding-top: 30px;
-    letter-spacing: 2px;
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 18px;
-     text-align: center;
-    letter-spacing: 1px;
-    padding-bottom: 30px;
-}
 
-h3{
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 1px;
-
-}
