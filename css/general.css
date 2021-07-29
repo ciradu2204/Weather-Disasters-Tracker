@@ -43,6 +43,7 @@ p{
         padding: 10px;
 }
 
+
 /** Nav bar styling**/
 
 nav {
@@ -211,8 +212,6 @@ nav a {
     }
 }
 
-
-
 /** Footer Css **/ 
 
 footer{
@@ -276,5 +275,4 @@ color: rgba(170, 169, 128, 0.6);
     }
     
 }
-
 

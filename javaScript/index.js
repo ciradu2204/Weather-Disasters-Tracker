@@ -26,7 +26,7 @@ const fetchData = (async () => {
                     div1.setAttribute("class", "div1")
                     div2.setAttribute("class", "div2")
                     let img = document.createElement("img");
-                    img.src= (types[0] == "Flood" || "Flash Flood")? "./images/overview/Flood.png": (types[0]== "Earthquake")? "./images/overview/earthquakes.png":"./images/Cyclone.png"
+                     img.src= (types[0] == "Flood" || "Flash Flood")? "./images/overview/Flood.png": (types[0]== "Earthquake")? "./images/overview/earthquakes.png":"./images/Cyclone.png"
                     div1.appendChild(img);
                     let status = capitalizeFirstLetter(disaster.fields.status);
                     let h3 = document.createElement('h3');
