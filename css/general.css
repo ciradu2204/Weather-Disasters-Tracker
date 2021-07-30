@@ -199,6 +199,7 @@ nav span{
         background-color: rgba(55, 65, 64, 0.8);
         text-align: center;
         bottom: 0;
+        margin-right: 0;
         right: 0;
          z-index: 1;
     }
