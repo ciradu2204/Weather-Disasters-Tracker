@@ -3,7 +3,7 @@ const iconUp = document.getElementById("iconUp");
 const iconDown = document.getElementById("iconDown");
 const dropDownContent = document.getElementById("dropdownContent");
 const mobileBar = document.getElementById("bars");
-const mNavbarContent = document.getElementById("pages");
+const mNavbarContent = document.getElementById("content");
 const mobileClose = document.getElementById("close");
 
 iconUp.addEventListener('click', () =>{
@@ -21,10 +21,14 @@ iconDown.addEventListener('click', () =>{
 })
 
 mobileBar.addEventListener('click', () =>{
-   mNavbarContent.style.display = "block";
+   mNavbarContent.style.display = "grid";
+   mobileClose.style.display = "block";
+   mobileBar.style.display = "none";
 })
 
 mobileClose.addEventListener('click', () =>{
    mNavbarContent.style.display = "none";
+   mobileBar.style.display = "block";
+
 
 })
