@@ -223,7 +223,8 @@ nav span{
     }
 
     #dropdownContent {
-       top:11.7em;
+        top: 18.7em;
+        left: 0.3em;
     }
 
     #bars i {
