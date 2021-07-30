@@ -20,23 +20,24 @@
 <body>
 
     <nav>
+        <div class="mobileView">
         <div id="logo">
             <a href="#">LOGO</a>
         </div>
+        <div id="bars">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div id="close">
+            <i class="fas fa-times"></i>
+        </div>
+        </div>
         <div id="content">
-            <div id="bars">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div id="pages">
-                <div id="close">
-                    <i class="fas fa-times"></i>
-                </div>
-                <a class="active homePage" href="../index.html">HOME</a>
+                <a class="active homePage" href="#">HOME</a>
                 <a class="authorPage" href="../html/author.html">AUTHOR</a>
                 <a class="weatherPage" href="#">WEATHER</a>
                 <div id="dropDown">
                     <div>
-                    <a class="disastersPage" href="#">DISASTERS</a>
+                    <span class="disastersPage">DISASTERS</span>
                     <a class="fa fa-angle-down" id="iconDown"></a>
                     <a class="fa fa-angle-up" id="iconUp"></a>
                    </div>
@@ -45,8 +46,7 @@
                         <a href="#">CYCLONE</a>
                         <a href="#">FLOOD</a>
                     </div>
-                </div>
-            </div>
+             </div>
         </div>
     </nav>
 
