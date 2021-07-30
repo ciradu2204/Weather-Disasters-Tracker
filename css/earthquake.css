@@ -90,6 +90,16 @@ select{
     width: calc(35%);
 }
 
+#Error{
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    width: 50%;
+    color: black !important;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
 #earthquakesInfo > div{
     display: flex;
     flex-direction: row;
@@ -180,26 +190,6 @@ select{
     color: #374140;
 }
 
-.loaderDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
- }
-
-#loader {
-    border: 11px solid #f3f3f3;
-    border-top: 11px solid #374140; 
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 2s linear infinite;
-}
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
 
  @media only screen and (max-width: 1023px) {
 
@@ -239,5 +229,12 @@ select{
   
   #legend img {
     vertical-align: middle;
+  }
+
+  /** Loader custom css **/
+
+  #loader > div {
+    background: #d9cb9e !important;
+
   }
   

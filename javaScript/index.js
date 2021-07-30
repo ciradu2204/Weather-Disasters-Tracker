@@ -1,7 +1,7 @@
    
 
 let loading = true; 
-if(loading)document.getElementById("loaderDiv").style.display= "flex";
+if(loading)document.getElementById("loader").style.display= "flex";
 
 const fetchData = (async () => {
       await fetch("https://api.reliefweb.int/v1/disasters?appname=rwint-user-0&profile=list&preset=latest&slim=1&query[value]=%22earthquake%22%20OR%20%22flood%22%20OR%20%22Tropical%20Cylone%22&query[operator]=AND")
@@ -52,7 +52,7 @@ const fetchData = (async () => {
             console.log(error)
         })
         loading = false;
-        if(loading == false) document.getElementById("loaderDiv").style.display= "none";
+        if(loading == false) document.getElementById("loader").style.display= "none";
 });
 
 setTimeout(() => {

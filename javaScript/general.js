@@ -1,4 +1,4 @@
-
+/** Nav bar */
 const iconUp = document.getElementById("iconUp");
 const iconDown = document.getElementById("iconDown");
 const dropDownContent = document.getElementById("dropdownContent");

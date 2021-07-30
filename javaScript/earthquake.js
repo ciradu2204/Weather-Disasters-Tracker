@@ -50,8 +50,6 @@ function initMap() {
    })
 
    const legend = document.getElementById("legend");
-   const  icon1 = greenCircle;
-   const  icon2  = "../images/earthquake/m1.png"
    const div1 = document.createElement("div");
    div1.innerHTML = '<img src="../images/earthquake/moon.png"> ' + "Earthquake";
    const div2 = document.createElement("div");
@@ -262,7 +260,7 @@ const addAlert = (id) =>{
      if(loading == false){
        document.getElementById("loader").style.display = "none";
      }else{
-      document.getElementById("loader").style.display = "block";
+      document.getElementById("loader").style.display = "flex";
 
      }
   }
@@ -294,15 +292,24 @@ addLoader();
  .then(mainData =>{
    loading = false;
    addLoader();
-         data = filterData(mainData, country);
-         sortData(sortingType, data);
-         for(let i= 0; i<data.length; i++){
-          createMarker(i, data);
-          createEarthquakeInfo(i, earthquakesInfo, data)
-           }
+   data = filterData(mainData, country);
+   sortData(sortingType, data);
+    if(data.length === 0){
+      let div = document.createElement("div");
+     div.id = "Error"
+     div.innerHTML = "No Eathquakes Found"
+     earthquakesInfo.appendChild(div);
+  }else{   
+    for(let i= 0; i<data.length; i++){
+     createMarker(i, data);
+     createEarthquakeInfo(i, earthquakesInfo, data)
+    }
+  }
+   
+  drawer.appendChild(earthquakesInfo);
+  markerClusterer = new MarkerClusterer(map, markers,  {imagePath: `${path}/m`});
         //adding the markers
-       drawer.appendChild(earthquakesInfo);
-       markerClusterer = new MarkerClusterer(map, markers,  {imagePath: `${path}/m`});
+      
  
 
 })
