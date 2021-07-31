@@ -1,67 +1,61 @@
-@media only screen and (max-width: 600px) {
-    .videos {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-      
+/** Section Css**/
+.first-section{
+width: 100%;
+height: 10%;
+background-image: url('../images/floods/flo.jpg');
+height: 500px;
+left: -34px;
+top: 74px;
+}
+
+.inner-sect{
+margin-left: 25%;
+width: 50%;
+height: 40%;
+left: 10%;
+margin-top: 10%;
+background: rgba(55, 65, 64, 0.77);
+}
+/**Disaster CSS**/
+.disasterDetails {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+}
+
+.disasterImage img {
+    width: 270px;
+    box-shadow: 31px -31px rgb(189 195 199 / 29%);
+}
+
+ 
+@media only screen and (max-width: 800px) {
+    .disasterDetails {
+        grid-template-columns: auto auto;
+        column-gap: 44px;
     }
-   
-}
-.code-image{
-width: 300px;
-height: 300px;
-border: 1px solid #000000;
-margin-left: 100px;
-}
-.sub-sections{
-    display: flex;
-    flex-direction: row;
-   margin-left: 110px;
-    
-}
-.subsection-2{
-    width:600px;
-}
-iframe{
-    border-radius: 0px 0px 20px 20px;
-    -ms-flex: 25%;
-  flex: 25%;
-  max-width: 100%;
+
+    .disasterImage img {
+        width: 222px;
+    }
  
 }
 
-.videos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-    
-   
+@media only screen and (max-width: 600px) {
+    .disasterImage {
+        display: none;
+    }
+
+    .disasterDetails {
+        grid-template-columns: auto auto;
+
+    }
+
+    .disasterContent p, h1 {
+        text-align: left;
+    }
 }
-
-.video-1, .video-2, .video-3{
-height: 313px;
-width: 422px;
-left: 26px;
-top: 775px;
-
-}
-
-
-h1{
-  
-font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 45px;
-text-align: center;
-letter-spacing: 5px;
-
-color: #000000;
-}
-
-
 
 
 /** Footer Css **/ 
