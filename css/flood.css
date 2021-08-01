@@ -16,18 +16,53 @@ left: 10%;
 margin-top: 10%;
 background: rgba(55, 65, 64, 0.77);
 }
+@media only screen and (max-width: 800px){
+.inner-sect{
+    height: fit-content;
+}
+}
+
 /**Disaster CSS**/
 .disasterDetails {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-
+    display: flex;
+    flex-direction: row;
+    
 }
-
+#disasters{
+    margin-left: 5%;
+}
 .disasterImage img {
-    width: 270px;
-    box-shadow: 31px -31px rgb(189 195 199 / 29%);
+    margin-left: 10%;
+    width: 360px;
+    height: 356px;
+    box-shadow:  -31px -31px rgb(55 65 64/ 95% );
 }
+.disasterContent{
+    width: 60%;
+    margin-left: 50px;
+}
+.disasterContent h1{
+    text-align: left;
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 45px;
+margin-left: 1.5%;
+
+}
+.disasterContent h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.2em;
+    color: #B0953D;
+    text-align: left;
+    margin-left: 1.5%;
+}
+
 
  
 @media only screen and (max-width: 800px) {
@@ -56,7 +91,101 @@ background: rgba(55, 65, 64, 0.77);
         text-align: left;
     }
 }
+.point-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 2%;
+    line-height: 5px;
+    
+}
 
+.fas fa-arrow-right{
+    color: #374140, 69%;
+    font-size: 20px;
+    width: 20px;
+    float: left;
+    
+}
+.disasterDetails {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#disasters2{
+    margin-left: 4%;
+}
+#disasters2 {
+    display: flex;
+    flex-direction: row;
+    
+}
+.disasterImage2 img {
+    margin-right: 10%;
+    width: 360px;
+    height: 356px;
+    box-shadow:  31px -31px rgb(55 65 64/ 95% );
+}
+.disasterContent2{
+    width: 60%;
+    margin-left: 50px;
+}
+.disasterContent2 h1{
+    text-align: left;
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 45px;
+margin-left: 1.5%;
+
+}
+.disasterContent2 h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.2em;
+    color: #B0953D;
+    text-align: left;
+    margin-left: 1.5%;
+}
+
+
+ 
+@media only screen and (max-width: 800px) {
+    .disasterDetails2 {
+        grid-template-columns: auto auto;
+        column-gap: 44px;
+    }
+
+    .disasterImage2 img {
+        width: 222px;
+    }
+ 
+}
+
+@media only screen and (max-width: 600px) {
+    .disasterImage2 {
+        display: none;
+    }
+
+    .disasterDetails2 {
+        grid-template-columns: auto auto;
+
+    }
+
+    .disasterContent2 p, h1 {
+        text-align: left;
+    }
+}
+.news-sect h1{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
 
 /** Footer Css **/ 
 
