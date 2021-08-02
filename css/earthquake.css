@@ -198,6 +198,9 @@ select{
         grid-template-rows: auto auto auto auto;
     }
 
+    #Error{
+        width: 100%;
+    }
     #earthquakeAlert{
         width: 100%;
     }

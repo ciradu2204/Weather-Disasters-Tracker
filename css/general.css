@@ -297,3 +297,39 @@ color: rgba(170, 169, 128, 0.6);
 }
 
 
+  
+  #loader {
+    display: flex;
+    justify-content: center;
+  
+  
+  }
+
+  #loader > div {
+    width: 8px;
+    height: 8px;
+    margin: 3rem 0.2rem;
+    background: #374140;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+
+  }
+
+
+  #loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  #loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+
+@keyframes bouncing-loader {
+    to {
+      opacity: 0.1;
+      transform: translate3d(0, -16px, 0);
+    }
+  }
+
+

@@ -1,0 +1,207 @@
+
+
+.mainContainer{
+    background-image: url(../images/cyclone/cyclone.png);
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+}
+
+.mainContainer .intro{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 2%;
+    padding-left: 10%;
+   }
+ .mainContainer .intro h1{
+    color: #d9cb9e;
+    text-align: left;
+    font-size: 35px;
+}
+
+.mainContainer .intro p{
+   color: white;
+   padding: 0;
+   width: 50%;
+}
+
+.mainContainer .intro h3{
+   color: white;
+   margin-top: 34px;
+   margin-bottom: 5px;
+
+}
+
+.mainContainer #cycloneInfos{
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+ }
+
+
+
+
+.cycloneInfo {
+    display: flex;
+    width:  25%;
+    padding: 20px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cycloneInfo:nth-child(4), .cycloneInfo:nth-child(2){
+    text-align: center;
+}
+
+.cycloneInfo h2 {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.cycloneInfo p{
+    padding: 0;
+}
+
+.up.iconify{
+    font-size: 50px;
+    align-self: center;
+    color:#d9cb9e;
+    margin: 10px 0;
+
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #d9cb9e;
+    font-size: 35px;
+    align-self: center;
+    margin: 10px 0;
+    color:white;
+}
+.green{
+    color: #374140;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#prev, #next{
+    font-size: 25px;
+    color:#d9cb9e;
+    display: none;
+
+}
+
+/** Latest news **/
+
+.formNews{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(170, 169, 128, 0.5);
+
+}
+
+
+ form{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ select{
+    border: 1px solid #AAA980 !important;
+    background-color: white !important;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%23d9cb9e"/></svg>');
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 99%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+ }
+ input[type="search"]{
+     width: 40%;
+     border: 1px solid #AAA980;
+}
+
+input[type="submit"]{
+    background-color: #D9CB9E;
+    color: black;
+    font-weight: 800;
+    border: none;
+    letter-spacing: 0.2em;
+    padding: 10px;
+}
+
+input[type="submit"], input[type="search"], select{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+ 
+select, input[type="search"]{
+    padding: 8px;
+    outline: none;
+}
+
+@media only screen and (max-width: 1023px) {
+ 
+ #prev, #next{
+     display: flex;
+ }
+
+
+ .cycloneInfo{
+     width: 100%;
+ }
+
+ 
+.mainContainer .intro p {
+    width: 100%;
+}
+
+input[type="search"]{
+    font-size: 10px;
+}
+ 
+}
+
+.news{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ table{
+     width: 100%;
+    background: rgba(170, 169, 128, 0.18);;
+ }
+
+th{
+    flex-basis: 30%;
+    padding: 20px;
+    font-size: 17px;
+    line-height: 34px;
+    font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 400px) {
+    input[type="search"]{
+        font-size: 7px;
+    }
+}
+
