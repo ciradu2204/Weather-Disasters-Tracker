@@ -6,7 +6,7 @@
     <meta name="description" content="Natural Disasters Tracker">
     <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eathquake</title>
+    <title>Cyclone</title>
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/cyclone.css">
     <script defer src="../javaScript/general.js"></script>
@@ -51,79 +51,105 @@
     <section>
 
         <div class="mainContainer">
-           
-              <div class="intro">
+
+            <div class="intro">
                 <h1>CYCLONES</h1>
                 <p>Cyclones can be the most intense storms on Earth. A cyclone is a system of winds rotating
                     counterclockwise in the Northern Hemisphere around a low pressure center. The swirling air rises and
                     cools, creating clouds and precipitation.</p>
                 <h3><span class="iconify" data-icon="carbon:next-outline" data-inline="false"></span> A DEEP BRIEF ON
                     CYCLONES</h3>
+            </div>
+            <div id="cycloneInfos">
+                <div id="prev">
+                    <i class="fas fa-chevron-circle-left"></i>
                 </div>
-                <div id="cycloneInfos">
-                    <div id="prev">
-                        <i class="fas fa-arrow-circle-left"></i>            
-                    </div>
-                    <div class="cycloneInfo" id="1">
-                        <span class="circle iconify" data-icon="carbon:types" data-inline="false"></span>
-                        <h2>TYPES OF CYCLONES </h2>
-                        <p>There are two types of cyclones: middle latitude (mid-latitude) cyclones and tropical
-                            cyclones. Mid-latitude cyclones are the main cause of winter storms in the middle latitudes.
-                        </p>
-                    </div>
+                <div class="cycloneInfo" id="1">
+                    <span class="circle iconify" data-icon="carbon:types" data-inline="false"></span>
+                    <h2>TYPES OF CYCLONES </h2>
+                    <p>There are two types of cyclones: middle latitude (mid-latitude) cyclones and tropical
+                        cyclones. Mid-latitude cyclones are the main cause of winter storms in the middle latitudes.
+                    </p>
+                </div>
 
-                    <div class="cycloneInfo" id="2">
-                        <span class="circle iconify" data-icon="bi:hurricane" data-inline="false"></span>
-                        <h2>DIFFERENT TERMINOLOGIES</h2>
-                        <div>
-                            <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span> the
-                                North Atlantic Ocean and the eastern and central North Pacific Ocean, it is called
-                                "<span class="green">hurricane</span>"</p>
-                            <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span> In
-                                the western North Pacific, it is called "<span class="green" >typhoon</span>"</p>
-                            <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span> In
-                                the southwest Indian Ocean, it is called “<span class="green">tropical cyclone</span>”</p>
+                <div class="cycloneInfo" id="2">
+                    <span class="circle iconify" data-icon="bi:hurricane" data-inline="false"></span>
+                    <h2>DIFFERENT TERMINOLOGIES</h2>
+                    <div>
+                        <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span>
+                            the
+                            North Atlantic Ocean and the eastern and central North Pacific Ocean, it is called
+                            "<span class="green">hurricane</span>"</p>
+                        <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span>
+                            In
+                            the western North Pacific, it is called "<span class="green">typhoon</span>"</p>
+                        <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span>
+                            In
+                            the southwest Indian Ocean, it is called “<span class="green">tropical cyclone</span>”</p>
 
-                        </div>
-                    </div>
-
-                    <div class="cycloneInfo" id="3">
-                        <span class="up iconify " data-icon="cryptocurrency:storm" data-inline="false"></span>
-                        <h2>STORM SURGE</h2>
-                        <p>A storm surge is a rise above the normal water level along a shore resulting from strong
-                            onshore winds and/or reduced atmospheric pressure. Storm surges accompany a tropical cyclone
-                            as it comes ashore. </p>
-                    </div>
-
-                    <div id="next">
-                        <i class="fas fa-chevron-circle-right"></i>
                     </div>
                 </div>
-   
+
+                <div class="cycloneInfo" id="3">
+                    <span class="up iconify " data-icon="cryptocurrency:storm" data-inline="false"></span>
+                    <h2>STORM SURGE</h2>
+                    <p>A storm surge is a rise above the normal water level along a shore resulting from strong
+                        onshore winds and/or reduced atmospheric pressure. Storm surges accompany a tropical cyclone
+                        as it comes ashore. </p>
+                </div>
+
+                <div id="next">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
+            </div>
+
         </div>
 
         <div class="formNews">
-     
-                <h1>LASTEST CYCLONE NEWS</h1>
-                <p>use the search bar to access news in the country of your choose</p>
-                <form>
-                    <input type="search" placeholder="SEARCH FOR COUNTRY"><select id="status">
-                       <option value="ongoing" >ONGOING</option>
-                       <option value="alert">ALERT</option>
-                       <option value="past disaster">PAST DISASTER</option>
-                    </select><input type="submit" value="SEARCH">
-                </form>
-          
+
+            <h1>LASTEST CYCLONE NEWS</h1>
+            <p>use the search bar to access news in the country of your choose</p>
+            <form id="form">
+                <div class="autocomplete"> <input type="text" id="search" placeholder="SEARCH FOR COUNTRY"></div>
+                <select id="status">
+                    <option value="">STATUS</option>
+                    <option value="current">ONGOING</option>
+                    <option value="alert">ALERT</option>
+                    <option value="past">PAST</option>
+                </select>
+                <input type="submit" value="SEARCH">
+            </form>
+
         </div>
 
         <div class="news">
-            <table>
-                <tr>
-                    <th>COUNTRY</th>
-                    <th>DATE/TIME</th>
-                    <th>STATUS</th>
-                </tr>
-       </table> 
+        <div id="tableContainer">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>COUNTRY</th>
+                         <th>Name</th>
+                        <th>DATE</th>
+                        <th>STATUS</th>
+                        <th>MORE INFO</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="slideLeft">
+            <i class="fas fa-chevron-circle-left"></i>
+        </div>
+        <div id="slideRight">
+            <i class="fas fa-chevron-circle-right"></i>
+        </div>
+            <div id="error">
+
+            </div>
+            <div id="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
 
     </section>

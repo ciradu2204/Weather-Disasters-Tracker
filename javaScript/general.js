@@ -28,6 +28,7 @@ mobileBar.addEventListener('click', () =>{
 
 mobileClose.addEventListener('click', () =>{
    mNavbarContent.style.display = "none";
+   mobileClose.style.display = "none";
    mobileBar.style.display = "block";
 
 

@@ -154,7 +154,7 @@ nav span{
    color:#d9cb9e;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     nav{
          grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -224,8 +224,11 @@ nav span{
 
     #dropdownContent {
         top: 18.7em;
-        left: 0.3em;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+     }
 
     #bars i {
         color: #d9cb9e;
