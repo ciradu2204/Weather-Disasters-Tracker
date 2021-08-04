@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="..\css\flood.css">
      <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+     <script src="../javaScript/flood.js"></script>
       </head>
 <body>
     <nav>
@@ -192,13 +193,24 @@
         </div>
     </section>
 
-    <div class= "news-sect">
-        <div>
+    
+        <div class="latestNews">
+
             <h1><strong>LATEST FLOOD NEWS</strong></h1>
-        </div>
-        <div>
-            <i class="fa-solid fa-water-arrow-up"></i>
-        </div>
+            <br>
+            <form id="form">
+                 <select id="status">
+                    <option value="">filter status</option>
+                    <option value="current">ONGOING</option>
+                    <option value="alert">ALERT</option>
+                    <option value="past">PAST DISASTER</option>
+                </select>
+                <div class="autocomplete"> <input type="text" id="search" 
+                    placeholder="search for country"></div>
+              
+        
+            </form>
+        
     </div>
 </main>
     <footer>
