@@ -165,38 +165,7 @@ input[type="text"]{
     cursor: pointer;
 }
 
- /* autocomplete css from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
-
-.autocomplete {
-    position: relative;
-    width: calc(500px);
-  }
-   
-.autocomplete-items {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    width: 40%;
-    z-index: 99;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-.autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    border-bottom: 1px solid #d4d4d4;
-}
-.autocomplete-items div:hover {
-    background-color: #e9e9e9;
-}
-.autocomplete-active {
-    background-color: DodgerBlue !important;
-    color: #ffffff;
-}
-
+ 
 .news{
     display: flex;
     flex-direction: column;

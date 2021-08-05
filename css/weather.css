@@ -1,195 +1,236 @@
-
- html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
- }
+}
 
- #container{
+#container {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 90vh;
+}
 
- }
+#locationAndDate {
+    color: white;
+    margin-right: 10px;
+    text-align: right;
+}
 
- #locationAndDate{
-     color: white;
-     margin-right: 10px;
-     text-align: right;
- }
+.autocomplete {
+    margin-left: 10px;
+    padding-top: 20px;
+}
 
- #search {
-     margin-left: 10px ;
-     padding-top: 20px;
- }
+input[type="text"] {
+    border: initial;
+    padding: 5px;
+    border-bottom: 1px solid #d9cb9e;
+    border-radius: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
 
- #search input[type="text"]{
-  border: initial;
-  padding: 5px;
-   border-bottom: 1px solid #d9cb9e;
-   border-radius: none;
-   background-color: transparent;
-   outline: none;
-   color: white;
- }
+.autocomplete .fas {
+    color: #d9cb9e;
+    cursor: pointer;
+}
 
- #search .fas{
-     color: #d9cb9e;
-     cursor: pointer;
- }
-
- ::placeholder{
+::placeholder {
     text-align: center;
     color: rgba(189, 195, 199, 0.6);
- }
-
- #tempInfo {
-     margin-left: 10px;
- }
-
- #location h1{
-     padding-top: 0;
-     text-align: right;
-     font-weight: normal;
- }
-
- #date h2{
-     font-weight: 300;
-     text-align: right;
-     padding-bottom: 0;
- }
- 
- #forecastAndMap{
-     position: absolute;
-     bottom: 0;
-     width: 100%;
-     height: 400px;
-     display: flex;
-     justify-content: space-between;
- }
-  
- #map{
-    width: 600px;
-    height: auto;
-    margin-right: 10px;
-  }
-
-table{
-     width: 100%;
-     border-collapse: collapse;
- }
-
- #foreCast h1{
-     text-align: left;
-     padding-left: 20px;
-     padding-top: 10px ;
-     padding-bottom: 10px;
 }
 
-table th{
-    text-align: center;
-     border: 0.2px solid white;
-
+#tempInfo {
+    margin-left: 10px;
 }
 
-table th:nth-child(1){
-     border-left: initial;
-}
-table th:nth-child(4){
-    border-right: initial;
-}
-
-table tr td:nth-child(1){
-    border-left: initial;
- }
-
- table tr td:nth-child(4){
-    border-right: initial;
- }
-
- table tr:nth-child(7) td{
-     border-bottom: initial;
- }
-
-table td{
-    text-align: center;
-    border: 0.2px solid white;
-
+#location h1 {
+    padding-top: 0;
+    text-align: right;
+    font-weight: normal;
 }
 
-table th:nth-child(1){
-    padding-left: 20px;
-    text-align: left;
-
-}
-table td:nth-child(1){
-    text-align: left;
-    padding-left: 20px;
-
-
+#date h2 {
+    font-weight: 300;
+    text-align: right;
+    padding-bottom: 0;
 }
 
-#dateAndTime{
+#forecastAndMap {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
-  }
+    align-items: flex-end;
+}
 
-#tempInfo{
+.mapContainer {
+    width: 48%;
+    height: 400px;
+    margin-right: 10px;
+}
+#map {
+    height: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#foreCast h1 {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table th {
+    text-align: center;
+    border: 0.2px solid white;
+}
+
+table th:nth-child(1) {
+    border-left: initial;
+}
+table th:nth-child(4) {
+    border-right: initial;
+}
+
+table tr td:nth-child(1) {
+    border-left: initial;
+}
+
+table tr td:nth-child(4) {
+    border-right: initial;
+}
+
+table tr:nth-child(7) td {
+    border-bottom: initial;
+}
+
+table td {
+    text-align: center;
+    border: 0.2px solid white;
+}
+
+table th:nth-child(1) {
+    padding-left: 20px;
+    text-align: left;
+}
+table td:nth-child(1) {
+    text-align: left;
+    padding-left: 20px;
+}
+
+#dateAndTime {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+#tempInfo {
     display: flex;
     flex-direction: row;
-     gap:10px;
+    gap: 10px;
 }
 
-#tempInfo img{
+#tempInfo img {
     width: 100px;
-
+    height: auto;
 }
 
-#tempType{
+#tempType {
     font-size: 40px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.99);
 }
 
-#description{
+#description {
     color: white;
     letter-spacing: 1px;
-
 }
 
-#tempInfo > div:nth-child(1){
+#tempInfo > div:nth-child(1) {
     display: flex;
     flex-direction: column;
 }
 
-#temp{
+#temp {
     color: white;
     font-size: 80px;
 }
 
-#foreCast{
-    width: 600px;
+#foreCast {
+    width: 48%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background: rgba(55, 65, 64, 0.77);
-    color:white;
+    color: white;
     margin-left: 10px;
 }
 
-.row2{
+.row2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
- }
+}
 
- .row2 img{
-     width: 20px;
-     height: 20px;
- }
+.row2 img {
+    width: 20px;
+    height: 20px;
+}
 
- .active{
-     color: rgba(255, 255, 255, 0.5) ;
- }
+.active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 800px) {
+
+    #container{
+        position: initial;
+    }
+    
+    #forecastAndMap{
+        flex-direction: column;
+        margin-top: 10px;
+        gap:20px;
+        position: initial;
+     }
+
+    #dateAndTime{
+        flex-direction: column;
+    }
+
+    #locationAndDate{
+        margin-left: 10px;
+    }
+
+    #location h1{
+        text-align: left;
+    }
+
+    #date h2{
+        text-align: left;
+    }
+
+
+    .mapContainer{
+        width: 98%;
+        align-self: center;
+        margin-right: 0;
+        height: 400px;
+    }
+    #foreCast{
+        align-self: center;
+        margin-left: 0;
+        width: 98%;
+    }
+}

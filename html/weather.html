@@ -27,9 +27,9 @@
             </div>
         </div>
         <div id="content">
-            <a class="active homePage" href="#">HOME</a>
+            <a class="homePage" href="#">HOME</a>
             <a class="authorPage" href="../html/author.html">AUTHOR</a>
-            <a class="weatherPage" href="#">WEATHER</a>
+            <a class="active weatherPage" href="#">WEATHER</a>
             <div id="dropDown">
                 <div>
                     <span class="disastersPage">DISASTERS</span>
@@ -47,9 +47,9 @@
 
     <section id="container">
 
-        <div id="search">
-            <input type="text" autocomplete="on" class="search-box" placeholder="Search for a country">
-             <i id="searchIcon" class="fas fa-search"></i>
+        <div class="autocomplete">
+            <input type="text" id="search" class="search-box" placeholder="Search for a country">
+            <i id="searchIcon" class="fas fa-search"></i>
         </div>
 
         <div id="dateAndTime">
@@ -58,7 +58,8 @@
                 <img src="" alt="" id="weather-icon">
                 <div id="temp"> </div>
                 <div>
-                    <div id="tempType">  <a i class="active" id="degreeCelsius" > °C  </a><a id="degreeFanheit"> °F  </a></div>
+                    <div id="tempType"> <a i class="active" id="degreeCelsius"> °C </a><a id="degreeFanheit"> °F </a>
+                    </div>
                     <div id="description"></div>
                 </div>
 
@@ -89,20 +90,58 @@
                             <th>PERCIP</th>
                         </tr>
                     </thead>
-  
+
                 </table>
 
             </div>
 
-            <div id="map">
+            <div class="mapContainer">
+                <div id="map">
 
+                </div>
             </div>
-            
 
         </div>
 
     </section>
+    <footer>
+        <div class="explore">
+            <span>EXPLORE</span>
+            <ul>
+                <a href="../index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="../html/author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="">
+                    <li>WEATHER</li>
+                </a>
+                <a href="../html/earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="./html/geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
+        </div>
+        <div class="data">
+            <span>DATA RETRIEVED FROM</span>
+            <ul>
+                <a href="https://reliefweb.int/" target="_blank">
+                    <li>RELIEF WEB</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
+
+            <p>This page provides you with an overview of what the web application provides.</p>
+
+        </div>
+    </footer>
 </body>
-<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA&callback=initMap"></script>
+<script async defer type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA&callback=initMap"></script>
 
 </html>

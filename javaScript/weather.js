@@ -54,7 +54,7 @@ const removeContent = () => {
 
 }
 
-searchIcon.addEventListener('click', (event) => {
+searchIcon.addEventListener('click', () => {
     let searchBox = document.querySelector(".search-box");
     removeContent();
     dateBuilder();
@@ -71,7 +71,7 @@ async function getResults(country) {
                 .then(json => {
                     console.log(json);
                     const weeklyData = json.daily.filter((ele, index) => index > 0);
-                    const iconURL = "http://openweathermap.org/img/w/"
+                     const iconURL = "http://openweathermap.org/img/w/"
                     const tbody = document.createElement("tbody");
                     tbody.id = "tbody";
                     let location = document.getElementById("location");
@@ -81,14 +81,14 @@ async function getResults(country) {
                     location.appendChild(h1);
                     let icon = document.getElementById("weather-icon");
                     let desc = document.getElementById("description");
-                    var temp = document.getElementById("temp");
+                    let temp = document.getElementById("temp");
                     icon.src = `${iconURL + json.current.weather[0].icon}.png` ;
                     const descriptionData = json.current.weather[0].description;
                     desc.innerHTML = descriptionData.charAt(0).toUpperCase() + descriptionData.slice(1);
                     const restOfDays = days.slice(date.getDay() + 1)
-                    const otherDays = days.splice(0, date.getDay() + 1)
-                    const combinedDays = restOfDays.concat(otherDays)
-                    for (var i = 0; i < combinedDays.length; i++) {
+                    const otherDays = days.slice(0, date.getDay() + 1)
+                    const combinedDays = restOfDays.concat(otherDays);
+                     for (var i = 0; i < combinedDays.length; i++) {
                         const row = document.createElement("tr");
                         headerTemp.innerHTML = `TEMP (${deg})`
                         const row_data1 = document.createElement("td")
@@ -220,7 +220,7 @@ async function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: parseFloat(lat), lng: parseFloat(long) },
-        zoom: 8
+        zoom: 7
     });
 
     new google.maps.Marker({
