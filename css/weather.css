@@ -75,8 +75,21 @@ input[type="text"] {
     height: 400px;
     margin-right: 10px;
 }
+
+
 #map {
-    height: 100%;
+    height: calc(100% - 50px);
+}
+
+
+.mapContainer h1{
+    text-align: left;
+    height: 50px;
+     padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:rgba(55, 65, 64, 0.77) ;
+    color: white;
 }
 table {
     width: 100%;
@@ -192,9 +205,15 @@ table td:nth-child(1) {
     color: rgba(255, 255, 255, 0.5);
 }
 
+#loader{
+    height: 100vh;
+    
+}
+
 @media only screen and (max-width: 800px) {
 
     #container{
+        height: auto;
         position: initial;
     }
     
@@ -226,11 +245,27 @@ table td:nth-child(1) {
         width: 98%;
         align-self: center;
         margin-right: 0;
-        height: 400px;
-    }
+     }
+
+    
+ 
+
     #foreCast{
         align-self: center;
         margin-left: 0;
         width: 98%;
     }
+}
+
+@media only screen and (min-width: 800px) {
+
+    #container{
+        position: relative;
+    }
+
+    #forecastAndMap{
+        position: absolute;
+    }
+
+
 }

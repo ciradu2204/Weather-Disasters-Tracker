@@ -13,6 +13,7 @@ let searchIcon = document.getElementById("searchIcon")
 const headerTemp = document.getElementById("tempH");
 const deg = "°C";
 let geocoder = null;
+let loading = false;
 
 const dateBuilder = () => {
     var optionsMonth = { month: 'long' };
@@ -26,7 +27,7 @@ const dateBuilder = () => {
     dateDiv.appendChild(h2);
 }
 
-const changeMap = async(value) =>{
+const changeMap = async (value) => {
     await getCoordinate(value);
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: parseFloat(lats), lng: parseFloat(longs) },
@@ -39,7 +40,7 @@ const changeMap = async(value) =>{
         title: value,
     });
 }
- 
+
 
 
 const removeContent = () => {
@@ -64,93 +65,112 @@ searchIcon.addEventListener('click', () => {
 
 });
 
+const isLoading = () => {
+    if (loading) {
+        document.getElementById("container").style.display = "none";
+        document.getElementById("loader").style.display = "flex"
+    } else {
+        document.getElementById("container").style.display = "block";
+        document.getElementById("loader").style.display = "none"
+    }
+}
+
+
 async function getResults(country) {
-       await getCoordinate(country);
-          await  fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lats}&lon=${longs}&exclude=hourly,minutely,alerts&units=metric&appid=${apiKey}`)
-                .then(forecastResponse => forecastResponse.json())
-                .then(json => {
-                    console.log(json);
-                    const weeklyData = json.daily.filter((ele, index) => index > 0);
-                     const iconURL = "http://openweathermap.org/img/w/"
-                    const tbody = document.createElement("tbody");
-                    tbody.id = "tbody";
-                    let location = document.getElementById("location");
-                    const h1 = document.createElement("h1");
-                    const myArr = json.timezone.split("/");
-                    h1.innerHTML = `${myArr[1]} , ${countryName}`
-                    location.appendChild(h1);
-                    let icon = document.getElementById("weather-icon");
-                    let desc = document.getElementById("description");
-                    let temp = document.getElementById("temp");
-                    icon.src = `${iconURL + json.current.weather[0].icon}.png` ;
-                    const descriptionData = json.current.weather[0].description;
-                    desc.innerHTML = descriptionData.charAt(0).toUpperCase() + descriptionData.slice(1);
-                    const restOfDays = days.slice(date.getDay() + 1)
-                    const otherDays = days.slice(0, date.getDay() + 1)
-                    const combinedDays = restOfDays.concat(otherDays);
-                     for (var i = 0; i < combinedDays.length; i++) {
-                        const row = document.createElement("tr");
-                        headerTemp.innerHTML = `TEMP (${deg})`
-                        const row_data1 = document.createElement("td")
-                        row_data1.innerHTML = combinedDays[i];
-                        const row_data2 = document.createElement("td")
-                        row_data2.className = "row2"
-                        const row_data3 = document.createElement("td");
-                        row_data3.innerHTML = `${weeklyData[i].humidity} <span> %</span>`
-                        const row_data4 = document.createElement("td");
-                        row_data4.innerHTML = `${weeklyData[i].pop} <span> %</span>`
-                        const icon = weeklyData[i].weather[0].icon;
-                        const img = document.createElement('img');
-                        img.src = `${iconURL + icon}` + ".png";
+    loading = true;
+    isLoading(loading);
+    await getCoordinate(country);
+    await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lats}&lon=${longs}&exclude=hourly,minutely,alerts&units=metric&appid=${apiKey}`)
+        .then(forecastResponse => forecastResponse.json())
+        .then(json => {
+            loading = false;
+            isLoading(loading);
 
-                        row_data2.appendChild(img);
-                        const p = document.createElement("p");
-                        p.id = "forecastTemp"
-                        const span = document.createElement("span");
-                        temp.innerHTML = `${Math.round(weeklyData[i].temp.max)}`;
-                        p.innerHTML = ` ${weeklyData[i].temp.max}`
-                        span.innerHTML = `°`
-                        row_data2.appendChild(p);
-                        row_data2.appendChild(span);
-                        row.appendChild(row_data1);
-                        row.appendChild(row_data2);
-                        row.appendChild(row_data3);
-                        row.appendChild(row_data4);
-                        tbody.appendChild(row)
-                        table.appendChild(tbody);
+            const weeklyData = json.daily.filter((ele, index) => index > 0);
+            const iconURL = "http://openweathermap.org/img/w/"
+            const tbody = document.createElement("tbody");
+            tbody.id = "tbody";
+            let location = document.getElementById("location");
+            const h1 = document.createElement("h1");
+            const myArr = json.timezone.split("/");
+            h1.innerHTML = `${myArr[1]} , ${countryName}`
+            location.appendChild(h1);
+            let icon = document.getElementById("weather-icon");
+            let desc = document.getElementById("description");
+            let temp = document.getElementById("temp");
+            icon.src = `${iconURL + json.current.weather[0].icon}.png`;
+            const descriptionData = json.current.weather[0].description;
+            desc.innerHTML = descriptionData.charAt(0).toUpperCase() + descriptionData.slice(1);
+            const restOfDays = days.slice(date.getDay() + 1)
+            const otherDays = days.slice(0, date.getDay() + 1)
+            const combinedDays = restOfDays.concat(otherDays);
+            for (var i = 0; i < combinedDays.length; i++) {
+                const row = document.createElement("tr");
+                headerTemp.innerHTML = `TEMP (${deg})`
+                const row_data1 = document.createElement("td")
+                row_data1.innerHTML = combinedDays[i];
+                const row_data2 = document.createElement("td")
+                row_data2.className = "row2"
+                const row_data3 = document.createElement("td");
+                row_data3.innerHTML = `${weeklyData[i].humidity} <span> %</span>`
+                const row_data4 = document.createElement("td");
+                row_data4.innerHTML = `${weeklyData[i].pop} <span> %</span>`
+                const icon = weeklyData[i].weather[0].icon;
+                const img = document.createElement('img');
+                img.src = `${iconURL + icon}` + ".png";
 
-                    }
+                row_data2.appendChild(img);
+                const p = document.createElement("p");
+                p.id = "forecastTemp"
+                const span = document.createElement("span");
+                temp.innerHTML = `${Math.round(weeklyData[i].temp.max)}`;
+                p.innerHTML = ` ${weeklyData[i].temp.max}`
+                span.innerHTML = `°`
+                row_data2.appendChild(p);
+                row_data2.appendChild(span);
+                row.appendChild(row_data1);
+                row.appendChild(row_data2);
+                row.appendChild(row_data3);
+                row.appendChild(row_data4);
+                tbody.appendChild(row)
+                table.appendChild(tbody);
 
-
-                    const container = document.getElementById("container")
-                    switch (json.current.weather[0].main) {
-                        case "Clouds":
-                            container.style.backgroundImage = `url("../images/weather/clouds.jpeg")`;
-                            break;
-
-                        case "Thunderstorm":
-                            container.style.backgroundImage = `url("../images/weather/storm.jpeg")`;
-                            break;
-
-                        case "Drizzle":
-                        case "Rain":
-                        case "Mist":
-                            container.style.backgroundImage = `url("../images/weather/rainy.jpeg")`;
-                            break;
-
-                        case "Snow":
-                            container.style.backgroundImage = `url("../images/weather/snow.jpeg")`;
-                            break;
+            }
 
 
-                        case "Clear":
-                            container.style.backgroundImage = `url("../images/weather/sunny.jpeg")`;
-                            break;
+            const container = document.getElementById("container")
+            switch (json.current.weather[0].main) {
+                case "Clouds":
+                    container.style.backgroundImage = `url("../images/weather/clouds.jpeg")`;
+                    break;
 
-                    }
-                })
-                .catch(error => console.log(error))
- 
+                case "Thunderstorm":
+                    container.style.backgroundImage = `url("../images/weather/storm.jpeg")`;
+                    break;
+
+                case "Drizzle":
+                case "Rain":
+                case "Mist":
+                    container.style.backgroundImage = `url("../images/weather/rainy.jpeg")`;
+                    break;
+
+                case "Snow":
+                    container.style.backgroundImage = `url("../images/weather/snow.jpeg")`;
+                    break;
+
+
+                case "Clear":
+                    container.style.backgroundImage = `url("../images/weather/sunny.jpeg")`;
+                    break;
+
+            }
+        })
+        .catch(error => {
+            loading = false;
+            isLoading(loading);
+            console.log(error)
+        })
+
 }
 
 
@@ -210,7 +230,7 @@ degreeF.addEventListener('click', () => {
     }
 })
 
- 
+
 
 var map;
 async function initMap() {
@@ -236,7 +256,7 @@ const getCoordinate = async (country) => {
     geocoder = new google.maps.Geocoder();
     await geocoder.geocode({ componentRestrictions: { country: country, } })
         .then((response) => {
-            countryName =  response.results[0].formatted_address;
+            countryName = response.results[0].formatted_address;
             lats = response.results[0].geometry.location.lat();
             longs = response.results[0].geometry.location.lng();
         })
@@ -248,8 +268,8 @@ window.addEventListener('load', () => {
     getResults("UK");
 })
 
-      
- 
+
+
 
 
 

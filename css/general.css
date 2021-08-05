@@ -242,7 +242,7 @@ footer{
     border:1px solid rgba(55, 65, 64, 0.85);
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+     flex-direction: row;
     justify-content: center;
     padding: 10px 0;
  }
@@ -305,7 +305,7 @@ color: rgba(170, 169, 128, 0.6);
   #loader {
     display: flex;
     justify-content: center;
-  
+    align-items: center;
   
   }
 
