@@ -1,0 +1,195 @@
+
+ html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+ }
+
+ #container{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+ }
+
+ #locationAndDate{
+     color: white;
+     margin-right: 10px;
+     text-align: right;
+ }
+
+ #search {
+     margin-left: 10px ;
+     padding-top: 20px;
+ }
+
+ #search input[type="text"]{
+  border: initial;
+  padding: 5px;
+   border-bottom: 1px solid #d9cb9e;
+   border-radius: none;
+   background-color: transparent;
+   outline: none;
+   color: white;
+ }
+
+ #search .fas{
+     color: #d9cb9e;
+     cursor: pointer;
+ }
+
+ ::placeholder{
+    text-align: center;
+    color: rgba(189, 195, 199, 0.6);
+ }
+
+ #tempInfo {
+     margin-left: 10px;
+ }
+
+ #location h1{
+     padding-top: 0;
+     text-align: right;
+     font-weight: normal;
+ }
+
+ #date h2{
+     font-weight: 300;
+     text-align: right;
+     padding-bottom: 0;
+ }
+ 
+ #forecastAndMap{
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 400px;
+     display: flex;
+     justify-content: space-between;
+ }
+  
+ #map{
+    width: 600px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+table{
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ #foreCast h1{
+     text-align: left;
+     padding-left: 20px;
+     padding-top: 10px ;
+     padding-bottom: 10px;
+}
+
+table th{
+    text-align: center;
+     border: 0.2px solid white;
+
+}
+
+table th:nth-child(1){
+     border-left: initial;
+}
+table th:nth-child(4){
+    border-right: initial;
+}
+
+table tr td:nth-child(1){
+    border-left: initial;
+ }
+
+ table tr td:nth-child(4){
+    border-right: initial;
+ }
+
+ table tr:nth-child(7) td{
+     border-bottom: initial;
+ }
+
+table td{
+    text-align: center;
+    border: 0.2px solid white;
+
+}
+
+table th:nth-child(1){
+    padding-left: 20px;
+    text-align: left;
+
+}
+table td:nth-child(1){
+    text-align: left;
+    padding-left: 20px;
+
+
+}
+
+#dateAndTime{
+    display: flex;
+    justify-content: space-between;
+  }
+
+#tempInfo{
+    display: flex;
+    flex-direction: row;
+     gap:10px;
+}
+
+#tempInfo img{
+    width: 100px;
+
+}
+
+#tempType{
+    font-size: 40px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.99);
+}
+
+#description{
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+#tempInfo > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+
+#temp{
+    color: white;
+    font-size: 80px;
+}
+
+#foreCast{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: rgba(55, 65, 64, 0.77);
+    color:white;
+    margin-left: 10px;
+}
+
+.row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+ }
+
+ .row2 img{
+     width: 20px;
+     height: 20px;
+ }
+
+ .active{
+     color: rgba(255, 255, 255, 0.5) ;
+ }
