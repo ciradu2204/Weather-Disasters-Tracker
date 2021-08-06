@@ -53,22 +53,7 @@ left: 26px;
 top: 775px;
 
 }
-
-
-h1{
   
-font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 45px;
-text-align: center;
-letter-spacing: 5px;
-
-color: #000000;
-}
-
-
 
 
 /** Footer Css **/ 
@@ -135,3 +120,4 @@ color: rgba(170, 169, 128, 0.6);
     }
     
 }
+ 

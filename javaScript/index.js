@@ -1,5 +1,7 @@
+   
+
 let loading = true; 
-if(loading)document.getElementById("loaderContainer").style.display= "block";
+if(loading)document.getElementById("loader").style.display= "flex";
 
 const fetchData = (async () => {
       await fetch("https://api.reliefweb.int/v1/disasters?appname=rwint-user-0&profile=list&preset=latest&slim=1&query[value]=%22earthquake%22%20OR%20%22flood%22%20OR%20%22Tropical%20Cylone%22&query[operator]=AND")
@@ -24,7 +26,7 @@ const fetchData = (async () => {
                     div1.setAttribute("class", "div1")
                     div2.setAttribute("class", "div2")
                     let img = document.createElement("img");
-                    img.src= (types[0] == "Flood")? "./images/overview/Flood.png": (types[0]== "Earthquake")? "./images/overview/earthquakes.png":"./images/Cyclone.png"
+                     img.src= (types[0] == "Flood" || "Flash Flood")? "./images/overview/Flood.png": (types[0]== "Earthquake")? "./images/overview/earthquakes.png":"./images/Cyclone.png"
                     div1.appendChild(img);
                     let status = capitalizeFirstLetter(disaster.fields.status);
                     let h3 = document.createElement('h3');
@@ -50,7 +52,7 @@ const fetchData = (async () => {
             console.log(error)
         })
         loading = false;
-        if(loading == false) document.getElementById("loaderContainer").style.display= "none";
+        if(loading == false) document.getElementById("loader").style.display= "none";
 });
 
 setTimeout(() => {

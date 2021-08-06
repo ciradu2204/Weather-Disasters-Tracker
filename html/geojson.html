@@ -10,32 +10,40 @@
     
         <link rel="stylesheet" href="..\css\geojson.css">
         <link rel="stylesheet" href="../css/general.css">
-      <script defer src="../javaScript/author.js"></script>
+        <script defer src = "../javaScript/general.js"></script>
      <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
 
       </head>
 <body>
+   
     <nav>
+        <div class="mobileView">
         <div id="logo">
             <a href="#">LOGO</a>
         </div>
-        <div class="content">
-            <div class="bars">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div id="pages">
-                <a class=" homePage" href="..\index.html">HOME</a>
-                <a class="active authorPage" href="..\html\earthquake.html">AUTHOR</a>
-                <a class="weatherPage" href="#">WEATHER</a>
-                <div class="dropDown">
-                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
-                    <div class="dropdownContent">
-                        <a href="..\html\earthquake.html">EARTHQUAKE</a>
-                        <a href="#">CYCLONE</a>
-                        <a href="#">FLOOD</a>
+        <div id="bars">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div id="close">
+            <i class="fas fa-times"></i>
+        </div>
+        </div>
+        <div id="content">
+                <a class="active homePage" href="../index.html">HOME</a>
+                <a class="authorPage" href="./author.html">AUTHOR</a>
+                <a class="weatherPage" href="./weather.html">WEATHER</a>
+                <div id="dropDown">
+                    <div>
+                    <span class="disastersPage">DISASTERS</span>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                   </div>
+                    <div id="dropdownContent">
+                        <a href="./earthquake.html">EARTHQUAKE</a>
+                        <a href="./cyclone.html">CYCLONE</a>
+                        <a href="./flood.html">FLOOD</a>
                     </div>
-                </div>
-            </div>
+             </div>
         </div>
     </nav>
 <main>
@@ -97,26 +105,24 @@
     <div class="explore">
     <span>EXPLORE</span>
         <ul>
-            <a href="..\html\index.html"><li>HOME</li></a>
-            <a href="..\html\author.html"><li>AUTHOR</li></a>
-            <a href=""><li>WEATHER</li></a>
-            <a href=""><li>DISASTERS</li></a>
-            <a href="..\html\geojson.html"><li>GEOJSON</li></a>
+            <a href="../index.html"><li>HOME</li></a>
+            <a href="./author.html"><li>AUTHOR</li></a>
+            <a href="./weather.html"><li>WEATHER</li></a>
+            <a href="./earthquake.html"><li>DISASTERS</li></a>
+            <a href="#"><li>GEOJSON</li></a>
          </ul>
     </div>
     <div class="data">
         <span>DATA RETRIEVED FROM</span>
              <ul>
-             <a href="https://weatherstack.com/" target="_blank"><li>weatherstack.com</li></a>
-             <a href="https://reliefweb.int/" target="_blank"><li>earthquake.usgs.com</li></a>
-             <a href="https://reliefweb.int/" target="_blank"><li>cloud.google.com/maps-platform-</li></a>
-              </ul>
+             <a href="https://geojson.org" target="_blank"><li>GeoJSON</li></a>
+            </ul>
      </div>
    <div class="pageDetails">
     <span>PAGE DETAILS</span>
 
        <p>GEOJSON Page provides with the information needed to understand the concepts behind 
-           geojson
+           geojson data. 
        </p>
 
    </div>

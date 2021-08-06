@@ -3,6 +3,7 @@ body,
 html {
     font-family: "Poppins", sans-serif;
 }
+ 
 
 /** General Css **/
 * {
@@ -11,13 +12,38 @@ html {
     box-sizing: border-box;
 }
 
+h1 {
+    
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 18px;
+     text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
 
 
 p{ 
-font-style: normal;
-
-padding: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 10px;
 }
+
 
 /** Nav bar styling**/
 
@@ -41,12 +67,10 @@ nav a {
     font-size: 0.7em;
 }
 
-#pages {
-    display: grid;
-    grid-template-columns: 8em 8em 8em 8em;
-    grid-template-rows: auto;
-    justify-content: end;
-    margin-right: 7em;
+nav span{
+    font-size: 0.7em;
+    color: white;
+
 }
 
 #logo {
@@ -59,86 +83,129 @@ nav a {
     color: #d9cb9e;
 }
 
-#pages .active {
+#dropDown div:first-child{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#content .active {
     color: #d9cb9e;
 }
 
-.disastersPage .fa-angle-down {
-    font-size: 1.4em;
+#iconUp, #iconDown{
+    cursor: pointer;
+    font-size: 25px;
+     margin: auto;
+    height: 28px;
+ 
 }
 
-.dropDown {
+#iconDown {
+    display: none   
+}
+
+.disastersPage {
     position: relative;
-    display: inline-block;
+    display: inline;
 }
 
-.dropdownContent {
+#dropdownContent {
     position: absolute;
-    top: 1.8em;
+    top: 2.7em;
     display: none;
     text-align: center;
     margin-top: 0.8em;
-    width: 8em;
+    padding: 5px;
     background: rgba(55, 65, 64, 0.8);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     z-index: 1;
 }
-.dropdownContent a:nth-child(1)::after,
-.dropdownContent a:nth-child(2)::after {
+#dropdownContent a:nth-child(1)::after,
+#dropdownContent a:nth-child(2)::after {
     content: "";
     display: block;
     height: 0.05em;
     background-color: #f3f3f36e;
 }
 
-.dropdownContent a {
+#dropdownContent a {
     display: block;
 }
-.dropdownContent a:hover {
-    background-color: #f3f3f36e;
-}
+ 
 
-.dropDown:hover .dropdownContent {
-    display: block;
-}
-
-.bars {
+#bars {
     display: none;
 }
 
-@media only screen and (max-width: 800px) {
-    .bars {
+#close {
+    display: none;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 8em 8em 8em 8em;
+    grid-template-rows: auto;
+    justify-content: end;
+    margin-right: 7em;
+}
+
+#content a:hover{
+   color:#d9cb9e;
+}
+
+@media only screen and (max-width: 700px) {
+    nav{
+         grid-template-columns: auto;
+        grid-template-rows: auto auto;
+     }
+    
+    .mobileView{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #bars {
         display: block;
         margin-right: 1em;
-        position: relative;
+        cursor: pointer;
     }
 
-    body{
-        position: relative;
+    #close {
+        display: none;
+        color: #d9cb9e;
+        cursor: pointer;
+        margin-right: 1em;
+        z-index: 2;
+
+     }
+
+     body{
+         position: relative;
+     }
+
+    #dropdownContent{
+        padding: 0;
     }
 
-    #pages {
+    #content {
         display: none;
         position: absolute;
         grid-template-columns: auto;
+        padding: 60px 5px 0 5px;
         grid-template-rows: 4em 4em 4em 4em;
         height: 100%;
+        width: 35%;
         background-color: rgba(55, 65, 64, 0.8);
         text-align: center;
-        top: 50px;
-        right: -112px;
         bottom: 0;
+        margin-right: 0;
+        right: 0;
+         z-index: 1;
     }
-
-    .content:hover #pages {
-        display: block;
-    }
-
-    #pages a {
-        padding: 5px;
-    }
-    #pages > a::after,
-    .dropDown a.disastersPage::after {
+    
+ 
+    #content > a::after{
         content: "";
         display: block;
         width: 100%;
@@ -146,41 +213,161 @@ nav a {
         background-color: #f3f3f36e;
     }
 
-    nav {
-        justify-content: space-between;
-    }
-
-    .dropDown:hover a.disastersPage::after {
-        display: none;
+    .disastersPage {
+        display: inline;
+    
     }
 
     #logo {
         margin-left: 1em;
     }
 
-    .bars i {
+    #dropdownContent {
+        top: 18.7em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+     }
+
+    #bars i {
         color: #d9cb9e;
     }
 }
-h1 {
+
+/** Footer Css **/ 
+
+footer{
+    background-color: #374140;
+    border:1px solid rgba(55, 65, 64, 0.85);
+    box-sizing: border-box;
+    display: flex;
+     flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+ }
+
+footer a{
+    text-decoration: none;
+}
+
+ footer .data{
+    flex-basis: 35%;
+}
+
+footer p{
+    padding: 0;
+}
+
+footer .explore{
+    flex-basis: 28%;
+}
+
+footer .pageDetails{
+    flex-basis: 24%;
+}
+
+footer span{
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 34px;
+letter-spacing: 5px;
+color: white;
+}
+
+footer ul li, footer p{
+list-style-type: none;
+font-weight: 600;
+font-size: 11px;
+line-height: 30px;
+letter-spacing: 5px;
+color: rgba(170, 169, 128, 0.6);
+}
+
+
+@media only screen and (max-width: 450px) {
+    footer{
+        flex-direction: column;
+        flex-basis: unset;
+        text-align: center;
+    }
+
+    footer div{
+        padding: 10px;
+    }
     
-    font-size: 20px;
-    text-align: center;
-    padding-top: 30px;
-    letter-spacing: 2px;
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 18px;
-     text-align: center;
-    letter-spacing: 1px;
-    padding-bottom: 30px;
+/*** Loader Css ***/
+
+  
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  #loader > div {
+    width: 8px;
+    height: 8px;
+    margin: 3rem 0.2rem;
+    background: #374140;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+
+  }
+
+
+  #loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  #loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+
+@keyframes bouncing-loader {
+    to {
+      opacity: 0.1;
+      transform: translate3d(0, -16px, 0);
+    }
+  }
+
+
+ 
+  /* autocomplete css from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
+
+.autocomplete {
+    position: relative;
+    width: calc(500px);
+  }
+   
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    width: 40%;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
 }
 
-h3{
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 1px;
 
-}
