@@ -4,7 +4,7 @@ const api = {
 }
 let longs = null;
 let lats = null;
-let countryName = "";
+let formatedAddress = "";
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const table = document.getElementById("table");
 const date = new Date();
@@ -40,8 +40,10 @@ const changeMap = async (value) => {
     });
 }
 
-
-
+const activatePlacesSearch = () =>{
+    let input = document.getElementById("search");
+      new google.maps.places.Autocomplete(input);
+}
 const removeContent = () => {
     const tbody = document.getElementById("tbody");
     table.removeChild(tbody);
@@ -56,7 +58,6 @@ const removeContent = () => {
 
 searchIcon.addEventListener('click', () => {
     let searchBox = document.querySelector(".search-box");
-
     removeContent();
     dateBuilder();
     getResults(searchBox.value);
@@ -77,23 +78,22 @@ const isLoading = () => {
 
 
 async function getResults(city) {
-    loading = true;
+     loading = true;
     isLoading(loading);
      await getCoordinate(city);
     await fetch(`${api.base}onecall?lat=${lats}&lon=${longs}&exclude=hourly,minutely,alerts&units=metric&appid=${api.apiKey}`)
         .then(forecastResponse => forecastResponse.json())
         .then(json => {
-            loading = false;
+             loading = false;
             isLoading(loading);
-
             const weeklyData = json.daily.filter((ele, index) => index > 0);
             const iconURL = "http://openweathermap.org/img/w/"
             const tbody = document.createElement("tbody");
             tbody.id = "tbody";
             let location = document.getElementById("location");
             const h1 = document.createElement("h1");
-            const myArr = city.charAt(0).toUpperCase() + city.slice(1);
-            h1.innerHTML = `${myArr} , ${countryName}`
+             const address  = (formatedAddress.length >3)? formatedAddress.slice(formatedAddress.length-3, formatedAddress.length):formatedAddress
+             h1.innerHTML = `${address.join(", ")}`
             location.appendChild(h1);
             let icon = document.getElementById("weather-icon");
             let desc = document.getElementById("description");
@@ -233,10 +233,8 @@ degreeF.addEventListener('click', () => {
 
 
 var map;
-async function initMap() {
+async function initMap(lat, long, city) {
 
-    const long = 30.0588
-    const lat = -1.95
 
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: parseFloat(lat), lng: parseFloat(long) },
@@ -246,44 +244,46 @@ async function initMap() {
     new google.maps.Marker({
         position: { lat: parseFloat(lat), lng: parseFloat(long) },
         map,
-        title: "Kigali",
+        title: city,
     });
 
-
+    activatePlacesSearch();
 }
 
-const getCoordinate =  async(cityName) => {
-     await fetch(`${api.base}weather?q=${cityName} &appid=${api.apiKey}`)
-          .then(response=>response.json())
-        .then((json) => {
-        
-            longs=json.coord.lon
-            lats=json.coord.lat
-            countryName=json.sys.country;
-            console.log(json)
-        })
-        .catch(error => { console.log(error) })
+const getCoordinate =  async(city) => {
+    geocoder = new google.maps.Geocoder();
+   await geocoder.geocode( { 'address': city})
+    .then((response) => {
+        lats =  response.results[0].geometry.location.lat()
+       longs = response.results[0].geometry.location.lng()
+        formatedAddress = response.results[0].formatted_address.split(',')
+    })
+    .catch(error => {console.log(error)})
 }
 
 window.addEventListener('load', async() => {
 
 navigator.geolocation.getCurrentPosition (async (success)=>{
-        const longss=success.coords.longitude;
-        const latss=success.coords.latitude
-          await fetch(`${api.base}weather?lat=${latss}&lon=${longss}&units=metric&appid=${api.apiKey}`)
-        .then(forecastResponse => forecastResponse.json())
-        .then(json=>{
-         //console.log(json)
+         const longs=success.coords.longitude;
+        const  lats=success.coords.latitude
+        let latlng = new google.maps.LatLng(lats,longs)
+          geocoder = new google.maps.Geocoder();
+         await geocoder.geocode( { latLng: latlng})
+         .then(response =>{
+             let addressArray = response.results[0].formatted_address.split(',');
+            let city = addressArray[addressArray.length -2];
             dateBuilder();
-           getResults(json.name);
+            initMap(lats,longs, city);
+           getResults(city);
         })
     },()=>{
+ 
         dateBuilder();
+        initMap(-1.95, 30.0588, "Kigali");
         getResults("Kigali");
     })
-    
-    
-    
+    activatePlacesSearch()
+
 })
 
 
