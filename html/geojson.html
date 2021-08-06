@@ -7,126 +7,136 @@
     <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeoJSON</title>
-    
-        <link rel="stylesheet" href="..\css\geojson.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <script defer src = "../javaScript/general.js"></script>
-     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
 
-      </head>
+    <link rel="stylesheet" href="..\css\geojson.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <script defer src="../javaScript/general.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+
+</head>
+
 <body>
-   
+
     <nav>
         <div class="mobileView">
-        <div id="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <div id="bars">
-            <i class="fa fa-bars"></i>
-        </div>
-        <div id="close">
-            <i class="fas fa-times"></i>
-        </div>
+            <div id="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
         <div id="content">
-                <a class="active homePage" href="../index.html">HOME</a>
-                <a class="authorPage" href="./author.html">AUTHOR</a>
-                <a class="weatherPage" href="./weather.html">WEATHER</a>
-                <div id="dropDown">
-                    <div>
+            <a class="homePage" href="../index.html">HOME</a>
+            <a class="authorPage" href="./author.html">AUTHOR</a>
+            <a class="weatherPage" href="./weather.html">WEATHER</a>
+            <div id="dropDown">
+                <div>
                     <span class="disastersPage">DISASTERS</span>
                     <a class="fa fa-angle-down" id="iconDown"></a>
                     <a class="fa fa-angle-up" id="iconUp"></a>
-                   </div>
-                    <div id="dropdownContent">
-                        <a href="./earthquake.html">EARTHQUAKE</a>
-                        <a href="./cyclone.html">CYCLONE</a>
-                        <a href="./flood.html">FLOOD</a>
-                    </div>
-             </div>
+                </div>
+                <div id="dropdownContent">
+                    <a href="./earthquake.html">EARTHQUAKE</a>
+                    <a href="./cyclone.html">CYCLONE</a>
+                    <a href="./flood.html">FLOOD</a>
+                </div>
+            </div>
         </div>
     </nav>
-<main>
-<div class="main-section">
-<div>
-    <h1 style="font-weight: bolder;">WHAT IS GEOJSON?</h1>
-    <h2>GeoJSON is a format for encoding a variety of geographic data structures</h2>
-    <div class="sub-sections">
-        <div class="subsection-1">
-        <img src="..\images\geojson\codes.png"  class="code-image">
+    <main>
+        <div class="main-section">
+            <div>
+                <h1 style="font-weight: bolder;">WHAT IS GEOJSON?</h1>
+                <h2>GeoJSON is a format for encoding a variety of geographic data structures</h2>
+                <div class="sub-sections">
+                    <div class="subsection-1">
+                        <img src="..\images\geojson\codes.png" class="code-image">
+                    </div>
+                    <div class="subsection-2">
+                        <p>It defines several types of JSON objects and the manner in which
+                            they are combined to represent data about geographic features, their properties, and their
+                            spatial extents.
+                        </p>
+                        <p>GeoJSON supports the following geometry types: Point, lineString, Polygon, MultiPoint,
+                            MultiLineString and MultiPolygon. Geometric objects with additional
+                            properties are Feature objects. Sets of features are contained by FeatureCollection objects.
+                        </p>
+                        <p> The format is concerned with geographic data in the broadest sense;
+                            anything with qualities that are bounded in geographical space might
+                            be a Feature whether or not it is a physical structure. The concepts
+                            in GeoJSON are not new; they are derived from preexisting open
+                            geographic information system standards and have been streamlined to
+                            better suit web application development using JSON.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div>
+                <h1 style="font-weight: bolder;">GEOJSON TUTORIAL VIDEOS</h1>
+            </div>
+            <br>
+            <div class=videos>
+                <div class="video-1"> <iframe width="350" height="310" src="https://www.youtube.com/embed/W8gZa2gAXQM">
+                    </iframe> </div>
+
+                <div class="video-2"> <iframe width="350" height="310"
+                        src="https://www.youtube.com/embed/8RPfrhzRw2s&t=2s">
+                    </iframe> </div>
+
+                <div class="video-3"> <iframe width="350" height="310" src="https://www.youtube.com/embed/045-bsOsbJc">
+                    </iframe> </div>
+            </div>
         </div>
-        <div class="subsection-2">
-    <p>It defines several types of JSON objects and the manner in which
-        they are combined to represent data about geographic features, their properties, and their spatial extents.
-    </p>
-    <p>GeoJSON supports the following geometry types: Point, lineString, Polygon, MultiPoint, 
-        MultiLineString and MultiPolygon. Geometric objects with additional
-        properties are Feature objects. Sets of features are contained by FeatureCollection objects.
-    </p>
-    <p> The format is concerned with geographic data in the broadest sense;
-        anything with qualities that are bounded in geographical space might
-        be a Feature whether or not it is a physical structure.  The concepts
-        in GeoJSON are not new; they are derived from preexisting open
-        geographic information system standards and have been streamlined to
-        better suit web application development using JSON.</p>
-</div>
-</div>
-</div>
-<br>
-
-    <div>
-    <h1 style="font-weight: bolder;">GEOJSON TUTORIAL VIDEOS</h1>
-</div>
-<br>
-<div class=videos>
-<div class="video-1"> <iframe width="350" height="310"
-    src="https://www.youtube.com/embed/W8gZa2gAXQM">
-    </iframe> </div>
-
-    <div class="video-2"> <iframe width="350" height="310"
-        src="https://www.youtube.com/embed/8RPfrhzRw2s&t=2s">
-        </iframe> </div>
-
-        <div class="video-3"> <iframe width="350" height="310"
-            src="https://www.youtube.com/embed/045-bsOsbJc">
-            </iframe> </div>
-</div>
-</div>
-<br>
+        <br>
 
 
-</main>
+    </main>
 
 
 
-
-</body>
-<footer>
-    <div class="explore">
-    <span>EXPLORE</span>
-        <ul>
-            <a href="../index.html"><li>HOME</li></a>
-            <a href="./author.html"><li>AUTHOR</li></a>
-            <a href="./weather.html"><li>WEATHER</li></a>
-            <a href="./earthquake.html"><li>DISASTERS</li></a>
-            <a href="#"><li>GEOJSON</li></a>
-         </ul>
-    </div>
-    <div class="data">
-        <span>DATA RETRIEVED FROM</span>
-             <ul>
-             <a href="https://geojson.org" target="_blank"><li>GeoJSON</li></a>
+    <footer>
+        <div class="explore">
+            <span>EXPLORE</span>
+            <ul>
+                <a href="../index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="./author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="./weather.html">
+                    <li>WEATHER</li>
+                </a>
+                <a href="./earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="#">
+                    <li>GEOJSON</li>
+                </a>
             </ul>
-     </div>
-   <div class="pageDetails">
-    <span>PAGE DETAILS</span>
+        </div>
+        <div class="data">
+            <span>DATA RETRIEVED FROM</span>
+            <ul>
+                <a href="https://geojson.org" target="_blank">
+                    <li>GeoJSON.ORG</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
+    
+            <p>GEOJSON Page provides with the information needed to understand the concepts behind
+                geojson data.
+            </p>
+    
+        </div>
+    </footer>
+</body>
 
-       <p>GEOJSON Page provides with the information needed to understand the concepts behind 
-           geojson data. 
-       </p>
-
-   </div>
-</footer>
-
-
-      </html>
+</html>

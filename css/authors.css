@@ -144,25 +144,7 @@ input[type=email], select, textarea {
         width: 100%;
     }
   }
-  .footer-content{
-    font-family: Roboto Mono;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0px;
-    text-align: center;
-    
-  }
-  .footer-content1{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 10px;
-    text-align: center;
-      }
-
+  
   ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;

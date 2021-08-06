@@ -92,7 +92,7 @@
 .topic .content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+     height: 200px;
     justify-content: space-between;
     background: rgba(189, 195, 199, 0.5);
     border-radius: 0px 0px 20px 20px;
@@ -101,7 +101,7 @@
 
 .topic .content a {
     position: relative;
-    right: 0.5em;
+    right: 0.2em;
     align-self: center;
     font-size: 30px;
     color: #d9cb9e;
@@ -158,6 +158,12 @@ letter-spacing: 2px;
 padding: 0;
 }
 
+.iconify{
+   color: #D9CB9E;
+   font-size: 20px;
+}
+ 
+
 #latestNews .news{
     display:  flex;
     flex-direction: row;
@@ -186,7 +192,7 @@ padding: 0;
  
  .news span i{
     color: #d9cb9e;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .news .div2 div{

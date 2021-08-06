@@ -35,7 +35,7 @@ const fetchData = (async () => {
                     h3.innerHTML = `${disaster.fields.name}`
                     p.innerHTML = `<span><i class="fa fa-flag"></i> Countries Affected: ${countries}</span></br>
                                     <span class=${disaster.fields.status} == "current"? "current":${disaster.fields.status} == "alert"? "alert": "past">Status: ${status}</span></br>
-                                    <span><i class="fa fa-bolt"></i> Disaster Type: ${types}</span></br>
+                                    <span><span class="iconify" data-icon="mdi:weather-hurricane"></span> Disaster Type: ${types}</span></br>
                                     <span><i class="fa fa-clock-o"></i> Time: ${date}</span></br>
                                     <div><a href="${disaster.fields.url}" target="_blank">Read More</a></div>`
                     div2.appendChild(h3);
