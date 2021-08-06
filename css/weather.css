@@ -43,6 +43,7 @@ input[type="text"] {
 ::placeholder {
     text-align: center;
     color: rgba(189, 195, 199, 0.6);
+    font-size: 15px;
 }
 
 #tempInfo {
@@ -80,6 +81,9 @@ input[type="text"] {
     height: calc(100% - 45px);
 }
 
+#forecastTemp p{
+    padding: 0;
+}
 
 .mapContainer h1{
     text-align: left;
