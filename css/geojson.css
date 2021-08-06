@@ -1,26 +1,35 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .videos {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-      
+        
+       flex-direction: column;
+        flex-wrap: wrap;
+      justify-content: space-evenly;
     }
    
+}
+@media only screen and (max-width: 800px){
+    .sub-sections{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 .code-image{
 width: 300px;
 height: 300px;
 border: 1px solid #000000;
-margin-left: 100px;
+margin-left: 10%;
 }
 .sub-sections{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+
     justify-items: center;
 }
-.sub-section2{
-    width:200px;
+.subsection-2{
+    width: 53%;
+    margin-left: 3%;
 }
 iframe{
     border-radius: 0px 0px 20px 20px;
@@ -34,18 +43,81 @@ iframe{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
-    
-   
+ 
 }
 
 .video-1, .video-2, .video-3{
 height: 313px;
-width: 422px;
+width: 390px;
 left: 26px;
 top: 775px;
 
 }
+  
 
 
+/** Footer Css **/ 
 
+footer{
+    background-color: #374140;
+    border:1px solid rgba(55, 65, 64, 0.85);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+ }
+
+footer a{
+    text-decoration: none;
+}
+
+ footer .data{
+    flex-basis: 35%;
+}
+
+footer p{
+    padding: 0;
+}
+
+footer .explore{
+    flex-basis: 28%;
+}
+
+footer .pageDetails{
+    flex-basis: 24%;
+}
+
+footer span{
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 34px;
+letter-spacing: 5px;
+color: white;
+}
+
+footer ul li, footer p{
+list-style-type: none;
+font-weight: 600;
+font-size: 15px;
+line-height: 30px;
+letter-spacing: 5px;
+color: rgba(170, 169, 128, 0.6);
+}
+
+
+@media only screen and (max-width: 800px) {
+    footer{
+        flex-direction: column;
+        flex-basis: unset;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    footer div{
+        padding: 10px;
+    }
+    
+}
+ 
