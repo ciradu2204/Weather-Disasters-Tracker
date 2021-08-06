@@ -95,10 +95,8 @@ nav span{
 
 #iconUp, #iconDown{
     cursor: pointer;
-    font-size: 25px;
-     margin: auto;
-    height: 28px;
- 
+    font-size: 20px;
+    margin: auto;
 }
 
 #iconDown {
@@ -302,14 +300,13 @@ color: rgba(170, 169, 128, 0.6);
 /*** Loader Css ***/
 
   
-  #loader {
+  #loader, #loader2 {
     display: flex;
     justify-content: center;
     align-items: center;
-  
   }
 
-  #loader > div {
+  #loader > div, #loader2 > div {
     width: 8px;
     height: 8px;
     margin: 3rem 0.2rem;
@@ -320,11 +317,11 @@ color: rgba(170, 169, 128, 0.6);
   }
 
 
-  #loader > div:nth-child(2) {
+  #loader > div:nth-child(2) , #loader2 > div:nth-child(2) {
     animation-delay: 0.2s;
   }
 
-  #loader > div:nth-child(3) {
+  #loader > div:nth-child(3), #loader2 > div:nth-child(3) {
     animation-delay: 0.4s;
   }
 

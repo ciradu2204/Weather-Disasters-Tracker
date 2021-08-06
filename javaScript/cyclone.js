@@ -73,11 +73,19 @@ const getCycloneNews = async () => {
           /** Display only 4 disasters */
           if (nDisaster < 4) {
             let ul = document.createElement("ul");
-            disaster.fields.country.forEach(country => {
+             
+            if(country === ""){
+              disaster.fields.country.forEach(country => {
+                let li = document.createElement("li");
+                li.innerHTML = country.name;
+                ul.appendChild(li);
+              })
+            }else{
               let li = document.createElement("li");
-              li.innerHTML = country.name;
+              li.innerHTML = country;
               ul.appendChild(li);
-            })
+            }
+           
 
             let date = new Date(disaster.fields.date.created);
             let status = disaster.fields.status;

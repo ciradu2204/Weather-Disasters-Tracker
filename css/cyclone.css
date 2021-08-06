@@ -167,6 +167,7 @@ input[type="text"]{
 
  
 .news{
+    height: 100%;
     display: flex;
     flex-direction: column;
  }
@@ -205,6 +206,10 @@ th{
     flex-direction: column;
     text-align: initial;
     
+}
+
+tr td{
+    padding: 20px;
 }
 
 .rowList ul{
@@ -273,15 +278,15 @@ table a{
     position: absolute;
     left: 0; 
     font-size: 25px;
-    top:60%;
+    top:calc(50% + 60px);
 }
 
 #slideRight{
     display: none;
     position: absolute;
     right: 0;
+    top: calc(50% + 60px);
     font-size: 25px;
-    top:60%;
 
 }
 
@@ -296,16 +301,15 @@ table a{
 
 table{
     width: 800px;
-    position: relative;
-}
+ }
 
- td.rowList{
-     position: sticky;
-     top:0;
-  }
+ .news{
+ position: relative;
+ }
+ 
  #slideRight, #slideLeft{
      display: flex;
-     color: #d9cb9e;
+     color: rgba(217, 203, 158, 0.7);
      cursor: pointer;
  }
 

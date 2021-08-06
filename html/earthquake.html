@@ -21,35 +21,40 @@
 
     <nav>
         <div class="mobileView">
-        <div id="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <div id="bars">
-            <i class="fa fa-bars"></i>
-        </div>
-        <div id="close">
-            <i class="fas fa-times"></i>
-        </div>
+            <div id="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
         <div id="content">
-                <a class="homePage" href="../index.html">HOME</a>
-                <a class="authorPage" href="./author.html">AUTHOR</a>
-                <a class="weatherPage" href="./weather.html">WEATHER</a>
-                <div id="dropDown">
-                    <div>
+            <a class="homePage" href="../index.html">HOME</a>
+            <a class="authorPage" href="./author.html">AUTHOR</a>
+            <a class="weatherPage" href="./weather.html">WEATHER</a>
+            <div id="dropDown">
+                <div>
                     <span class="disastersPage">DISASTERS</span>
                     <a class="fa fa-angle-down" id="iconDown"></a>
                     <a class="fa fa-angle-up" id="iconUp"></a>
-                   </div>
-                    <div id="dropdownContent">
-                        <a active href="./earthquake.html">EARTHQUAKE</a>
-                        <a href="./cyclone.html">CYCLONE</a>
-                        <a href="./flood.html">FLOOD</a>
-                    </div>
-             </div>
+                </div>
+                <div id="dropdownContent">
+                    <a class="active" href="./earthquake.html">EARTHQUAKE</a>
+                    <a href="./cyclone.html">CYCLONE</a>
+                    <a href="./flood.html">FLOOD</a>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <div id="loader2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <div id="container">
         <div id="openBar">
             <i class="fas fa-bars"></i>
@@ -351,37 +356,53 @@
             </div>
         </div>
         <div id="map"> </div>
-        <div id="legend"><h3>Legend</h3></div>
+        <div id="legend">
+            <h3>Legend</h3>
+        </div>
 
     </div>
 
     <footer>
         <div class="explore">
-        <span>EXPLORE</span>
+            <span>EXPLORE</span>
             <ul>
-                <a href="../index.html"><li>HOME</li></a>
-                <a href="./author.html"><li>AUTHOR</li></a>
-                <a href=""><li>WEATHER</li></a>
-                <a href="./earthquake.html"><li>DISASTERS</li></a>
-                <a href="./geojson.html"><li>GEOJSON</li></a>
-             </ul>
+                <a href="../index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="./author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="">
+                    <li>WEATHER</li>
+                </a>
+                <a href="./earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="./geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
         </div>
         <div class="data">
             <span>DATA RETRIEVED FROM</span>
-                 <ul>
-                 <a href="https://reliefweb.int/" target="_blank"><li>RELIEF WEB</li></a>
-                  </ul>
-         </div>
-       <div class="pageDetails">
-        <span>PAGE DETAILS</span>
+            <ul>
+                <a href="https://reliefweb.int/" target="_blank">
+                    <li>RELIEF WEB</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
 
-           <p>This page uses Google maps api to show the different earthquakes that happened in the past days, week, and month around the world</p>
+            <p>This page uses Google maps api to show the different earthquakes that happened in the past days, week,
+                and month around the world</p>
 
-       </div>
+        </div>
     </footer>
 
 </body>
-<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA&callback=initMap"></script>
+<script async type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA"></script>
 
 
 </html>
