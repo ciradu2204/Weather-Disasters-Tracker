@@ -154,7 +154,7 @@ nav span{
    color:#d9cb9e;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     nav{
          grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -224,8 +224,11 @@ nav span{
 
     #dropdownContent {
         top: 18.7em;
-        left: 0.3em;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+     }
 
     #bars i {
         color: #d9cb9e;
@@ -239,7 +242,7 @@ footer{
     border:1px solid rgba(55, 65, 64, 0.85);
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+     flex-direction: row;
     justify-content: center;
     padding: 10px 0;
  }
@@ -294,6 +297,77 @@ color: rgba(170, 169, 128, 0.6);
         padding: 10px;
     }
     
+}
+
+/*** Loader Css ***/
+
+  
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  #loader > div {
+    width: 8px;
+    height: 8px;
+    margin: 3rem 0.2rem;
+    background: #374140;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+
+  }
+
+
+  #loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  #loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+
+@keyframes bouncing-loader {
+    to {
+      opacity: 0.1;
+      transform: translate3d(0, -16px, 0);
+    }
+  }
+
+
+ 
+  /* autocomplete css from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
+
+.autocomplete {
+    position: relative;
+    width: calc(500px);
+  }
+   
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    width: 40%;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
 }
 
 

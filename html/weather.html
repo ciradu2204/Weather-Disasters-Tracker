@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather</title>
+    <link rel="stylesheet" href="../css/weather.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <script defer src="../javaScript/general.js"></script>
+    <script defer src="../javaScript/weather.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="mobileView">
+            <div id="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div id="content">
+            <a class="homePage" href="#">HOME</a>
+            <a class="authorPage" href="../html/author.html">AUTHOR</a>
+            <a class="active weatherPage" href="#">WEATHER</a>
+            <div id="dropDown">
+                <div>
+                    <span class="disastersPage">DISASTERS</span>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                </div>
+                <div id="dropdownContent">
+                    <a href="./html/earthquake.html">EARTHQUAKE</a>
+                    <a href="#">CYCLONE</a>
+                    <a href="#">FLOOD</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <section id="container">
+
+        <div class="autocomplete">
+            <input type="text" id="search" class="search-box" placeholder="Search for a country">
+            <i id="searchIcon" class="fas fa-search"></i>
+        </div>
+
+        <div id="dateAndTime">
+
+            <div id="tempInfo">
+                <img src="" alt="" id="weather-icon">
+                <div id="temp"> </div>
+                <div>
+                    <div id="tempType"> <a i class="active" id="degreeCelsius"> °C </a><a id="degreeFanheit"> °F </a>
+                    </div>
+                    <div id="description"></div>
+                </div>
+
+            </div>
+
+            <div id="locationAndDate">
+                <div id="location">
+
+                </div>
+                <div id="date">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="forecastAndMap">
+
+            <div id="foreCast">
+                <h1> Weekly Forecast</h1>
+                <table id="table">
+
+                    <thead>
+                        <tr>
+                            <th>Days</th>
+                            <th id="tempH">TEMP</th>
+                            <th>HUMIDITY</th>
+                            <th>PERCIP</th>
+                        </tr>
+                    </thead>
+
+                </table>
+
+            </div>
+
+
+            <div class="mapContainer">
+                  <h1>Location</h1>  
+                <div id="map">
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+        <div class="explore">
+            <span>EXPLORE</span>
+            <ul>
+                <a href="../index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="../html/author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="">
+                    <li>WEATHER</li>
+                </a>
+                <a href="../html/earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="./html/geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
+        </div>
+        <div class="data">
+            <span>DATA RETRIEVED FROM</span>
+            <ul>
+                <a href="https://reliefweb.int/" target="_blank">
+                    <li>RELIEF WEB</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
+
+            <p>This page provides you with an overview of what the web application provides.</p>
+
+        </div>
+    </footer>
+</body>
+<script async defer type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA&callback=initMap"></script>
+
+</html>
