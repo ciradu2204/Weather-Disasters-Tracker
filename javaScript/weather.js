@@ -1,12 +1,11 @@
 const api = {
-    key: "2ed0ff2dc64c56e802a83ed9048e168e",
-    base: "http://api.weatherstack.com/"
+    apiKey : "9476ad1e5c7f52fb8d9bf31ee8cbddaa",
+    base: "https://api.openweathermap.org/data/2.5/"
 }
 let longs = null;
 let lats = null;
 let countryName = "";
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const apiKey = "9476ad1e5c7f52fb8d9bf31ee8cbddaa"
 const table = document.getElementById("table");
 const date = new Date();
 let searchIcon = document.getElementById("searchIcon")
@@ -57,6 +56,7 @@ const removeContent = () => {
 
 searchIcon.addEventListener('click', () => {
     let searchBox = document.querySelector(".search-box");
+
     removeContent();
     dateBuilder();
     getResults(searchBox.value);
@@ -76,11 +76,11 @@ const isLoading = () => {
 }
 
 
-async function getResults(country) {
+async function getResults(city) {
     loading = true;
     isLoading(loading);
-    await getCoordinate(country);
-    await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lats}&lon=${longs}&exclude=hourly,minutely,alerts&units=metric&appid=${apiKey}`)
+     await getCoordinate(city);
+    await fetch(`${api.base}onecall?lat=${lats}&lon=${longs}&exclude=hourly,minutely,alerts&units=metric&appid=${api.apiKey}`)
         .then(forecastResponse => forecastResponse.json())
         .then(json => {
             loading = false;
@@ -92,8 +92,8 @@ async function getResults(country) {
             tbody.id = "tbody";
             let location = document.getElementById("location");
             const h1 = document.createElement("h1");
-            const myArr = json.timezone.split("/");
-            h1.innerHTML = `${myArr[1]} , ${countryName}`
+            const myArr = city.charAt(0).toUpperCase() + city.slice(1);
+            h1.innerHTML = `${myArr} , ${countryName}`
             location.appendChild(h1);
             let icon = document.getElementById("weather-icon");
             let desc = document.getElementById("description");
@@ -124,7 +124,7 @@ async function getResults(country) {
                 p.id = "forecastTemp"
                 const span = document.createElement("span");
                 temp.innerHTML = `${Math.round(weeklyData[i].temp.max)}`;
-                p.innerHTML = ` ${weeklyData[i].temp.max}`
+                p.innerHTML = ` ${Math.round(weeklyData[i].temp.max)}`
                 span.innerHTML = `°`
                 row_data2.appendChild(p);
                 row_data2.appendChild(span);
@@ -235,8 +235,8 @@ degreeF.addEventListener('click', () => {
 var map;
 async function initMap() {
 
-    const long = -0.106
-    const lat = 51.517
+    const long = 30.0588
+    const lat = -1.95
 
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: parseFloat(lat), lng: parseFloat(long) },
@@ -246,26 +246,44 @@ async function initMap() {
     new google.maps.Marker({
         position: { lat: parseFloat(lat), lng: parseFloat(long) },
         map,
-        title: "London",
+        title: "Kigali",
     });
 
 
 }
 
-const getCoordinate = async (country) => {
-    geocoder = new google.maps.Geocoder();
-    await geocoder.geocode({ componentRestrictions: { country: country, } })
-        .then((response) => {
-            countryName = response.results[0].formatted_address;
-            lats = response.results[0].geometry.location.lat();
-            longs = response.results[0].geometry.location.lng();
+const getCoordinate =  async(cityName) => {
+     await fetch(`${api.base}weather?q=${cityName} &appid=${api.apiKey}`)
+          .then(response=>response.json())
+        .then((json) => {
+        
+            longs=json.coord.lon
+            lats=json.coord.lat
+            countryName=json.sys.country;
+            console.log(json)
         })
         .catch(error => { console.log(error) })
 }
 
-window.addEventListener('load', () => {
-    dateBuilder();
-    getResults("UK");
+window.addEventListener('load', async() => {
+
+navigator.geolocation.getCurrentPosition (async (success)=>{
+        const longss=success.coords.longitude;
+        const latss=success.coords.latitude
+          await fetch(`${api.base}weather?lat=${latss}&lon=${longss}&units=metric&appid=${api.apiKey}`)
+        .then(forecastResponse => forecastResponse.json())
+        .then(json=>{
+         //console.log(json)
+            dateBuilder();
+           getResults(json.name);
+        })
+    },()=>{
+        dateBuilder();
+        getResults("Kigali");
+    })
+    
+    
+    
 })
 
 
