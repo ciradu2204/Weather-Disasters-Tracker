@@ -1,58 +1,20 @@
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
+ 
 const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
 const form = document.getElementById("form");
 let loading = false; 
 
-let displayId = 1;
-
-const createSlider = () =>{
-    if(window.innerWidth < 1024){
-        document.getElementById("2").style.display = "none";
-        document.getElementById("3").style.display = "none";
-        next.addEventListener( 'click', () =>{
-            if(displayId < 3){
-                document.getElementById(displayId).style.display = "none";
-                document.getElementById(++displayId).style.display = "flex";
-            }
-        })
-    
-        prev.addEventListener('click', () =>{
-            if(displayId > 1){
-                document.getElementById(displayId).style.display ="none";
-                document.getElementById(--displayId).style.display="flex";
-            }
-        })
-    }
-  
-    
-}
-createSlider();
-
-
 const addLoader = () =>{
     if(loading == false){
       document.getElementById("loader").style.display = "none";
+      document.getElementById("floodNews").style.display = "block";
     }else{
      document.getElementById("loader").style.display = "flex";
-  
+     document.getElementById("floodNews").style.display = "none";
     }
   }
   
-  
-  const removeNews =  () =>{
-    const table = document.getElementById("table");
-    const tbody = document.getElementById("body");
-    const error = document.getElementById("error");
-  
-    if(table.contains(tbody)){
-      table.removeChild(tbody);
-    }
-    error.innerHTML = "";
-    error.style.margin = "";
-    
-  }
-  const getCycloneNews =  async() => {
+ 
+  const getFloodNews =  async() => {
      loading = true;
       addLoader();
       const status = document.getElementById("status").options[document.getElementById("status").selectedIndex].value;
@@ -61,71 +23,41 @@ const addLoader = () =>{
      .then((response) => {return response.json()})
      .then((data) => {
        loading = false;
-       console.log(data);
-       addLoader();
-      if(data.data.length > 0){
-      let tbody = document.createElement("tbody");
-      let table = document.getElementById("table");
-      let nDisaster  = 0
-      tbody.id ="body";
-      data.data.forEach((disaster)  =>{
-         if(nDisaster <4){
-        let ul = document.createElement("ul");
-        disaster.fields.country.forEach(country =>{
-           let li = document.createElement("li");
-          li.innerHTML = country.name;
-          ul.appendChild(li); 
-        })
-  
-        let date = new Date(disaster.fields.date.created);
-        let status  = disaster.fields.status;
-        let link  = disaster.fields.url;
-        let name = disaster.fields.name;
-        // let hours = ((date.getHours() < 10)? "0":"") + date.getHours();
-        // let minutes = ((date.getMinutes() < 10)? "0":"") + date.getMinutes();
-        // let period  = (hours < 12)? "AM": "PM";
-        let row2 = document.createElement("tr");
-        row2.className = 'row';
-        let row2_data0 = document.createElement("td");
-        row2_data0.className="rowList"
-        row2_data0.appendChild(ul) ;
-        let row2_data1 = document.createElement("td");
-        row2_data1.innerHTML = (name.includes("Tropical Cyclone"))? "Tropical Cyclone": (name.includes("Hurricane"))? "Hurricane" :(name.includes("Typhoon"))? "Typhoon": "Storm Surge"
-        let row2_data2 = document.createElement("td");
-        const options = { month: 'long'};
-        row2_data2.innerHTML = `${date.getDate()} ${new Intl.DateTimeFormat('en-US', options).format(date)} ${date.getFullYear()}`; 
-        let row2_data3 = document.createElement("td");
-        row2_data3.className = status;
-        row2_data3.innerHTML = `<span>${status.charAt(0).toUpperCase()}${status.slice(1)} </span>`; 
-        let row2_data4 = document.createElement("td");
-        row2_data4.innerHTML = `<a href="${link}"  target="_blank">Read More</a>`; 
-        row2.appendChild(row2_data0)
-        row2.appendChild(row2_data1)
-        row2.appendChild(row2_data2)
-        row2.appendChild(row2_data3)
-        row2.appendChild(row2_data4)
-        tbody.appendChild(row2);
-       nDisaster++;
-      
-      }
-      })
-      table.appendChild(tbody);  
-     }else{
-       document.getElementById("error").innerHTML = "<p>No Information Found</p>";
-       document.getElementById("error").style.margin = "20px";
-     }
+        addLoader();
+        const floodNews = document.getElementById("floodNews");
+        data.data.forEach(element => {
+          let mainDiv =  document.createElement("mainDiv");
+          mainDiv.className = "news";
+          let div1 = document.createElement("div");
+          div1.innerHTML = `<img src="../images/floods/news.png">`
+          let div2 = document.createElement("div"); 
+          let h1 = document.createElement("h1"); 
+          h1.innerHTML = element.fields.name;
+          let p = document.createElement("p");
+          const countryArray =  element.fields.country.map(element => {
+             return element.name; 
+          }).join();
+          console.log(countryArray);
+          p.innerHTML = `<span >Status: ${element.fields.status}</span> <span>Country: ${countryArray}</span>`
+          div2.appendChild(h1);
+          div2.appendChild(p);
+          mainDiv.appendChild(div1); 
+          mainDiv.appendChild(div2);
+          floodNews.appendChild(mainDiv);
+        });
+       
      })
      
   }
   
   
-  form.addEventListener('submit', (e)=>{
+  form.addEventListener('submit', (e)=>{ 
     e.preventDefault();
     removeNews();
     getCycloneNews()
   }
   );
-  window.addEventListener('load', getCycloneNews());
+  window.addEventListener('load', getFloodNews());
   
   
 
