@@ -232,7 +232,9 @@ color: rgba(170, 169, 128, 0.6);
     }
     
 }
-.latestNews{
+/**Latest News CSS */
+
+.formNews{
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -240,23 +242,25 @@ color: rgba(170, 169, 128, 0.6);
     padding: 20px;
     justify-content: center;
     align-items: center;
-    
 
 }
-form{
+
+
+ form{
     display: flex;
-    width: 70%;
+    width: 40%;
     flex-direction: row;
     justify-content: flex-end;
     margin-left: 60%;
-    
-    
+    margin-right: 5%;
  }
+ 
  select{
-    border: 1px solid #AAA980 !important;
-    background-color: white !important;
-    border-radius: 0;
-    background-color: transparent;
+    border-bottom: 3px solid #AAA980 ;
+    border-top: 0px;
+    border-left: 0px;
+    background-color: white !important; 
+    background-color: #DBDBDBD4;
     background-image: url('data:image/svg+xml;utf8,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%23d9cb9e"/></svg>');
     background-repeat: no-repeat;
     background-position-y: 50%;
@@ -265,23 +269,42 @@ form{
     -moz-appearance: none;
     appearance: none;
  }
- select{
+ option{
+     background-color: #DBDBDBD4;
+     border-bottom: 3px solid #D9CB9E;
+ }
+ 
+ input[type="text"]{
+   
+    width: 60%;
+    border-bottom: 3px solid #AAA980 ;
+    border-top: 0px;
+    border-right: 0px;
+}
+
+
+
+select{
     padding: 8px 20px;
-    outline: none;
+    width: 45%;
     cursor: pointer;
+   
+   
 }
  
 input[type="text"]{
     padding: 8px;
     outline: none;
     cursor: pointer;
-   
+    
 }
+
 /* autocomplete css from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
 
 .autocomplete {
     position: relative;
     width: calc(500px);
+    
   }
    
 .autocomplete-items {
