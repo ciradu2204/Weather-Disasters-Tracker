@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HOME</title>
+    <link rel="stylesheet" href="../css/weather.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <script defer src="../javaScript/home.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="mobileView">
+            <div id="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div id="content">
+            <a class="homePage" href="#">HOME</a>
+            <a class="authorPage" href="../html/author.html">AUTHOR</a>
+            <a class="active weatherPage" href="#">WEATHER</a>
+            <div id="dropDown">
+                <div>
+                    <span class="disastersPage">DISASTERS</span>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                </div>
+                <div id="dropdownContent">
+                    <a href="./html/earthquake.html">EARTHQUAKE</a>
+                    <a href="#">CYCLONE</a>
+                    <a href="#">FLOOD</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+           
+                  <h1>PRESENTING WEATHER & COUNTRIES WITH DISASTERS(<img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"> ONGOING AND <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"> ALERT )</h1>  
+                <div id="map">
+
+                </div>
+           
+
+       
+    <footer>
+        <div class="explore">
+            <span>EXPLORE</span>
+            <ul>
+                <a href="../index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="../html/author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="">
+                    <li>WEATHER</li>
+                </a>
+                <a href="../html/earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="./html/geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
+        </div>
+        <div class="data">
+            <span>DATA RETRIEVED FROM</span>
+            <ul>
+                <a href="https://reliefweb.int/" target="_blank">
+                    <li>RELIEF WEB</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
+
+            <p>This page provides you with an overview of what the web application provides.</p>
+
+        </div>
+    </footer>
+</body>
+<script async defer type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA&callback=initMap"></script>
+
+</html>
