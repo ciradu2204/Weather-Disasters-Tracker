@@ -4,32 +4,6 @@ const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguill
 const form = document.getElementById("form");
 let loading = false; 
 
-let displayId = 1;
-
-const createSlider = () =>{
-    if(window.innerWidth < 1024){
-        document.getElementById("2").style.display = "none";
-        document.getElementById("3").style.display = "none";
-        next.addEventListener( 'click', () =>{
-            if(displayId < 3){
-                document.getElementById(displayId).style.display = "none";
-                document.getElementById(++displayId).style.display = "flex";
-            }
-        })
-    
-        prev.addEventListener('click', () =>{
-            if(displayId > 1){
-                document.getElementById(displayId).style.display ="none";
-                document.getElementById(--displayId).style.display="flex";
-            }
-        })
-    }
-  
-    
-}
-createSlider();
-
-
 const addLoader = () =>{
     if(loading == false){
       document.getElementById("loader").style.display = "none";
