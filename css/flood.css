@@ -167,6 +167,33 @@ margin-left: 1.5%;
     text-align: center;
     font-weight: bolder;
 }
+ 
+.current span{
+    background: #951B1B;
+    border-radius: 10px;
+    padding: 8px 10px;
+    color: white;
+    margin: 2px;
+    text-align: center;
+}
+
+
+.alert span{
+    background: #94903C;
+    border-radius: 10px;
+    padding:8px 10px;
+    margin: 2px;
+    color: white;
+    text-align: center;
+}
+
+.past span{
+background: #DBDBDB;
+border-radius: 10px;
+padding: 8px 40px;
+color: black;
+text-align: center;
+}
 
 /** Footer Css **/ 
 
@@ -330,5 +357,20 @@ input[type="text"]{
 .autocomplete-active {
     background-color: DodgerBlue !important;
     color: #ffffff;
+}
+
+.floods{
+    display: flex;
+    flex-direction: row;
+    
+}
+.news{
+    display: flex;
+    flex-direction: column; 
+    margin-left: 5%;
+}
+.floods h1{
+    text-align: left;
+    padding: 0px;
 }
 

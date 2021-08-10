@@ -31,14 +31,14 @@ const addLoader = () =>{
           let div1 = document.createElement("div");
           div1.innerHTML = `<img src="../images/floods/news.png">`
           let div2 = document.createElement("div"); 
-          let h1 = document.createElement("h1"); 
+          let h1 = document.createElement("h1");
           h1.innerHTML = element.fields.name;
           let p = document.createElement("p");
           const countryArray =  element.fields.country.map(element => {
              return element.name; 
           }).join();
           console.log(countryArray);
-          p.innerHTML = `<span >Status: ${element.fields.status}</span> <span>Country: ${countryArray}</span>`
+          p.innerHTML = `<span>Status: ${element.fields.status}</span> <span>Country Affected: ${countryArray}</span>`
           div2.appendChild(h1);
           div2.appendChild(p);
           mainDiv.appendChild(div1); 
