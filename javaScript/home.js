@@ -1,15 +1,5 @@
 
-const contentString = 
-'<div id="weather">'+
-'<div id="location">'+
-"</div>"  +
-'<div id="date">' +
-"</div>" +
-'<div id="temp">' +
-"</div>"+
-"</div>" +
-'<div id="recent">'+
-"</div>"
+
 
 
 const api = {
@@ -17,11 +7,7 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 }
  
-const ele=document.createElement("div");
-ele.setAttribute("id","wrapper");
-ele.innerHTML=contentString;
-document.body.appendChild(ele);
-console.log(document.body)
+
 const apiKey="AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA";
 
 const temp=document.getElementById("temp");
@@ -78,7 +64,17 @@ const position=document.getElementById("location");
    }
 
 
-   
+   const contentString = `<div id="weather">
+<div id="location">
+</div>  
+<div id="date">
+</div> 
+<div id="temp">
+</div>
+</div> 
+<div id="recent"> 
+${ul.children}
+</div> `
  
    console.log(ul)//list of recent disasters
    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${countryName}&key=${apiKey}`)
@@ -103,7 +99,7 @@ const position=document.getElementById("location");
                             
                             
                            const   infowindow = new google.maps.InfoWindow({
-                                content: ele,
+                                content: contentString,
                                 position:{ lat: parseFloat(lat), lng: parseFloat(long) }
                                
                               });
