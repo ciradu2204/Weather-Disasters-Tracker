@@ -12,7 +12,9 @@ const addLoader = () =>{
      document.getElementById("floodNews").style.display = "none";
     }
   }
-  
+  function removeNews(){
+    document.getElementById('floodNews')
+  }
  
   const getFloodNews =  async() => {
      loading = true;
@@ -24,26 +26,35 @@ const addLoader = () =>{
      .then((data) => {
        loading = false;
         addLoader();
+        let numOfDisasters = 0;
         const floodNews = document.getElementById("floodNews");
         data.data.forEach(element => {
-          let mainDiv =  document.createElement("mainDiv");
+if(numOfDisasters < 4){
+  let mainDiv =  document.createElement("mainDiv");
           mainDiv.className = "news";
           let div1 = document.createElement("div");
+         
           div1.innerHTML = `<img src="../images/floods/news.png">`
           let div2 = document.createElement("div"); 
           let h1 = document.createElement("h1");
+         
           h1.innerHTML = element.fields.name;
           let p = document.createElement("p");
+         
           const countryArray =  element.fields.country.map(element => {
              return element.name; 
           }).join();
           console.log(countryArray);
-          p.innerHTML = `<span>Status: ${element.fields.status}</span> <span>Country Affected: ${countryArray}</span>`
+          p.innerHTML = `<span id="span-1"><strong>Status</strong>: ${element.fields.status}</span> <span id="span-2"><strong>Affected Country</strong>: ${countryArray}</span>`
           div2.appendChild(h1);
           div2.appendChild(p);
           mainDiv.appendChild(div1); 
           mainDiv.appendChild(div2);
           floodNews.appendChild(mainDiv);
+          numOfDisasters++;
+}
+
+          
         });
        
      })
@@ -51,13 +62,14 @@ const addLoader = () =>{
   }
   
   
-  form.addEventListener('submit', (e)=>{ 
+  form.addEventListener('change', (e)=>{ 
     e.preventDefault();
-    removeNews();
-    getCycloneNews()
+    /*removeNews();*/
+    getFloodNews()
   }
   );
   window.addEventListener('load', getFloodNews());
+  
   
   
 
@@ -163,31 +175,5 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById("search"), countries);
 
 
-  /** News Slider Mobile View */
-  const slideRight = document.getElementById("slideRight");
-  const slideLeft = document.getElementById("slideLeft")
-  const table = document.getElementById("tableContainer");
-  const maxScrollLeft = table.scrollWidth - table.clientWidth;
 
-
-  slideRight.addEventListener('click', ()=>{
-     table.scrollLeft += 20;
-
-     if(table.scrollLeft >100){
-       slideLeft.style.display = "flex";
-     }
-
-     if(table.scrollLeft >= maxScrollLeft){
-      slideRight.style.display = "none";
-
-     }
-  })
-
-
-  slideLeft.addEventListener('click', () =>{
-    table.scrollLeft -= 20;
-    if(table.scrollLeft <=0){
-      slideLeft.style.display = "none";
-      slideRight.style.display ="flex";
-    }
-  })
+  

@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+body,
+html {
+    font-family: "Poppins", sans-serif;
+}
 /** Section Css**/
 .first-section{
 width: 100%;
@@ -9,7 +14,9 @@ height: 500px;
 left: -34px;
 top: 74px;
 }
-
+h2{
+    padding: 0px;
+}
 .inner-sect{
 margin-left: 25%;
 width: 50%;
@@ -295,7 +302,11 @@ color: rgba(170, 169, 128, 0.6);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-family: poppins;
+    color: gray;
+
  }
+ 
  option{
      background-color: #DBDBDBD4;
      border-bottom: 3px solid #D9CB9E;
@@ -331,6 +342,7 @@ input[type="text"]{
 .autocomplete {
     position: relative;
     width: calc(500px);
+    font-family: poppins;
     
   }
    
@@ -359,18 +371,30 @@ input[type="text"]{
     color: #ffffff;
 }
 
-.floods{
-    display: flex;
-    flex-direction: row;
-    
-}
+
 .news{
     display: flex;
-    flex-direction: column; 
-    margin-left: 5%;
+    flex-direction: row; 
+    padding-left: 3%;
+position:relative;
+   
 }
-.floods h1{
+.news h1{
     text-align: left;
     padding: 0px;
+}
+
+#span-1{
+    padding-right:20px;
+}
+.news::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-bottom: 1px solid black;
+    z-index: -1;
 }
 
