@@ -65,7 +65,7 @@ input[type="text"] {
 #forecastAndMap {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     display: flex;
     justify-content: space-between;
  }
@@ -78,7 +78,7 @@ input[type="text"] {
 
 
 #map {
-    height: calc(100% - 45px);
+    height: calc(100% - 50px);
 }
 
 #forecastTemp p{

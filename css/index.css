@@ -205,8 +205,7 @@ ul li{
     background: url("../images/home/cancel.png") no-repeat !important;
     background-position-x: 40% !important;
     background-position-y: 40% !important;
-     color: #D9CB9E !important;
-  }
+   }
 
 
   button.gm-ui-hover-effect > img{
@@ -222,6 +221,7 @@ ul li{
      width: auto;
      height: auto;
      color: white;
+     outline: none;
 }
  
 .info_Window h3{

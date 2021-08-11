@@ -151,7 +151,7 @@ async function getResults(city) {
                 case "Drizzle":
                 case "Rain":
                 case "Mist":
-                    container.style.backgroundImage = `url("../images/weather/rainy.jpeg")`;
+                    container.style.backgroundImage = `url("../images/weather/rainy.png")`;
                     break;
 
                 case "Snow":
