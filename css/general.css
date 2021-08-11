@@ -61,6 +61,31 @@ nav {
     align-content: center;
 }
 
+#logo{
+    margin-left: 7em;
+    width: 60%;
+    height: 20%;
+}
+
+#logo a{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+ }
+
+ #logo a span{
+     align-self: center;
+     font-size: 1em;
+     color: #d9cb9e;
+ }
+
+ #logo a img{
+    height: 40px;
+}
+
+
+
+
 nav a {
     text-decoration: none;
     color: white;
@@ -73,15 +98,6 @@ nav span{
 
 }
 
-#logo {
-    margin-left: 7em;
-}
-
-#logo a {
-    font-size: 1em;
-    letter-spacing: 1em;
-    color: #d9cb9e;
-}
 
 #dropDown div:first-child{
     display: flex;
@@ -193,7 +209,6 @@ nav span{
         padding: 60px 5px 0 5px;
         grid-template-rows: 4em 4em 4em 4em;
         height: 100%;
-        width: 35%;
         background-color: rgba(55, 65, 64, 0.8);
         text-align: center;
         bottom: 0;
@@ -366,5 +381,7 @@ color: rgba(170, 169, 128, 0.6);
     background-color: DodgerBlue !important;
     color: #ffffff;
 }
+
+
 
 

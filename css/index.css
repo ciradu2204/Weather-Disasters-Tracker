@@ -1,241 +1,256 @@
-
-/*** mission section **/
- 
-.missionDetails {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: flex-end;
-    gap:25px;
+/** map css **/
+#container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
-.missionContent p{
-    width: 750px;
-    padding-left: 50px;
+
+#map {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
-.missionContent h1, .missionContent h3 {
-    text-align: left;
-    padding-left: 145px;
-    padding-bottom: 0; 
+#arrowIcon img{
+    height: 100px;
+}
+
+#arrowIcon{
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    animation: arrowIconAnimation 1s linear infinite alternate;
 
 }
 
- 
-
-.missionContent h3 {
-    padding-left: 160px;
-    padding-bottom: 30px;
-}
-
-.missionImage img {
-     width: 200px;
-     box-shadow: 31px -31px rgb(189 195 199 / 29%);
-}
-
- 
- 
-
-/** Main topics section  **/
-
-#main h3{
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-.mainDetails {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-    column-gap: 37px;
+@keyframes arrowIconAnimation {
+    from {
+      bottom: 15px;
+    }
+    to {
+      bottom: 35px;
+    }
   }
 
-.topic {
-   display: flex;
-   flex-direction: column;
-   width: 300px;
-   font-size: 0px;
-}
+ 
 
-
-.topic img{
-    display: inline-block;
-    font-size: 16px;
-    width: 300px;
-}
-
-.topic .content {
-    display: flex;
-    flex-direction: row;
-     height: 200px;
-    justify-content: space-between;
-    background: rgba(189, 195, 199, 0.5);
-    border-radius: 0px 0px 20px 20px;
-    position: relative;
-}
-
-.topic .content a {
-    position: relative;
-    right: 0.2em;
-    align-self: center;
-    font-size: 30px;
-    color: #d9cb9e;
+#container #h3 {
+    position: absolute;
+    top: 3.5em;
+    padding: 10px;
+    font-weight: 350;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    width: 100%;
+    background-color: #374140;
+    z-index: 2;
 }
  
-.topic .mainImage {
+#container #h3::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    padding: 2px;
+    width: 100%;
+    height: 0.05em;
+    background-color: rgba(199, 242, 232, 0.29);;
+}
+
+
+h3 img {
+    width: 20px;
+    height: 20px;
+}
+
+/** Nav **/
+
+@media only screen and (min-width: 0px) {
+ 
+    .mobileView {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #bars {
+        display: block;
+        font-size: 29px;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+
+    #close {
+        display: none;
+        color: #d9cb9e;
+        font-size: 29px;
+        cursor: pointer;
+        margin-right: 0.5em;
+        z-index: 2;
+    }
+
+    body {
+        position: relative;
+    }
+
+    #dropdownContent {
+        padding: 0;
+    }
+
+    #content {
+        display: none;
+        position: absolute;
+        grid-template-columns: auto;
+        padding: 60px 5px 0 5px;
+        grid-template-rows: 4em 4em 4em 4em;
+        height: 100%;
+        background-color: rgba(55, 65, 64, 0.8);
+        text-align: center;
+        bottom: 0;
+        margin-right: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    #content > a::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.05em;
+        background-color: #f3f3f36e;
+    }
+
+    .disastersPage {
+        display: inline;
+    }
+
+    #logo {
+        margin-left: 1em;
+    }
+
+    #dropdownContent {
+        top: 18.7em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #bars i {
+        color: #d9cb9e;
+    }
+
+    nav {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        position: absolute;
+        top: 0;
+        background-color: transparent;
+        vertical-align: center;
+        width: 100%;
+        z-index: 6;
+    }
+
+    #content {
+        position: fixed;
+    }
+}
+
+/*** alertWeather CSS **/
+ 
+ul{
+    margin: 20px;
+}
+
+ul li{
+    font-size: 16px;
+}
+
+.gm-style{
+    font: inherit !important;
+}
+
+ 
+#alertWeather{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: space-between;
+    gap:20px;
+}
+
+#alertWeather h2{
+    color: #D9CB9E;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 0;
+    text-align: initial;
+}
+
+.gm-style-iw-d{
+    overflow: initial !important;
+}
+.gm-style-iw.gm-style-iw-c{
+    padding-bottom: 10px;
+}
+
+.gm-ui-hover-effect{
+    margin: 5px 10px 5px 10px !important;
+    color: white !important;
+  }
+
+  button.gm-ui-hover-effect{
+    background: url("../images/home/cancel.png") no-repeat !important;
+    background-position-x: 40% !important;
+    background-position-y: 40% !important;
+     color: #D9CB9E !important;
+  }
+
+
+  button.gm-ui-hover-effect > img{
+    display: none !important;
+  }
+
+.gm-style .gm-style-iw-c{
+    background: linear-gradient(180deg, #374140 11.46%, rgba(55, 65, 64, 0.7) 45.83%, #374140 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 20px;
+     padding-right: 20px !important;
+    padding-left: 20px !important;
+     width: auto;
+     height: auto;
+     color: white;
+}
+ 
+.info_Window h3{
+    padding: 5px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.info_Window > div:nth-child(2) > h3{
+    font-weight: 800;
+    padding-top:20px;
+    color: #D9CB9E;
+}
+
+.info_Window > div:first-child{
     position: relative;
+    padding-bottom:10px;
+
+ }
+
+
+.info_Window > div:first-child::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-bottom: 1px solid #d9cb9e;
     z-index: -1;
 }
-
-.topic .mainImage h3 {
-    color: #ffecad;
-    position: absolute;
-    font-size: 20px;
-    bottom: 0;
-    left: 1em;
-}
-
-
-/*** Latest news Api**/
-
-#latestNews{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-#latestNews > h3{
- text-align: center;
-}
-
-#latestNews p{
-padding: 0;
-}
-
-.iconify{
-   color: #D9CB9E;
-   font-size: 20px;
-}
  
-
-#latestNews .news{
-    display:  flex;
-    flex-direction: row;
-     width: 70%;
-    padding: 15px;
-}
- #latestNews .news .div2{
-     display: flex;
-     flex-direction: column;
-     padding-left:20px;
-  }
-#latestNews .news img{
-    width: 300px;
-    border-radius: 0 0 15px 15px;
-}
-
-#latestNews .news a{
-    text-decoration: none;
-    background-color: #d9cb9e;
-    border-radius: 15px;
-    padding:10px;
-    color: white;
-}
- 
-
- 
- .news span i{
-    color: #d9cb9e;
-    font-size: 18px;
-  }
-
-  .news .div2 div{
-    padding-top: 10px;
-   }
-
-
-  .current:before{
-      content: "";
-      width: 15px;
-      height:15px; 
-      border-radius: 15px;
-      background-color: red;
-      display: inline-block;
-      margin-right: 5px;
-  }
-
-  .alert:before{
-    content: "";
-    width: 15px;
-    height:15px; 
-    border-radius: 15px;
-    background-color:rgb(255, 153, 0) ;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-
-@media only screen and (max-width: 1020px) {
-  
-#latestNews .news{
-    flex-direction: column;
-    padding: 1em 0;
-    align-items: center;
-    width: 100%;
-}
-
-#latestNews .news .div2{
-         padding-left: 0;
-         width: 300px;
-         
-}
-
-.mainDetails {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-    justify-content: center;
-    row-gap: 5em;
-    padding: 0 0;
-}
-
-.topic .content {
-    width: auto;
-}
-.topic img {
-    width: 100%;
-}
-
-.missionImage {
-    display: none;
-}
-
-.missionDetails {
-    grid-template-columns: auto;
-
-    text-align: center;
-}
-
-.missionContent p{
-    width: 100%;
-    padding-left: 0;
-}
-
-.missionContent h3 {
-    text-align: center;
-}
-
-.missionContent h1, .missionContent h3{
-    padding-left: 0;
-    text-align: center;
-}
- 
-
-
- 
- 
-}
-
-
-  
-  

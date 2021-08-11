@@ -5,6 +5,8 @@ const dropDownContent = document.getElementById("dropdownContent");
 const mobileBar = document.getElementById("bars");
 const mNavbarContent = document.getElementById("content");
 const mobileClose = document.getElementById("close");
+const dropdownContent = document.getElementById("dropdownContent");
+
 
 iconUp.addEventListener('click', () => {
    iconUp.style.display = "none";
@@ -23,6 +25,7 @@ iconDown.addEventListener('click', () => {
 mobileBar.addEventListener('click', () => {
    mNavbarContent.style.display = "grid";
    mobileClose.style.display = "block";
+   dropdownContent.style.display = "none"
    mobileBar.style.display = "none";
 })
 
