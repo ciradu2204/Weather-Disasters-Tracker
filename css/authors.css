@@ -104,6 +104,8 @@ input[type=email], select, textarea {
     font-style: normal;
     font-weight: 600;
     align-self: center;
+    width: fit-content;
+
 
   }
   .row{
@@ -136,6 +138,7 @@ input[type=email], select, textarea {
     }
     .row{
       flex-direction: row;
+     
     }
 
     form {

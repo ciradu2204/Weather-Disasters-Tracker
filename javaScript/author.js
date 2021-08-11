@@ -2,14 +2,14 @@ const profiles = [
   {
     "imageName": "reynald.jpeg",
     "header": "What's up, It is Reynald",
-     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+     "bio": "Liyeuk Reynald is a fourth-year student at the African Leadership College. He hails from Cameroon, often referred to as Africa in miniature. He has a keen interest in functional programming, backend software engineering and big data. He is passionate about how technology can be used to improve healthcare, education and agriculture."
      
     
   },
   {
     "imageName":"cynthia.jpeg",
     "header": "Hi, It is Cynthia",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+    "bio": "Cynthia is a front-end developer aspiring to be a full stack developer. She's worked with languages including Java and JavaScript, as well as frameworks like VUE and React. Cynthia is currently looking for opportunities to grow her front end skills and learn more about the backend side. "
  
   },
   {
@@ -23,7 +23,7 @@ const profiles = [
  {
    "imageName":"Rudo.jpg",
    "header": "Hi, It is  Rudo ",
-   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+   "bio": " I am front-end web developer and I am an aspiring UI/UX designer. For web development, I am fluent in HTML, CSS and JavaScript with a growing interest in JavaScript frameworks such as React. At present, I am looking into expanding my design field of interest. "
  }
 ]
 
