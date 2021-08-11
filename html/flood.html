@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="..\css\flood.css">
     <script defer src="../javaScript/flood.js"></script>
+    <script defer src="../javaScript/general.js"></script>
     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -27,14 +28,14 @@
             </div>
             <div id="pages">
                 <a class=" homePage" href="..\index.html">HOME</a>
-                <a class="active authorPage" href="..\html\earthquake.html">AUTHOR</a>
-                <a class="weatherPage" href="#">WEATHER</a>
+                <a class="authorPage" href="..\html\earthquake.html">AUTHOR</a>
+                <a class="weatherPage" href="..\html\weather.html">WEATHER</a>
                 <div class="dropDown">
                     <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
                     <div class="dropdownContent">
                         <a href="..\html\earthquake.html">EARTHQUAKE</a>
-                        <a href="#">CYCLONE</a>
-                        <a href="..\html\flood.html">FLOOD</a>
+                        <a href="..\html\cyclone.html">CYCLONE</a>
+                        <a class="active floodPage" href="..\html\flood.html">FLOOD</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +78,7 @@
                     <h2>CAUSES</h2>
                     <div class="point-1">
                         <div>
-                            <i class='fas fa-arrow-right'></i>
+                            <image src="../images/floods/Arrow 10.png"></image>
                         </div>
                         <div class="point">
                             <p>Excessive rain from tropical storm systems making landfall</p>
@@ -85,7 +86,7 @@
                     </div>
                     <div class="point-1">
                         <div>
-                            <i class='fas fa-arrow-right'></i>
+                            <image src="../images/floods/Arrow 10.png"></image>
                         </div>
                         <div class="point">
                             <p>Persistent thunderstorms over the same area for extended periods</p>
@@ -94,7 +95,7 @@
 
                     <div class="point-1">
                         <div>
-                            <i class='fas fa-arrow-right'></i>
+                            <image src="../images/floods/Arrow 10.png"></image>
                         </div>
                         <div class="point">
                             <p>Combined rainfall and snowmelt</p>
@@ -117,7 +118,7 @@
                 <h2>CAUSES</h2>
                 <div class="point-1">
                     <div>
-                        <i class='fas fa-arrow-right'></i>
+                        <image src="../images/floods/Arrow 10.png"></image>
                     </div>
                     <div class="point">
                         <p>Tropical cyclones</p>
@@ -125,7 +126,7 @@
                 </div>
                 <div class="point-1">
                     <div>
-                        <i class='fas fa-arrow-right'></i>
+                        <image src="../images/floods/Arrow 10.png"></image>
                     </div>
                     <div class="point">
                         <p>Tsunami</p>
@@ -134,7 +135,7 @@
 
                 <div class="point-1">
                     <div>
-                        <i class='fas fa-arrow-right'></i>
+                        <image src="../images/floods/Arrow 10.png"></image>
                     </div>
                     <div class="point">
                         <p>Higher-than-average tides</p>
@@ -170,7 +171,7 @@
                     <h2>CAUSES</h2>
                     <div class="point-1">
                         <div>
-                            <i class='fas fa-arrow-right'></i>
+                            <image src="../images/floods/Arrow 10.png"></image>
                         </div>
                         <div class="point">
                             <p>Winds</p>
@@ -178,7 +179,7 @@
                     </div>
                     <div class="point-1">
                         <div>
-                            <i class='fas fa-arrow-right'></i>
+                            <image src="../images/floods/Arrow 10.png"></image>
                         </div>
                         <div class="point">
                             <p>Waves</p>
@@ -187,7 +188,7 @@
 
                     <div class="point-1">
                         <div>
-                            <i class='fas fa-arrow-right'></i>
+                            <image src="../images/floods/Arrow 10.png"></image>
                         </div>
                         <div class="point">
                             <p>Low atmospherics pressure</p>
@@ -210,7 +211,7 @@
                     <option value="alert">ALERT</option>
                     <option value="past">PAST DISASTER</option>
                 </select>
-                <div class="autocomplete"> <input type="text" id="search" placeholder="search for country"></div>
+                <div class="autocomplete"> <input type="text" id="search" placeholder="search for country" ></div>  
             </form>
 <br>
             <div id="container">
