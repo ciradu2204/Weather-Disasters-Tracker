@@ -248,7 +248,7 @@ const markerClicked = async(markerPosition, dataId, long, lat, status,  country)
      const contentString = document.createElement("div");
      contentString.className = "info_Window"
     const div1 = document.createElement("div");
-    div1.innerHTML = `<div id="alertWeather"><h2>WEATHER</h2><h2>${data.main.temp}°C</h2> </div> <div id="alertLocation"><h3>${country}</h3></div> <div id="alertDate"><h3>${dateBuilder()}</h3></div> `
+    div1.innerHTML = `<div id="alertWeather"><h2>WEATHER</h2><h2>${Math.round(data.main.temp)}°C</h2> </div> <div id="alertLocation"><h3>${country}</h3></div> <div id="alertDate"><h3>${dateBuilder()}</h3></div> `
     contentString.appendChild(div1);
      
     const div2 = document.createElement("div");
