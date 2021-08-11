@@ -7,7 +7,6 @@ body {
 
 #container {
     position: relative;
-    background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;
 }

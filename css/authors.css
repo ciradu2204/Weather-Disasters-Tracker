@@ -70,6 +70,10 @@ input[type=email], select, textarea {
     border: 1px;
     border-color: #D9CB9E;
   }
+
+  #fname:focus, #email:focus, #message:focus{
+    outline-color: #D9CB9E;
+  }
   
   @media screen and (min-width: 1024px) {
     #fname, #email, #message{
@@ -95,8 +99,10 @@ input[type=email], select, textarea {
  
   form{
     width: 100%;
+    position: relative;
     padding: 20px;
   }
+
      
   input[type=submit] {
     background-color: #D9CB9E;
@@ -121,8 +127,30 @@ input[type=email], select, textarea {
    }
   
   .col-75 {
+    display: flex;
+    flex-direction: column;
      margin-top: 6px;
    
+  }
+
+  #emailError, #fullNameError, #messageError{
+    color: red;
+    margin-left: 10px;
+  }
+
+  #successMessageDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px ;
+  }
+
+  #sucessMessage {
+    color: white; 
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: #32CD32		;
+
   }
  
    @media screen and (min-width: 1024px) {
@@ -271,5 +299,13 @@ input[type=email], select, textarea {
 
     }
    }
- 
- 
+
+  /** Loader css **/ 
+  
+  #loader{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+  }

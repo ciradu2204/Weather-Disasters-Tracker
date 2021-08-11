@@ -2,30 +2,42 @@ const profiles = [
   {
     "imageName": "reynald.jpeg",
     "header": "What's up, It is Reynald",
-     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non ",
+    "linkedIn": "https://www.linkedin.com/in/liyeuk-reynald-joabet-942472161/",
+    "github" : "https://github.com/reynaldjoabet",
+    "twitter" : "https://twitter.com/reynaldjoabet",
      
     
   },
   {
     "imageName":"cynthia.jpeg",
     "header": "Hi, It is Cynthia",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non ",
+    "linkedIn": "http://www.linkedin.com/in/ciradu2204",
+    "github" : "https://github.com/ciradu2204",
+    "twitter" : "https://twitter.com/IraduCynthia",
  
   },
   {
    "imageName": "celine.jpeg",
    "header": "What's up, It is Celine ",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non ",
+    "linkedIn": "https://www.linkedin.com/in/celine-ishimwe-67b593109/",
+    "github" : "",
+    "twitter" : "https://twitter.com/__celinish"
 
-
-   
  },
  {
    "imageName":"Rudo.jpg",
    "header": "Hi, It is  Rudo ",
-   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non "
+   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, velporttitor rhoncus dolor purus non ",
+   "linkedIn": "https://www.linkedin.com/in/rudo-courtney-togara-ab1108184/",
+    "github" : "https://github.com/Rudo-Courtney",
+    "twitter" : ""
  }
 ]
+
+let loading = false;
 
   const createElement = (leftElement) =>{
    let div = document.createElement("div");
@@ -34,9 +46,9 @@ const profiles = [
    let img = document.createElement("img");
    img.src= "../images/author/" + profiles[leftElement].imageName
    let div2 = document.createElement("div");
-    div2.innerHTML = `<h3> ${profiles[leftElement].header}</h3> <p>${profiles[leftElement].bio}</p> <div class="socialIcons"> <a href="#" class="fab fa-facebook"></a>
-    <a href="#" class="fab fa-github"></a>
-    <a href="#" class="twitter">@</a></div>`
+    div2.innerHTML = `<h3> ${profiles[leftElement].header}</h3> <p>${profiles[leftElement].bio}</p> <div class="socialIcons"> <a href="${profiles[leftElement].linkedIn}" class="fab fa-linkedin-in"></a>
+    <a href="${profiles[leftElement].github}" class="fab fa-github"></a>
+    <a href="${profiles[leftElement].twitter}" class="twitter">@</a></div>`
     div.appendChild(img);
     div.appendChild(div2);
       return div; 
@@ -87,3 +99,99 @@ const rightSide = () => {
 }
 
 addProfiles()
+
+const resetErrors = () =>{
+  let successMessage = document.getElementById("successMessageDiv");
+  let fullNameError = document.getElementById("fullNameError");
+  let emailError = document.getElementById("emailError"); 
+  let messageError = document.getElementById("messageError");
+  successMessage.innerHTML = "";
+  fullNameError.innerHTML = "";
+  emailError.innerHTML = "";
+  messageError.innerHTML = ""
+
+}
+
+const resetForm = () =>{
+  let fullName = document.getElementById("fname");
+  let email = document.getElementById("email");
+  let message = document.getElementById("message");
+
+  fullName.value = "";
+  email.value = "";
+  message.value = "";
+
+}
+
+const isLoading = (loading) =>{
+
+  if(loading){
+    document.getElementById("loader").style.display = "flex";
+    document.getElementById("submit").disabled = true;
+  }else{
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("submit").disabled = false;
+
+  }
+}
+
+isLoading(loading);
+
+const formValidation  =  () => {
+
+  let fullName = document.getElementById("fname").value;
+  let fullNameError = document.getElementById("fullNameError");
+  let successMessage = document.getElementById("successMessageDiv");
+
+  let h3 = document.createElement("h3");
+  h3.id = "sucessMessage";
+
+  let email = document.getElementById("email").value;
+  let emailError = document.getElementById("emailError"); 
+  
+  let message = document.getElementById("message").value;
+  let messageError = document.getElementById("messageError");
+  
+
+  if(fullName === ""){
+     fullNameError.innerHTML = "Full Name is needed"
+  }
+
+  if(email === ""){
+    emailError.innerHTML = "Email is needed"
+  }
+
+  if(message === ""){
+    messageError.innerHTML = "Message is needed "
+  }
+
+
+  if(email !== "" && message !== "" && fullName !== ""){
+    resetForm();
+    loading = true; 
+    isLoading(loading);
+    Email.send({
+      SecureToken: "3fb9a956-1064-4111-b24f-098c8f9a289e",
+      To : `c.iradukund@alustudent.com`,
+      From : 'c.iradukund@alustudent.com',
+      Subject : `${fullName} From Natural&Weather`,
+      Body : `${message} from ${email}`,      
+      }).then( () =>{
+        loading = false; 
+        isLoading(loading);
+        h3.innerHTML = "Mail sent successfully";
+        successMessage.appendChild(h3);
+      }).catch(error => console.log(error));
+
+
+  }
+  
+
+}
+
+const form = document.getElementById("form");
+form.addEventListener('submit', (e) =>{
+  e.preventDefault();
+  resetErrors();
+  formValidation();
+})

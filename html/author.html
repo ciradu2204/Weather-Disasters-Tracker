@@ -2,140 +2,162 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Natural Disasters Tracker">
-    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authors</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="..\css\authors.css">
-      <link rel="stylesheet" href="../css/general.css">
-      <script defer src="../javaScript/general.js"></script>
-      <script defer src="../javaScript/author.js"></script>
-     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="description" content="Natural Disasters Tracker">
+  <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authors</title>
 
-      </head>
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="..\css\authors.css">
+  <script defer src="../javaScript/general.js"></script>
+  <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+  <script defer src="../javaScript/author.js"></script>
+  <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
   <nav>
     <div class="mobileView">
-    <div id="logo">
-      <a href="../index.html">
-        <span>WEATHER</span>
-         <img src="../images/logo.png">
-        <span>DISASTERS</span>      
-    </a>
-    </div>
-    <div id="bars">
+      <div id="logo">
+        <a href="../index.html">
+          <span>WEATHER</span>
+          <img src="../images/logo.png">
+          <span>DISASTERS</span>
+        </a>
+      </div>
+      <div id="bars">
         <i class="fa fa-bars"></i>
-    </div>
-    <div id="close">
+      </div>
+      <div id="close">
         <i class="fas fa-times"></i>
-    </div>
+      </div>
     </div>
     <div id="content">
-            <a class="homePage" href="../html/home.html">HOME</a>
-            <a class="active authorPage" href="./author.html">AUTHOR</a>
-            <a class="weatherPage" href="./weather.html">WEATHER</a>
-            <div id="dropDown">
-                <div>
-                <span class="disastersPage">DISASTERS</span>
-                <a class="fa fa-angle-down" id="iconDown"></a>
-                <a class="fa fa-angle-up" id="iconUp"></a>
-               </div>
-                <div id="dropdownContent">
-                    <a href="../html/earthquake.html">EARTHQUAKE</a>
-                    <a href="../html/cyclone.html">CYCLONE</a>
-                    <a href="../html/flood.html">FLOOD</a>
-                </div>
+      <a class="homePage" href="../html/home.html">HOME</a>
+      <a class="active authorPage" href="./author.html">AUTHOR</a>
+      <a class="weatherPage" href="./weather.html">WEATHER</a>
+      <div id="dropDown">
+        <div>
+          <span class="disastersPage">DISASTERS</span>
+          <a class="fa fa-angle-down" id="iconDown"></a>
+          <a class="fa fa-angle-up" id="iconUp"></a>
+        </div>
+        <div id="dropdownContent">
+          <a href="../html/earthquake.html">EARTHQUAKE</a>
+          <a href="../html/cyclone.html">CYCLONE</a>
+          <a href="../html/flood.html">FLOOD</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section>
+      <div class="first-heading">
+        <h1 style="text-align: center;"> MEET OUT TEAM</h1>
+      </div>
+      <div class="sub-heading">
+        <h2>The people behind the great things you see!</h2>
+      </div>
+      <div class="team">
+        <div class="dirIcon">
+          <div onclick="leftSide()" class="leftIcon"><a><i class="fa fa-caret-left"></i></a></div>
+          <div onclick="rightSide()" class="rightIcon1"><a><i class="fa fa-caret-right"></i></a></div>
+        </div>
+        <div id="profiles">
+
+        </div>
+        <div onclick="rightSide()" class="rightIcon2"><a><i class="fa fa-caret-right"></i></a></div>
+      </div>
+
+      <div class="third-heading">
+        <h1>GET IN TOUCH</h1>
+
+      </div>
+      <div class="sub-heading2">
+        <h2>For any enquiries, please reach out by filling out the form</h2>
+      </div>
+      <div>
+        <form id="form" onsubmit="return false" >
+          <div id="successMessageDiv">
+           </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname"><strong>Full Name: </strong></label>
+            </div>
+            <div class="col-75">
+              <span id="fullNameError"></span>
+              <input type="text" id="fname" name="fullname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email"><strong>Email: </strong></label>
+            </div>
+            <div class="col-75">
+              <span id="emailError"></span>
+              <input type="email" id="email" name="email">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="message"><strong>Message: </strong></label>
+            </div>
+            <div class="col-75">
+              <span id="messageError"></span>
+              <textarea id="message" name="message" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" id="submit" value="SEND">
+          </div>
+          <div id="loader">
+            <div></div>
+            <div></div>
+            <div></div>
          </div>
-    </div>
-</nav>
-<main>
-  <section>
-<div class="first-heading">
-    <h1 style="text-align: center;"> MEET OUT TEAM</h1>
-</div>
-<div class="sub-heading">
-    <h2>The people behind the great things you see!</h2>
-</div>
-<div class="team">
-  <div class="dirIcon">
-  <div onclick="leftSide()" class="leftIcon"><a><i class="fa fa-caret-left"></i></a></div>
-  <div onclick="rightSide()" class="rightIcon1"><a><i class="fa fa-caret-right"></i></a></div>
-  </div>
-  <div id="profiles">
-
-  </div>
-  <div onclick="rightSide()" class="rightIcon2"><a><i class="fa fa-caret-right"></i></a></div>
-</div>
-
-<div class="third-heading">
-    <h1>GET IN TOUCH</h1>
-
-</div>
-<div class="sub-heading2">
-    <h2 >For any enquiries, please reach out by filling out the form</h2>
-</div>
-<div>
-  <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname"><strong>Full Name: </strong></label>
+        </form>
       </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="fullname" >
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="email"><strong>Email: </strong></label>
-      </div>
-      <div class="col-75">
-        <input type="email" id="email" name="email" >
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="message"><strong>Message: </strong></label>
-      </div>
-      <div class="col-75">
-        <textarea id="message" name="message"  style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="SEND">
-    </div>
-  </form>
-</div>
-</main>
-<footer>
-  <div class="explore">
-  <span>EXPLORE</span>
+  </main>
+  <footer>
+    <div class="explore">
+      <span>EXPLORE</span>
       <ul>
-         <a href="../html/home.html"><li>HOME</li></a>
-            <a href="../html/author.html"><li>AUTHOR</li></a>
-            <a href="../html/weather.html"><li>WEATHER</li></a>
-            <a href="../html/earthquake.html"><li>DISASTERS</li></a>
-            <a href="./geojson.html"><li>GEOJSON</li></a>
- 
-       </ul>
-  </div>
-  <div class="data">
-      <span>DATA RETRIEVED FROM</span>
-           <ul>
-           <a href="https://reliefweb.int/" target="_blank"><li>RELIEF WEB</li></a>
-            </ul>
-   </div>
- <div class="pageDetails">
-  <span>PAGE DETAILS</span>
+        <a href="../html/home.html">
+          <li>HOME</li>
+        </a>
+        <a href="../html/author.html">
+          <li>AUTHOR</li>
+        </a>
+        <a href="../html/weather.html">
+          <li>WEATHER</li>
+        </a>
+        <a href="../html/earthquake.html">
+          <li>DISASTERS</li>
+        </a>
+        <a href="./geojson.html">
+          <li>GEOJSON</li>
+        </a>
 
- 
-     <p>This page provides information about the authors of this web application.</p>
- 
- </div>
-</footer>
+      </ul>
+    </div>
+    <div class="data">
+      <span>DATA RETRIEVED FROM</span>
+      <ul>
+        <a href="https://reliefweb.int/" target="_blank">
+          <li>RELIEF WEB</li>
+        </a>
+      </ul>
+    </div>
+    <div class="pageDetails">
+      <span>PAGE DETAILS</span>
+
+
+      <p>This page provides information about the authors of this web application.</p>
+
+    </div>
+  </footer>
 </body>
 
 </html>

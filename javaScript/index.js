@@ -288,7 +288,7 @@ const createMarkers = (country, markerPosition, i, status) =>{
         position: { lat: parseFloat(lat), lng: parseFloat(long) },
         map,
         title: country,
-        icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+        icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
       });
     }
     else {
@@ -296,7 +296,7 @@ const createMarkers = (country, markerPosition, i, status) =>{
      marker = new google.maps.Marker({
         position: { lat: parseFloat(lat), lng: parseFloat(long) },
         title: country,
-        icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+        icon: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
         map
       });
     }
@@ -322,7 +322,6 @@ const getData = async() =>{
      result = data.data;
         for(let i=0; i<result.length; i++){
          result[i].fields.country.forEach(country =>{
-           console.log(markerPosition);
              createMarkers(country.name, markerPosition, i, result[i].fields.status)
              markerPosition++;
         })
@@ -332,7 +331,12 @@ const getData = async() =>{
 
 }
 
-getData();
+window.addEventListener('load', () =>{
+  initMap();
+  getData();
+})
+
+
  
 
 
