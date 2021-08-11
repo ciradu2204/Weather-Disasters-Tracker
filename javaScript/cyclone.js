@@ -121,7 +121,7 @@ const getCycloneNews = async () => {
         })
         table.appendChild(tbody);
       } else {
-        document.getElementById("error").innerHTML = "<p>No Information Found</p>";
+        document.getElementById("error").innerHTML = "<p>No Cyclone Found</p>";
         document.getElementById("error").style.margin = "20px";
       }
     })

@@ -46,9 +46,9 @@ let loading = false;
    let img = document.createElement("img");
    img.src= "../images/author/" + profiles[leftElement].imageName
    let div2 = document.createElement("div");
-    div2.innerHTML = `<h3> ${profiles[leftElement].header}</h3> <p>${profiles[leftElement].bio}</p> <div class="socialIcons"> <a href="${profiles[leftElement].linkedIn}" class="fab fa-linkedin-in"></a>
-    <a href="${profiles[leftElement].github}" class="fab fa-github"></a>
-    <a href="${profiles[leftElement].twitter}" class="twitter">@</a></div>`
+    div2.innerHTML = `<h3> ${profiles[leftElement].header}</h3> <p>${profiles[leftElement].bio}</p> <div class="socialIcons"> <a target="_blank" href="${profiles[leftElement].linkedIn}" class="fab fa-linkedin-in"></a>
+    <a  target="_blank" href="${profiles[leftElement].github}" class="fab fa-github"></a>
+    <a  target="_blank" href="${profiles[leftElement].twitter}" class="twitter">@</a></div>`
     div.appendChild(img);
     div.appendChild(div2);
       return div; 
