@@ -217,6 +217,8 @@ input[type=email], select, textarea {
     justify-content: space-around;
   }
 
+
+
   .rightIcon2{
     display: none;
   }
@@ -274,8 +276,11 @@ input[type=email], select, textarea {
     text-decoration: none;
     font-size: 15px;
   }
- 
 
+  .rightIcon1, .rightIcon2, .leftIcon{
+    cursor: pointer;
+  }
+ 
   .btn1{
     margin-left: 5%;
 

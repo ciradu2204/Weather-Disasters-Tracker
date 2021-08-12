@@ -7,7 +7,7 @@
     height: 500px;
 }
 h2 {
-    padding: 0px;
+    padding-bottom: 20px;
 }
 .inner-sect {
     display: flex;
@@ -19,6 +19,7 @@ h2 {
 
 .inner-sect div{
     width: 50%;
+    padding: 20px;
     background: rgba(55, 65, 64, 0.77);
 
 }
@@ -67,10 +68,12 @@ h2 {
     width: 60%;
     align-self: flex-start;
  }
+ 
 
  .disasterContent div{
   display: flex;
   flex-direction: row;
+  gap:5px;
   align-items: center;
   }
 
@@ -296,6 +299,11 @@ strong{
 
     .autocomplete-items{
         width: 60%;
+    }
+
+    h2 {
+        font-size: 15px;
+        padding-bottom: 10px;
     }
 
 }
