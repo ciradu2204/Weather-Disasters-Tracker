@@ -41,7 +41,7 @@ h2 {
 
 #disasters {
     display: flex;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     flex-direction: column;
     justify-content: center;
     width: 96%;
@@ -55,7 +55,7 @@ h2 {
     gap:10px;
  }
  .second{
-     gap:140px;
+     gap:100px;
  }
 .disasterImage img {
      width: 300px;
@@ -176,11 +176,9 @@ select {
 }
  
  
-#search-icon{
-    display: flex;
-    flex-direction: row;
-    color: khaki;
-    padding-left: 0%;
+a#searchIcon{
+    align-self: center;
+    color: #D9CB9E;
 }
 
 
@@ -217,8 +215,8 @@ input[type="text"] {
      font-size: 16px;
 }
 
-.news p{
-    padding: 0;
+ p{
+    padding: 2px;
 }
 
 
@@ -226,7 +224,7 @@ input[type="text"] {
     padding-right: 20px;
 }
 
-span{
+.news span{
     font-weight: 350;
 }
 
@@ -256,6 +254,12 @@ strong{
     color: white;
     padding: 20px;
     border-radius: 5px;
+}
+
+.autocomplete{
+    display: flex;
+    width: calc(20%);
+    flex-direction: row;
 }
 
 @media only screen and (max-width: 800px) {

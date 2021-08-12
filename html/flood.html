@@ -19,24 +19,35 @@
 
 <body>
     <nav>
-        <div id="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <div class="content">
-            <div class="bars">
+        <div class="mobileView">
+            <div id="logo">
+                <a href="../index.html">
+                    <span>WEATHER</span>
+                     <img src="../images/logo.png">
+                    <span>DISASTERS</span>      
+                </a>
+            </div>
+            <div id="bars">
                 <i class="fa fa-bars"></i>
             </div>
-            <div id="pages">
-                <a class=" homePage" href="../html/home.html">HOME</a>
-                <a class="authorPage" href="..\html\earthquake.html">AUTHOR</a>
-                <a class="weatherPage" href="..\html\weather.html">WEATHER</a>
-                <div class="dropDown">
-                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
-                    <div class="dropdownContent">
-                        <a href="..\html\earthquake.html">EARTHQUAKE</a>
-                        <a href="..\html\cyclone.html">CYCLONE</a>
-                        <a class="active floodPage" href="..\html\flood.html">FLOOD</a>
-                    </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div id="content">
+            <a class="homePage" href="../html/home.html">HOME</a>
+            <a class="authorPage" href="./author.html">AUTHOR</a>
+            <a class="weatherPage" href="./weather.html">WEATHER</a>
+            <div id="dropDown">
+                <div>
+                    <span class="disastersPage">DISASTERS</span>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                </div>
+                <div id="dropdownContent">
+                    <a  href="../html/earthquake.html">EARTHQUAKE</a>
+                    <a href="../html/cyclone.html">CYCLONE</a>
+                    <a class="active" href="#">FLOOD</a>
                 </div>
             </div>
         </div>
