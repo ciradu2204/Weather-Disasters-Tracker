@@ -271,7 +271,7 @@ const markerClicked = async(markerPosition, dataId, long, lat, status,  country)
     contentString.appendChild(div2);
     contentString.appendChild(div1);
     contentString.appendChild(div3)
-    contentString.style.position = "absolute";
+    contentString.style.position = "fixed";
     contentString.style.zIndex = "5"
     contentString.style.bottom = `0px`
     contentString.style.left = `0px`

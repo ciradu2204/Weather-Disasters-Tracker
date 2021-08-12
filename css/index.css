@@ -18,7 +18,7 @@
 }
 
 #arrowIcon{
-    position: absolute;
+    position: fixed;
     bottom: 15px;
     right: 10px;
     animation: arrowIconAnimation 1s linear infinite alternate;
@@ -166,10 +166,6 @@ ul{
 
 ul li{
     font-size: 16px;
-}
-
-.gm-style{
-    font: inherit !important;
 }
 
  

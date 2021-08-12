@@ -9,7 +9,7 @@ body {
     position: relative;
     background-repeat: no-repeat;
     height: 90vh;
-}
+ }
 
 #locationAndDate {
     color: white;
@@ -218,7 +218,8 @@ table td:nth-child(1) {
         height: auto;
         position: initial;
     }
-    
+
+   
     #forecastAndMap{
         flex-direction: column;
         margin-top: 10px;
