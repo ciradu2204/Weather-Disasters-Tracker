@@ -8,6 +8,7 @@ body {
 #container {
     position: relative;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 90vh;
  }
 
@@ -224,6 +225,7 @@ table td:nth-child(1) {
         flex-direction: column;
         margin-top: 10px;
         gap:20px;
+        padding-bottom: 20px;
         position: initial;
      }
 
