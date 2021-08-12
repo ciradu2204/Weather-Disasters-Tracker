@@ -30,6 +30,7 @@ input[type="text"] {
     border-radius: none;
     letter-spacing: 1px;
     font-size: 18px;
+    border-radius: unset;
     background-color: transparent;
     outline: none;
     color: white;
