@@ -25,17 +25,6 @@ iconDown.addEventListener('click', () => {
 
 })
 
-disasterPage.addEventListener('click', () =>{
-     if(iconDown.style.display === "inline"){
-      iconDown.style.display = "none";
-      iconUp.style.display = "inline";
-      dropDownContent.style.display = "none";
-    }else{
-      iconUp.style.display = "none";
-      iconDown.style.display = "inline";
-      dropDownContent.style.display = "block";
-    }
-})
 
 mobileBar.addEventListener('click', () => {
    mNavbarContent.style.display = "grid";
@@ -50,6 +39,18 @@ mobileClose.addEventListener('click', () => {
    mobileBar.style.display = "block";
 
 
+})
+
+disasterPage.addEventListener('click', () =>{
+   if(iconDown.style.display === "inline"){
+    iconDown.style.display = "none";
+    iconUp.style.display = "inline";
+    dropDownContent.style.display = "none";
+  }else{
+    iconUp.style.display = "none";
+    iconDown.style.display = "inline";
+    dropDownContent.style.display = "block";
+  }
 })
 
 
