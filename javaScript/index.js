@@ -234,6 +234,13 @@ const dateBuilder = () => {
   return date;
 }
 
+const removeInfoWindow = () =>{
+   
+  const container = document.getElementById("container");
+  const contentString = document.getElementById("info_Window");
+  container.removeChild(contentString);
+}
+
 const markerClicked = async(markerPosition, dataId, long, lat, status,  country) =>{
   await fetch(`${api.base}weather?lat=${lat}&lon=${long}&units=metric&appid=${api.openWeatherApiKey}`)
   .then((response) => response.json())
@@ -245,27 +252,38 @@ const markerClicked = async(markerPosition, dataId, long, lat, status,  country)
       ul.appendChild(li);
      })
       
+     const container = document.getElementById("container");
      const contentString = document.createElement("div");
-     contentString.className = "info_Window"
+     contentString.id = "info_Window"
     const div1 = document.createElement("div");
-    div1.innerHTML = `<div id="alertWeather"><h2>WEATHER</h2><h2>${Math.round(data.main.temp)}°C</h2> </div> <div id="alertLocation"><h3>${country}</h3></div> <div id="alertDate"><h3>${dateBuilder()}</h3></div> `
-    contentString.appendChild(div1);
-     
     const div2 = document.createElement("div");
+    div2.innerHTML = `<a id="closeInfoWindow" onclick="return removeInfoWindow()" class="fas fa-times"></a>`
+    div1.innerHTML = `<div id="alertWeather"><h2>WEATHER</h2><h2>${Math.round(data.main.temp)}°C</h2> </div> <div id="alertLocation"><h3>${country}</h3></div> <div id="alertDate"><h3>${dateBuilder()}</h3></div> `
+    const div3 = document.createElement("div");
     const h3 = document.createElement("h3");
     h3.innerHTML = `${(status ==="alert")?"ONGOING":"ALERT"} DISASTER TYPE`
-    div2.appendChild(h3);
-    div2.appendChild(ul);
-    contentString.appendChild(div2)
- 
-     const infowindow = new google.maps.InfoWindow({
-      content: contentString,
-    });
-     infowindow.open({
-      anchor: markers[markerPosition],
-      map,
-      shouldFocus: false,
-    })
+    div3.appendChild(h3);
+    const longPx = (Math.abs(long)*window.innerWidth)/360
+    console.log(longPx);
+    const latPx = (Math.abs(lat)*window.innerHeight)/180
+
+    div3.appendChild(ul);
+    contentString.appendChild(div2);
+    contentString.appendChild(div1);
+    contentString.appendChild(div3)
+    contentString.style.position = "absolute";
+    contentString.style.zIndex = "5"
+    contentString.style.top = `${latPx}px`
+    contentString.style.left = `${longPx}px`
+    container.appendChild(contentString);
+    //  const infowindow = new google.maps.InfoWindow({
+    //   content: contentString,
+    // });
+    //  infowindow.open({
+    //   anchor: markers[markerPosition],
+    //   map,
+    //   shouldFocus: false,
+    // })
    })
 
 }

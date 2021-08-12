@@ -1,7 +1,7 @@
 const profiles = [
   {
     "imageName": "reynald.jpeg",
-    "header": "What's up, It's Reynald",
+    "header": "What's up, I'm Reynald",
     "bio": "A fourth-year student at the African Leadership College. I am from Cameroon, often referred to as Africa in miniature. I have a keen interest in functional programming, backend software engineering and big data. Also, I am passionate about how technology can be used to improve healthcare, education and agriculture.",
     "linkedIn": "https://www.linkedin.com/in/liyeuk-reynald-joabet-942472161/",
     "github": "https://github.com/reynaldjoabet",
@@ -11,7 +11,7 @@ const profiles = [
   },
   {
     "imageName": "cynthia.jpeg",
-    "header": "Hello, It's Cynthia",
+    "header": "Hello, I'm Cynthia",
     "bio": "A front-end developer who is aspiring to be a full stack developer. I have worked with languages including Java and JavaScript, as well as frameworks like VUE and React. I am currently looking for opportunities to grow her front end skills and learn more about the backend side.",
     "linkedIn": "http://www.linkedin.com/in/ciradu2204",
     "github": "https://github.com/ciradu2204",
@@ -20,7 +20,7 @@ const profiles = [
   },
   {
     "imageName": "celine.jpeg",
-    "header": "Hi, It's Celine ",
+    "header": "Hi, I'm Celine",
     "bio": "An audacious, creative, and self-driven woman whose passion lies in designing UI & UX for software and web applications. I've worked on different tools for wireframing, mockups, and prototypes such as Balsamiq, Figma, and Adobe XD. I dream of becoming a product designer in the future.",
     "linkedIn": "https://www.linkedin.com/in/celine-ishimwe-67b593109/",
     "github": "",
@@ -29,7 +29,7 @@ const profiles = [
   },
   {
     "imageName": "Rudo.jpg",
-    "header": "Hey, It's Rudo",
+    "header": "Hey, I'm Rudo",
     "bio": " A front-end web developer and an aspiring UI/UX designer. For web development, I am fluent in HTML, CSS and JavaScript with a growing interest in JavaScript frameworks such as React. At present, I am looking into expanding my design field of interest. ",
     "linkedIn": "https://www.linkedin.com/in/rudo-courtney-togara-ab1108184/",
     "github": "https://github.com/Rudo-Courtney",

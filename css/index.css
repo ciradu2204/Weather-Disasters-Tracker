@@ -11,7 +11,7 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-}
+ }
 
 #arrowIcon img{
     height: 100px;
@@ -189,30 +189,7 @@ ul li{
     text-align: initial;
 }
 
-.gm-style-iw-d{
-    overflow: initial !important;
-}
-.gm-style-iw.gm-style-iw-c{
-    padding-bottom: 10px;
-}
-
-.gm-ui-hover-effect{
-    margin: 5px 10px 5px 10px !important;
-    color: white !important;
-  }
-
-  button.gm-ui-hover-effect{
-    background: url("../images/home/cancel.png") no-repeat !important;
-    background-position-x: 40% !important;
-    background-position-y: 40% !important;
-   }
-
-
-  button.gm-ui-hover-effect > img{
-    display: none !important;
-  }
-
-.gm-style .gm-style-iw-c{
+#info_Window {
     background: linear-gradient(180deg, #374140 11.46%, rgba(55, 65, 64, 0.7) 45.83%, #374140 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      border-radius: 20px;
@@ -223,34 +200,39 @@ ul li{
      color: white;
      outline: none;
 }
- 
-.info_Window h3{
+
+#info_Window > div:nth-child(1) {
+    text-align: right;
+}
+
+ #closeInfoWindow:hover{
+     color: #d9cb9e;
+ }
+#info_Window h3{
     padding: 5px;
     font-weight: 300;
     font-size: 15px;
 }
 
-.info_Window > div:nth-child(2) > h3{
+#info_Window > div:nth-child(3) > h3{
     font-weight: 800;
     padding-top:20px;
     color: #D9CB9E;
 }
 
-.info_Window > div:first-child{
+#info_Window > div:nth-child(2){
     position: relative;
     padding-bottom:10px;
 
  }
 
-
-.info_Window > div:first-child::after{
+#info_Window > div:nth-child(2)::after{
     content:"";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 0.5em;
-    border-bottom: 1px solid #d9cb9e;
+     border-bottom: 1px solid #d9cb9e;
     z-index: -1;
 }
  
