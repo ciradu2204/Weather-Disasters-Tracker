@@ -287,8 +287,8 @@ table a{
 #slideRight{
     display: none;
     position: absolute;
-    right: 0;
-    top: calc(50% + 60px);
+    right: 30%;
+    top: calc(50%);
     font-size: 25px;
 
 }

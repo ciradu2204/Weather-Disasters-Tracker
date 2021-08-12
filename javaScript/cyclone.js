@@ -99,21 +99,20 @@ const getCycloneNews = async () => {
             let row2_data0 = document.createElement("td");
             row2_data0.className = "rowList"
             row2_data0.appendChild(ul);
-            let row2_data1 = document.createElement("td");
-            row2_data1.innerHTML = (name.includes("Tropical Cyclone")) ? "Tropical Cyclone" : (name.includes("Hurricane")) ? "Hurricane" : (name.includes("Typhoon")) ? "Typhoon" : "Storm Surge"
+            // let row2_data1 = document.createElement("td");
+            // row2_data1.innerHTML = (name.includes("Tropical Cyclone")) ? "Tropical Cyclone" : (name.includes("Hurricane")) ? "Hurricane" : (name.includes("Typhoon")) ? "Typhoon" : "Storm Surge"
             let row2_data2 = document.createElement("td");
             const options = { month: 'long' };
             row2_data2.innerHTML = `${date.getDate()} ${new Intl.DateTimeFormat('en-US', options).format(date)} ${date.getFullYear()}`;
             let row2_data3 = document.createElement("td");
             row2_data3.className = status;
             row2_data3.innerHTML = `<span>${status.charAt(0).toUpperCase()}${status.slice(1)} </span>`;
-            let row2_data4 = document.createElement("td");
-            row2_data4.innerHTML = `<a href="${link}"  target="_blank">Read More</a>`;
+            // let row2_data4 = document.createElement("td");
+            // row2_data4.innerHTML = `<a href="${link}"  target="_blank">Read More</a>`;
             row2.appendChild(row2_data0)
-            row2.appendChild(row2_data1)
             row2.appendChild(row2_data2)
             row2.appendChild(row2_data3)
-            row2.appendChild(row2_data4)
+            // row2.appendChild(row2_data4)
             tbody.appendChild(row2);
             nDisaster++;
 
