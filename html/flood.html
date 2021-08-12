@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Natural Disasters Tracker">
+    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floods</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="..\css\flood.css">
+    <script defer src="../javaScript/flood.js"></script>
+    <script defer src="../javaScript/general.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <div class="content">
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="pages">
+                <a class=" homePage" href="..\index.html">HOME</a>
+                <a class="authorPage" href="..\html\earthquake.html">AUTHOR</a>
+                <a class="weatherPage" href="..\html\weather.html">WEATHER</a>
+                <div class="dropDown">
+                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
+                    <div class="dropdownContent">
+                        <a href="..\html\earthquake.html">EARTHQUAKE</a>
+                        <a href="..\html\cyclone.html">CYCLONE</a>
+                        <a class="active floodPage" href="..\html\flood.html">FLOOD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="first-section">
+            <div class="inner-sect">
+                <div>
+                    <h1> FLOOD</h1>
+                    <p>A flood is an overflow of water that submerges land that is usually dry. Floods
+                        are an
+                        area of study in the discipline of hydrology. They are the most common and widespread
+                        natural severe weather event.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1>TYPES OF FLOODS</h1>
+            <h2>Below are few types of floods and their causes</h2>
+        </div>
+        <br>
+        <br>
+        <section id="disasters">
+
+            <div class="disasterDetails">
+
+                <div class="disasterImage">
+                    <img src="../images/floods/flo2.jpg" alt="Mountains">
+                </div>
+
+                <div class="disasterContent">
+                    <h1>RIVER FLOOD</h1>
+                    <p>A river flood occurs when water levels rise over the top of river banks.
+                        This flooding can happen in all river and stream channels. This includes
+                        everything from small streams to the world’s largest rivers.</p>
+                    <h2>CAUSES</h2>
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div>
+                            <p>Excessive rain from tropical storm systems making landfall</p>
+                        </div>
+                    </div>
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div>
+                            <p>Persistent thunderstorms over the same area for extended periods</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div>
+                            <p>Combined rainfall and snowmelt</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="disasters">
+            <div class="disasterDetails second">
+                <div class="disasterContent">
+                    <h1>COASTAL FLOOD</h1>
+                    <p>A coastal flood is the inundation of normally dry land areas along the coast with seawater.</p>
+                    <h2>CAUSES</h2>
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div class="point">
+                            <p>Tropical cyclones</p>
+                        </div>
+                    </div>
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div class="point">
+                            <p>Tsunami</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div class="point">
+                            <p>Higher-than-average tides</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="disasterImage">
+                    <img src="../images/floods/flods.jpeg" alt="Coastal floods">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="disasters">
+
+            <div class="disasterDetails">
+
+                <div class="disasterImage">
+                    <img src="../images/floods/surge.jpg" alt="Mountains">
+                </div>
+
+                <div class="disasterContent">
+                    <h1>STORM SURGE</h1>
+                    <p>Storm surge is an abnormal rise in water level in coastal areas over and
+                        above the regular astronomical tide.</p>
+                    <h2>CAUSES</h2>
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div>
+                            <p>Winds</p>
+                        </div>
+                    </div>
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div class="point">
+                            <p>Waves</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <image src="../images/floods/Arrow 10.png"></image>
+                        <div>
+                            <p>Low atmospherics pressure</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="latestNews">
+
+            <h1><strong>LATEST FLOOD NEWS</strong></h1>
+            <br>
+            <form id="form">
+                <select id="status">
+                    <option value="">filter status</option>
+                    <option value="current">ONGOING</option>
+                    <option value="alert">ALERT</option>
+                    <option value="past">PAST DISASTER</option>
+                </select>
+                <div class="autocomplete">
+                    <input type="text" id="search" placeholder="search for country">
+                    <a id="searchIcon" class="fas fa-search"></a>
+                </div>
+
+            </form>
+            <br>
+            <div id="container">
+
+                <div id="loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="floodNews">
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="explore">
+            <span>EXPLORE</span>
+            <ul>
+                <a href="..\html\index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="..\html\author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="">
+                    <li>WEATHER</li>
+                </a>
+                <a href="">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="..\html\geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
+        </div>
+        <div class="data">
+            <span>DATA RETRIEVED FROM</span>
+            <ul>
+                <a href="https://www.earthnetworks.com/flooding/" target="_blank">
+                    <li>www.earthnetworks.com/flooding/</li>
+                </a>
+                <a href="https://reliefweb.int/disasters" target="_blank">
+                    <li>reliefweb.int/disasters</li>
+                </a>
+
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
+
+            <p>This page provides you knowledge on floods and news on countries that have been affected by flood
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
