@@ -1,168 +1,70 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Natural Disasters Tracker">
-    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Disasters Tracker</title>
-    <Link rel="stylesheet" href="./css/index.css">
-    <Link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer type='text/javascript' src="./javaScript/index.js"></script>
+    <title>Landing Page</title>
+     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script defer src="./javaScript/general.js"></script>
+    <script defer src="./javaScript/index.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-    <nav>
-        <div id="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <div class="content">
-            <div class="bars">
-                <i class="fa fa-bars"></i>
+    <div id="container">
+        <nav>
+            <div class="mobileView">
+                <div id="logo">
+                    <a href="./index.html">
+                        <span>WEATHER</span>
+                         <img src="./images/logo.png">
+                        <span>DISASTERS</span>      
+                    </a>
+                </div>
+                <div id="bars">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div id="close">
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
-            <div id="pages">
-                <a class="active homePage" href="#">HOME</a>
-                <a class="authorPage" href="../html/author.html">AUTHOR</a>
-                <a class="weatherPage" href="#">WEATHER</a>
-                <div class="dropDown">
-                    <a class="disastersPage" href="#">DISASTERS <i class="fa fa-angle-down"></i></a>
-                    <div class="dropdownContent">
-                        <a href="#">EARTHQUAKE</a>
-                        <a href="#">CYCLONE</a>
-                        <a href="#">FLOOD</a>
+            <div id="content">
+                <a class="homePage" href="./html/home.html">HOME</a>
+                <a class="authorPage" href="./html/author.html">AUTHOR</a>
+                <a class="weatherPage" href="./html/weather.html">WEATHER</a>
+                <div id="dropDown">
+                    <div>
+                        <span class="disastersPage">DISASTERS</span>
+                        <a class="fa fa-angle-down" id="iconDown"></a>
+                        <a class="fa fa-angle-up" id="iconUp"></a>
+                    </div>
+                    <div id="dropdownContent">
+                        <a class="active" href="./html/earthquake.html">EARTHQUAKE</a>
+                        <a href="./html/cyclone.html">CYCLONE</a>
+                        <a href="./html/flood.html">FLOOD</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <section id="mission">
+    <h3 id="h3">PRESENTING COUNTRIES WITH DISASTERS(<img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png">
+        ONGOING AND <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"> ALERT )</h3>
+    <div id="map">
 
-        <div class="missionDetails">
-
-            <div class="missionImage">
-                <img src="images/overview/mission.png" alt="Mountains">
-            </div>
-
-            <div class="missionContent">
-                <h1>WELCOME TO WEBNAME</h1>
-                <h2>Our mission and vision</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-                    purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim
-                    praesent elementum facilisis leo,
-                    velporttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel</p>
-
-            </div>
-        </div>
-
-
-    </section>
-
-    <section id="main">
-
-        <h1>MAIN TOPICS ARE:</h1>
-        <h2>Our website focuses on certain natural disasters</h2>
-
-        <div class="mainDetails">
-
-            <div class="topic">
-                <div class="mainImage">
-                    <img src="images/overview/earthquakes.png" alt="earthquake">
-                    <h3> EARTHQUAKE</h3>
-                </div>
-                <div class="content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-                        venenatis
-                    </p>
-                    <a href="#"><i class="fa fa-caret-right"></i></a>
-                </div>
-
-
-
-            </div>
-
-
-
-            <div class="topic">
-                <div class="mainImage">
-                    <img src="images/overview/Cyclone.png" alt="Cyclone">
-                    <h3>CYCLONE</h3>
-
-                </div>
-
-                <div class="content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-                        venenatis
-                    </p>
-                    <a href="#"><i class="fa fa-caret-right"></i></a>
-                </div>
-
-
-
-            </div>
-
-            <div class="topic">
-                <div class="mainImage">
-                    <img src="images/overview/Flood.png" alt="Flood">
-                    <h3>FLOOD</h3>
-
-                </div>
-
-                <div class="content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-                        venenatis
-                    </p>
-                    <a href="#"><i class="fa fa-caret-right"></i></a>
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="latestNews">
-        <h1>LATEST NEWS</h1>
-        <h2>Latest news on weather and other related topic bellow</h2>
-        <div id="loaderContainer">
-        <div class="loader"></div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="explore">
-        <span>EXPLORE</span>
-            <ul>
-                <a href=""><li>HOME</li></a>
-                <a href=""><li>AUTHOR</li></a>
-                <a href=""><li>WEATHER</li></a>
-                <a href=""><li>DISASTERS</li></a>
-             </ul>
-        </div>
-        <div class="data">
-            <span>DATA RETRIEVED FROM</span>
-                 <ul>
-                 <a href="https://reliefweb.int/" target="_blank"><li>RELIEF WEB</li></a>
-                  </ul>
-         </div>
-       <div class="pageDetails">
-        <span>PAGE DETAILS</span>
-
-           <p>This page provides you with an overview of what the web application provides.</p>
-
-       </div>
-    </footer>
-
-
+    </div>
+ 
+     <div id="arrowIcon">
+        <a href="./html/home.html">
+       <img src="./images/home/Arrow.png" alt="arrow">
+       </a>
+     </div>
+    </div>
+ 
 </body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgyUFeSUGpSugvMGDALnIBqVLILinzFSA&callback=initMap" async defer></script>
 
 </html>

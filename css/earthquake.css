@@ -1,0 +1,250 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+ }
+#map{
+     height: 100%;
+ }
+
+#container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+ }
+
+#drawer{
+    position: absolute;
+    display: none;
+    background-color: rgba(55, 65, 64,0.85);
+    z-index: 1;
+    height: 100%;
+    bottom: 0;
+}
+
+#openBar{
+  padding: 20px;
+  font-size: 25px;
+  color: #374140;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+
+}
+
+#closeBar{
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end ;
+ margin: 10px;
+font-size: 25px;
+color:#d9cb9e;
+cursor: pointer;
+}
+
+
+form{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap:20px;
+ }
+
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+ }
+
+.formItem label{
+    font-size: 12px;
+    padding-left: 4px;
+    color:white;
+    font-weight: bolder;
+}
+
+select{
+    margin-bottom: 1em;
+    padding: .25em;
+    border: none;
+    color: white;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%23d9cb9e"/></svg>');
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 99%;
+    border-bottom: 2px solid #d9cb9e; 
+    font-weight: bold;
+    letter-spacing: .15em;
+    border-radius: 0;   
+    font-size: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+ 
+#drawer{
+    overflow-y: scroll;
+    width: calc(35%);
+}
+
+#Error{
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    width: 50%;
+    color: black !important;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+#earthquakesInfo > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+    background-color: white;
+    color: black;
+    border-bottom: solid 1px #E1E1E1;
+ }
+
+
+ #drawerInfo .text{
+    overflow:hidden;
+     text-overflow: ellipsis;
+    white-space:nowrap; 
+    display: block;
+    flex-direction: column;
+     align-items: baseline;
+  }
+
+
+ #drawerInfo .mag{
+  padding-left: 10px;
+  width: 40px;
+  font-weight: bolder;
+ }
+
+ #drawerInfo .text p{
+     padding: 0;
+     width: calc(45%);
+     text-align: right;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap; 
+    display: inline-block;
+ }
+ 
+
+ #drawerInfo .text h3{
+     width: calc(70%);
+    overflow:hidden;
+   text-overflow: ellipsis;
+   white-space:nowrap; 
+   display: block;
+ }
+
+ .earthquake{
+     cursor: pointer;
+  }
+ 
+
+#earthquakeAlert{
+      position: absolute;
+      border-radius: 10px;
+      padding: 20px;
+      border: solid 1px black;
+      bottom:5px;
+      width: calc(35%);
+      background-color: white;
+      z-index: 2;
+  }
+
+#earthquakeAlert div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+  button{
+    background-color: #374140;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+  #earthquakeAlert a{
+      text-decoration: none;
+      color:#374140;
+      font-weight: bold;
+  }
+
+  #earthquakeAlert td{
+      padding-right: 10px;
+  }
+
+  #earthquakeAlert tr td:first-child{
+    color: #374140;
+}
+
+
+ @media only screen and (max-width: 1023px) {
+
+    form{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    #Error{
+        width: 100%;
+    }
+    #earthquakeAlert{
+         width: 97%;
+         align-self: center;
+    }
+
+    #drawer{
+        width: 100%;
+    }
+
+ }
+
+/** **/
+
+#legend {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    border: 3px solid #374140;
+  }
+
+  #legend div{
+      padding: 5px;
+  }
+  
+  #legend h3 {
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+  
+  #legend img {
+    vertical-align: middle;
+  }
+
+  /** Loader custom css **/
+
+  #loader > div {
+    background: #d9cb9e !important;
+
+  }
+
+  #loader2{
+      height: 100vh;
+  }
+  

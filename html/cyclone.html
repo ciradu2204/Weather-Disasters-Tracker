@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Natural Disasters Tracker">
+    <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyclone</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/cyclone.css">
+    <script defer src="../javaScript/general.js"></script>
+    <script defer src="../javaScript/cyclone.js"></script>
+    <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="mobileView">
+            <div id="logo">
+                <a href="../index.html">
+                    <span>WEATHER</span>
+                     <img src="../images/logo.png">
+                    <span>DISASTERS</span>      
+                </a>
+            </div>
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div id="content">
+            <a class="homePage" href="../html/home.html">HOME</a>
+            <a class="authorPage" href="../html/author.html">AUTHOR</a>
+            <a class="weatherPage" href="../html/weather.html">WEATHER</a>
+            <div id="dropDown">
+                <div>
+                    <span class="disastersPage">DISASTERS</span>
+                    <a class="fa fa-angle-down" id="iconDown"></a>
+                    <a class="fa fa-angle-up" id="iconUp"></a>
+                </div>
+                <div id="dropdownContent">
+                    <a href="../html/earthquake.html">EARTHQUAKE</a>
+                    <a class="active" href="../html/cyclone.html">CYCLONE</a>
+                    <a href="../html/flood.html">FLOOD</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+
+        <div class="mainContainer">
+
+            <div class="intro">
+                <h1>CYCLONES</h1>
+                <p>Cyclones can be the most intense storms on Earth. A cyclone is a system of winds rotating
+                    counterclockwise in the Northern Hemisphere around a low pressure center. The swirling air rises and
+                    cools, creating clouds and precipitation.</p>
+                <h3><span class="iconify" data-icon="carbon:next-outline" data-inline="false"></span> A DEEP BRIEF ON
+                    CYCLONES</h3>
+            </div>
+            <div id="cycloneInfos">
+                <div id="prev">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </div>
+                <div class="cycloneInfo" id="1">
+                    <span class="circle iconify" data-icon="carbon:types" data-inline="false"></span>
+                    <h2>TYPES OF CYCLONES </h2>
+                    <p>There are two types of cyclones: middle latitude (mid-latitude) cyclones and tropical
+                        cyclones. Mid-latitude cyclones are the main cause of winter storms in the middle latitudes.
+                    </p>
+                </div>
+
+                <div class="cycloneInfo" id="2">
+                    <span class="circle iconify" data-icon="bi:hurricane" data-inline="false"></span>
+                    <h2>DIFFERENT TERMINOLOGIES</h2>
+                    <div>
+                        <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span>
+                            the
+                            North Atlantic Ocean and the eastern and central North Pacific Ocean, it is called
+                            "<span class="green">hurricane</span>"</p>
+                        <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span>
+                            In
+                            the western North Pacific, it is called "<span class="green">typhoon</span>"</p>
+                        <p> <span class="iconify green" data-icon="akar-icons:arrow-right" data-inline="false"></span>
+                            In
+                            the southwest Indian Ocean, it is called “<span class="green">tropical cyclone</span>”</p>
+
+                    </div>
+                </div>
+
+                <div class="cycloneInfo" id="3">
+                    <span class="up iconify " data-icon="cryptocurrency:storm" data-inline="false"></span>
+                    <h2>STORM SURGE</h2>
+                    <p>A storm surge is a rise above the normal water level along a shore resulting from strong
+                        onshore winds and/or reduced atmospheric pressure. Storm surges accompany a tropical cyclone
+                        as it comes ashore. </p>
+                </div>
+
+                <div id="next">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="formNews">
+
+            <h1>LASTEST CYCLONE NEWS</h1>
+            <p>Use the search bar to access news in the country of your choose</p>
+            <form id="form">
+                <div class="autocomplete"> <input type="text" id="search" placeholder="SEARCH FOR COUNTRY"></div>
+                <select id="status">
+                    <option value="">STATUS</option>
+                    <option value="current">ONGOING</option>
+                    <option value="alert">ALERT</option>
+                    <option value="past">PAST</option>
+                </select>
+                <input type="submit" value="SEARCH">
+            </form>
+
+        </div>
+
+        <div class="news">
+            <div id="tableContainer">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>COUNTRY</th>
+                            <th>Name</th>
+                            <th>DATE</th>
+                            <th>STATUS</th>
+                            <th>MORE INFO</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="slideLeft">
+                <i class="fas fa-chevron-circle-left"></i>
+            </div>
+            <div id="slideRight">
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
+            <div id="error">
+
+            </div>
+            <div id="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="explore">
+            <span>EXPLORE</span>
+            <ul>
+                <a href="../html/home.html">
+                    <li>HOME</li>
+                </a>
+                <a href="../html/author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="../html/weather.html">
+                    <li>WEATHER</li>
+                </a>
+                <a href="../html/earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="./html/geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
+        </div>
+        <div class="data">
+            <span>DATA RETRIEVED FROM</span>
+            <ul>
+                <a href="https://reliefweb.int/" target="_blank">
+                    <li>RELIEF WEB</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
+
+            <p>This page provides latest cyclone news that happened around the world</p>
+
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

@@ -1,5 +1,4 @@
 
-
 *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -50,6 +49,11 @@
     background-color: #555;
   }
 
+  input[type="submit"] {
+
+    -webkit-appearance: none;
+    
+  }
  
 input[type=email], select, textarea {
     width: 50%;
@@ -121,8 +125,7 @@ input[type=email], select, textarea {
    
   }
  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (min-width: 1024px) {
+   @media screen and (min-width: 1024px) {
     .col-25{
       width: 9%;
       margin-top: 0;
@@ -141,25 +144,7 @@ input[type=email], select, textarea {
         width: 100%;
     }
   }
-  .footer-content{
-    font-family: Roboto Mono;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0px;
-    text-align: center;
-    
-  }
-  .footer-content1{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 10px;
-    text-align: center;
-      }
-
+  
   ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -286,67 +271,5 @@ input[type=email], select, textarea {
 
     }
    }
-   /** Footer Css **/ 
-
-footer{
-  background-color: #374140;
-  border:1px solid rgba(55, 65, 64, 0.85);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-footer a{
-  text-decoration: none;
-}
-
-footer .data{
-  flex-basis: 35%;
-}
-
-footer p{
-  padding: 0;
-}
-
-footer .explore{
-  flex-basis: 28%;
-}
-
-footer .pageDetails{
-  flex-basis: 24%;
-}
-
-footer span{
-font-style: normal;
-font-weight: 800;
-font-size: 16px;
-line-height: 34px;
-letter-spacing: 5px;
-color: white;
-}
-
-footer ul li, footer p{
-list-style-type: none;
-font-weight: 600;
-font-size: 15px;
-line-height: 30px;
-letter-spacing: 5px;
-color: rgba(170, 169, 128, 0.6);
-}
-
-
-@media only screen and (max-width: 450px) {
-  footer{
-      flex-direction: column;
-      flex-basis: unset;
-      text-align: center;
-  }
-
-  footer div{
-      padding: 10px;
-  }
-  
-}
-
+ 
+ 

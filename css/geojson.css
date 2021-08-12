@@ -1,129 +1,64 @@
-@media only screen and (max-width: 600px) {
-    .videos {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-      
-    }
-   
-}
 .code-image{
 width: 300px;
 height: 300px;
 border: 1px solid #000000;
-margin-left: 100px;
 }
 .sub-sections{
     display: flex;
     flex-direction: row;
-   margin-left: 110px;
-    
+    justify-content: center;
 }
 .subsection-2{
-    width:600px;
-}
+    width: 53%;
+    margin-left: 3%;
+ }
+
 iframe{
-    border-radius: 0px 0px 20px 20px;
-    -ms-flex: 25%;
-  flex: 25%;
-  max-width: 100%;
- 
-}
+   border-radius: 0px 0px 20px 20px;
+ }
 
 .videos{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-    
-   
-}
-
-.video-1, .video-2, .video-3{
-height: 313px;
-width: 422px;
-left: 26px;
-top: 775px;
-
-}
-
-
-h1{
-  
-font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 45px;
-text-align: center;
-letter-spacing: 5px;
-
-color: #000000;
-}
-
-
-
-
-/** Footer Css **/ 
-
-footer{
-    background-color: #374140;
-    border:1px solid rgba(55, 65, 64, 0.85);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
+     flex-direction: row;
     justify-content: center;
-    padding: 20px 0;
- }
-
-footer a{
-    text-decoration: none;
+    margin: 10px;
+    gap: 30px;
+ 
 }
 
- footer .data{
-    flex-basis: 35%;
+/* .video-1, .video-2, .video-3{
+width: 500px;
+
+} */
+
+@media only screen and (max-width: 1025px){
+
+    iframe{
+        width: calc(310px);
+     }
+
+
 }
 
-footer p{
-    padding: 0;
-}
-
-footer .explore{
-    flex-basis: 28%;
-}
-
-footer .pageDetails{
-    flex-basis: 24%;
-}
-
-footer span{
-font-style: normal;
-font-weight: 800;
-font-size: 16px;
-line-height: 34px;
-letter-spacing: 5px;
-color: white;
-}
-
-footer ul li, footer p{
-list-style-type: none;
-font-weight: 600;
-font-size: 15px;
-line-height: 30px;
-letter-spacing: 5px;
-color: rgba(170, 169, 128, 0.6);
-}
-
-
-@media only screen and (max-width: 450px) {
-    footer{
+@media only screen and (max-width: 800px){
+    .sub-sections{
+        display: flex;
         flex-direction: column;
-        flex-basis: unset;
-        text-align: center;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
-    footer div{
-        padding: 10px;
+    .subsection-2{
+        width: 90%;
+        margin-left: 0;
     }
-    
+
+    .videos {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+     }
+
+
+     
 }
