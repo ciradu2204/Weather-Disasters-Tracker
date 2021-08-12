@@ -120,6 +120,9 @@
  }
  
  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     border: 1px solid #AAA980 !important;
     background-color: white !important;
     border-radius: 0;
@@ -128,9 +131,7 @@
     background-repeat: no-repeat;
     background-position-y: 50%;
     background-position-x: 99%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  
  }
  input[type="text"]{
     border: 1px solid #AAA980;
@@ -138,6 +139,9 @@
 }
 
 input[type="submit"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: #D9CB9E;
     color: black;
     font-weight: 800;
