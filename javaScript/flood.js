@@ -31,7 +31,7 @@ const getFloodNews = async () => {
         let numOfDisasters = 0;
         data.data.forEach(element => {
           if (numOfDisasters < 4) {
-            let mainDiv = document.createElement("mainDiv");
+            let mainDiv = document.createElement("div");
             mainDiv.className = "news";
             let div1 = document.createElement("div");
   
@@ -46,7 +46,7 @@ const getFloodNews = async () => {
               return element.name;
             }).join();
             console.log(countryArray);
-            p.innerHTML = `<span id="span-1"><strong>Status</strong>: ${element.fields.status}</span> <span id="span-2"><strong>Affected Country</strong>: ${countryArray}</span>`
+            p.innerHTML = `<span id="span-1"><strong>Status</strong>: ${element.fields.status.charAt(0).toUpperCase()}${element.fields.status.substring(1)}</span> <span id="span-2"><strong>Affected Country</strong>: ${countryArray}</span>`
             div2.appendChild(h1);
             div2.appendChild(p);
             mainDiv.appendChild(div1);
@@ -62,7 +62,7 @@ const getFloodNews = async () => {
    
           const div = document.createElement("div");
           div.className = "error"
-          div.innerHTML = "<span>No Information Found</span>"
+          div.innerHTML = "<span>No Flood News Found</span>"
           floodNews.appendChild(div);
 
       }
@@ -73,12 +73,20 @@ const getFloodNews = async () => {
 }
 
 
-form.addEventListener('change', (e) => {
+const searchIcon = document.getElementById("searchIcon");
+const status = document.getElementById("status");
+
+searchIcon.addEventListener('click', (e) => {
   e.preventDefault();
   removeNews();
   getFloodNews()
-}
-);
+});
+
+status.addEventListener('change', (e) => {
+  e.preventDefault();
+  removeNews();
+  getFloodNews()
+})
 window.addEventListener('load', getFloodNews());
 
 

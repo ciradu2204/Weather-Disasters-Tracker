@@ -1,58 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
-body,
-html {
-    font-family: "Poppins", sans-serif;
-}
 /** Section Css**/
 .first-section {
     width: 100%;
-    height: 10%;
-    background-image: url("../images/floods/Rectangle\ 35.png");
-    background-repeat: inherit;
-
+    background-image: url("../images/floods/bgImage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 500px;
-    left: -34px;
-    top: 74px;
 }
 h2 {
     padding: 0px;
 }
 .inner-sect {
-    margin-left: 25%;
-    width: 50%;
-    height: 40%;
-    left: 10%;
-    margin-top: 10%;
-    background: rgba(55, 65, 64, 0.77);
+    display: flex;
+    height: 500px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-@media only screen and (max-width: 800px) {
-    .inner-sect {
-        height: fit-content;
-    }
+
+.inner-sect div{
+    width: 50%;
+    background: rgba(55, 65, 64, 0.77);
+
+}
+
+.inner-sect h1{
+    font-size: 35px;
+    text-align: left;
+    letter-spacing: 2px; 
+    color:#D9CB9E; 
+    padding-top: 10px;
+    margin-left:2%;
+}
+
+.inner-sect p{
+    color: white;
 }
 
 /**Disaster CSS**/
-.disasterDetails {
-    display: flex;
-    flex-direction: row;
-}
+
+
 #disasters {
-    margin-left: 5%;
-}
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    justify-content: center;
+    width: 96%;
+     align-items: center;
+ }
+
+ .disasterDetails {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:10px;
+ }
+ .second{
+     gap:140px;
+ }
 .disasterImage img {
-    margin-left: 10%;
-    width: 360px;
-    height: 356px;
+     width: 300px;
+    height: 250px;
     box-shadow: -31px -31px rgb(55 65 64/ 95%);
 }
+
 .disasterContent {
     width: 60%;
-    margin-left: 50px;
-}
+    align-self: flex-start;
+ }
+
+ .disasterContent div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+
 .disasterContent h1 {
     text-align: left;
     font-family: Poppins;
     font-style: normal;
+    padding-top: 0;
     font-weight: bold;
     font-size: 20px;
     line-height: 45px;
@@ -70,16 +96,9 @@ h2 {
     margin-left: 1.5%;
 }
 
-.point-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 2%;
-    line-height: 2%;
-    
-}
+ 
 
-.fas fa-arrow-right {
+.fas .fa-arrow-right {
     color: #374140, 69%;
     font-size: 20px;
     width: 20px;
@@ -90,76 +109,9 @@ h2 {
     flex-direction: row;
 }
 
-#disasters2 {
-    margin-left: 4%;
-}
-#disasters2 {
-    display: flex;
-    flex-direction: row;
-}
-.disasterImage2 img {
-    margin-right: 10%;
-    width: 360px;
-    height: 356px;
-    box-shadow: 31px -31px rgb(55 65 64/ 95%);
-}
-.disasterContent2 {
-    width: 60%;
-    margin-left: 50px;
-}
-.disasterContent2 h1 {
-    text-align: left;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 45px;
-    margin-left: 1.5%;
-}
-.disasterContent2 h2 {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 0.2em;
-    color: #b0953d;
-    text-align: left;
-    margin-left: 1.5%;
-}
 
-@media only screen and (max-width: 800px) {
-    .disasterDetails {
-        display: flex;
-        flex-wrap: wrap; 
-        ; 
-    }
-    .point-1 {
-        width: fit-content;
-        text-overflow: unset;
-        line-height: unset;
-    }
-    
 
-    .disasterImage img {
-        width: 222px;
-    }
-    .disasterImage2 img {
-        width: 222px;
-    }
-    .disasterDetails2 {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-@media only screen and (max-width: 800px) {
-    select{
-        flex-direction: row;
-    }
-   option{
-      flex-direction: row;
-   }
-}
+
 
 .news-sect h1{
     font-size: 20px;
@@ -194,85 +146,13 @@ h2 {
     text-align: center;
 }
 
-/** Footer Css **/ 
-footer{
-    background-color: #374140;
-    border: 1px solid rgba(55, 65, 64, 0.85);
-    box-sizing: border-box;
-    display: flex;
-     flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
- }
-
-footer a {
-    text-decoration: none;
-}
-
-footer .data {
-    flex-basis: 35%;
-}
-
-footer p {
-    padding: 0;
-}
-
-footer .explore {
-    flex-basis: 28%;
-}
-
-footer .pageDetails {
-    flex-basis: 24%;
-}
-
-footer span {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 34px;
-    letter-spacing: 5px;
-    color: white;
-}
-
-footer ul li, footer p{
-list-style-type: none;
-font-weight: 600;
-font-size: 11px;
-line-height: 30px;
-letter-spacing: 5px;
-color: rgba(170, 169, 128, 0.6);
-}
-
-@media only screen and (max-width: 450px) {
-    footer {
-        flex-direction: column;
-        flex-basis: unset;
-        text-align: center;
-    }
-
-    footer div {
-        padding: 10px;
-    }
-}
 /**Latest News CSS */
-
-.formNews {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    margin-top: 20px;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
+ 
 form {
     display: flex;
-    width: 40%;
     flex-direction: row;
     justify-content: flex-end;
-    margin-left: 60%;
-    margin-right: 5%;
+    margin-right: 3%;
 }
 
 select {
@@ -289,25 +169,13 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    width: 30%;
     font-family: poppins;
     color: gray;
+    outline: none;
 }
-
- 
- option{
-     background-color: #DBDBDBD4;
-
-    
- }
  
  
- input[type="text"]{
-   
-    width: 60%;
-    border-bottom: 3px solid #aaa980;
-    border-top: 0px;
-    border-right: 0px;
-}
 #search-icon{
     display: flex;
     flex-direction: row;
@@ -316,74 +184,54 @@ select {
 }
 
 
-select{
-    padding: 8px 20px;
-    width: 45%;
-    cursor: pointer;
-}
-
 input[type="text"] {
+    border-bottom: 3px solid #aaa980;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
     padding: 8px;
+    width: 100%;
     outline: none;
     cursor: pointer;
 }
 
-/* autocomplete css from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
-
-.autocomplete {
-    position: relative;
-    width: calc(500px);
-    font-family: poppins;
-   
-    
-  }
-  #search-icon{
-    background-position-y: 50%;
-    background-position-x: 99%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-family: poppins;
-  }
-   
-.autocomplete-items {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    width: 40%;
-    z-index: 99;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-.autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    
-}
-.autocomplete-items div:hover {
-    background-color: #e9e9e9;
-}
-.autocomplete-active {
-    background-color: DodgerBlue !important;
-    color: #ffffff;
-}
 
 .news {
     display: flex;
     flex-direction: row;
+    gap:5px;
     padding-left: 3%;
     position: relative;
 }
+
+.news div:first-child{
+    align-self: center;
+}
+
+.news div:nth-child(2){
+    width: 100%;
+ }
 .news h1 {
     text-align: left;
     padding: 0px;
+     font-size: 16px;
 }
+
+.news p{
+    padding: 0;
+}
+
 
 #span-1 {
     padding-right: 20px;
+}
+
+span{
+    font-weight: 350;
+}
+
+strong{
+    font-weight: 800;
 }
 .news::after {
     content: "";
@@ -408,4 +256,42 @@ input[type="text"] {
     color: white;
     padding: 20px;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+ 
+    .disasterImage{
+        display: none;
+    }
+
+    .disasterContent{
+     width: 80%;
+    }
+
+    .second{
+        margin-right: 10%;
+    }
+
+    #form{
+         margin-right: 1%;
+    }
+
+    .news p{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-sect div{
+        width: 90%;
+     
+    }
+
+    .autocomplete{
+        width: calc(50%);
+    }
+
+    .autocomplete-items{
+        width: 60%;
+    }
+
 }
