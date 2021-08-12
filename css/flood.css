@@ -172,6 +172,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border-radius: unset;
     width: 30%;
     font-family: poppins;
     color: gray;
@@ -187,6 +188,7 @@ a#searchIcon{
 
 input[type="text"] {
     border-bottom: 3px solid #aaa980;
+    border-radius: unset;
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
