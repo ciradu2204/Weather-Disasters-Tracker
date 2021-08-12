@@ -6,8 +6,12 @@
     background-size: cover;
     height: 500px;
 }
+#mainTitle h2{
+    padding-bottom: 50px;
+
+}
 h2 {
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 .inner-sect {
     display: flex;
