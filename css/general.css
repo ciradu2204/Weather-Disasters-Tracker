@@ -119,9 +119,10 @@ nav span{
     display: none   
 }
 
-.disastersPage {
+#disastersPage {
     position: relative;
     display: inline;
+    cursor: pointer;
 }
 
 #dropdownContent {
@@ -226,9 +227,9 @@ nav span{
         background-color: #f3f3f36e;
     }
 
-    .disastersPage {
+    #disastersPage {
         display: inline;
-    
+        cursor: pointer;
     }
 
     #logo {

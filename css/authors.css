@@ -100,10 +100,13 @@ input[type=email], select, textarea {
   form{
     width: 100%;
     position: relative;
-    padding: 20px;
+   }
+
+  .formContainer{
+    display: flex;
+    justify-content: center;
   }
 
-     
   input[type=submit] {
     background-color: #D9CB9E;
     color: black;
@@ -119,7 +122,7 @@ input[type=email], select, textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 10px;
+     margin-bottom: 10px;
   }
   .col-25 {
      margin-top: 6px;
@@ -129,7 +132,7 @@ input[type=email], select, textarea {
   .col-75 {
     display: flex;
     flex-direction: column;
-     margin-top: 6px;
+    margin-top: 6px;
    
   }
 
@@ -287,6 +290,14 @@ input[type=email], select, textarea {
   }
   .btn2{
     margin-left: 95%;
+
+  }
+
+  @media screen and (max-width: 800px) {
+
+    form{
+      width: 80%;
+    }
 
   }
 

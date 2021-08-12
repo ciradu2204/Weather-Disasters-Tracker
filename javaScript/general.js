@@ -3,6 +3,7 @@ const iconUp = document.getElementById("iconUp");
 const iconDown = document.getElementById("iconDown");
 const dropDownContent = document.getElementById("dropdownContent");
 const mobileBar = document.getElementById("bars");
+const disasterPage = document.getElementById("disastersPage")
 const mNavbarContent = document.getElementById("content");
 const mobileClose = document.getElementById("close");
 const dropdownContent = document.getElementById("dropdownContent");
@@ -15,11 +16,25 @@ iconUp.addEventListener('click', () => {
 
 })
 
+
+
 iconDown.addEventListener('click', () => {
    iconDown.style.display = "none";
    iconUp.style.display = "inline";
    dropDownContent.style.display = "none";
 
+})
+
+disasterPage.addEventListener('click', () =>{
+     if(iconDown.style.display === "inline"){
+      iconDown.style.display = "none";
+      iconUp.style.display = "inline";
+      dropDownContent.style.display = "none";
+    }else{
+      iconUp.style.display = "none";
+      iconDown.style.display = "inline";
+      dropDownContent.style.display = "block";
+    }
 })
 
 mobileBar.addEventListener('click', () => {

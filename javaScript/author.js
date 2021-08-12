@@ -1,39 +1,39 @@
 const profiles = [
   {
     "imageName": "reynald.jpeg",
-    "header": "What's up, It is Reynald",
-    "bio": "Liyeuk Reynald is a fourth-year student at the African Leadership College. He hails from Cameroon, often referred to as Africa in miniature. He has a keen interest in functional programming, backend software engineering and big data. He is passionate about how technology can be used to improve healthcare, education and agriculture.",
+    "header": "What's up, It's Reynald",
+    "bio": "A fourth-year student at the African Leadership College. I am from Cameroon, often referred to as Africa in miniature. I have a keen interest in functional programming, backend software engineering and big data. Also, I am passionate about how technology can be used to improve healthcare, education and agriculture.",
     "linkedIn": "https://www.linkedin.com/in/liyeuk-reynald-joabet-942472161/",
     "github": "https://github.com/reynaldjoabet",
-    "twitter": "https://twitter.com/reynaldjoabet",
+    "email": "l.joabet@alustudent.com",
 
 
   },
   {
     "imageName": "cynthia.jpeg",
-    "header": "Hi, It is Cynthia",
-    "bio": "Cynthia is a front-end developer aspiring to be a full stack developer. She's worked with languages including Java and JavaScript, as well as frameworks like VUE and React. Cynthia is currently looking for opportunities to grow her front end skills and learn more about the backend side.",
+    "header": "Hello, It's Cynthia",
+    "bio": "A front-end developer who is aspiring to be a full stack developer. I have worked with languages including Java and JavaScript, as well as frameworks like VUE and React. I am currently looking for opportunities to grow her front end skills and learn more about the backend side.",
     "linkedIn": "http://www.linkedin.com/in/ciradu2204",
     "github": "https://github.com/ciradu2204",
-    "twitter": "https://twitter.com/IraduCynthia",
+    "email": "c.iradukund@alustudent.com",
 
   },
   {
     "imageName": "celine.jpeg",
-    "header": "What's up, It is Celine ",
+    "header": "Hi, It's Celine ",
     "bio": "An audacious, creative, and self-driven woman whose passion lies in designing UI & UX for software and web applications. I've worked on different tools for wireframing, mockups, and prototypes such as Balsamiq, Figma, and Adobe XD. I dream of becoming a product designer in the future.",
     "linkedIn": "https://www.linkedin.com/in/celine-ishimwe-67b593109/",
     "github": "",
-    "twitter": "https://twitter.com/__celinish"
+    "email": "l.joabet@alustudent.com"
 
   },
   {
     "imageName": "Rudo.jpg",
-    "header": "Hi, It is  Rudo ",
-    "bio": " I am front-end web developer and I am an aspiring UI/UX designer. For web development, I am fluent in HTML, CSS and JavaScript with a growing interest in JavaScript frameworks such as React. At present, I am looking into expanding my design field of interest. ",
+    "header": "Hey, It's Rudo",
+    "bio": " A front-end web developer and an aspiring UI/UX designer. For web development, I am fluent in HTML, CSS and JavaScript with a growing interest in JavaScript frameworks such as React. At present, I am looking into expanding my design field of interest. ",
     "linkedIn": "https://www.linkedin.com/in/rudo-courtney-togara-ab1108184/",
     "github": "https://github.com/Rudo-Courtney",
-    "twitter": ""
+    "email": "r.togara@alustudent.com"
   }
 ]
 
@@ -49,7 +49,7 @@ const createElement = (leftElement) => {
   div2.innerHTML = `<h3> ${profiles[leftElement].header}</h3> <p>${profiles[leftElement].bio}</p> <div class="socialIcons"> 
   ${(profiles[leftElement].linkedIn !== "")? `<a target="_blank" href="${profiles[leftElement].linkedIn}" class="fab fa-linkedin-in"></a>` : `` }  
    ${(profiles[leftElement].github !== "")? `<a  target="_blank" href="${profiles[leftElement].github}" class="fab fa-github"></a> `: `` }  
-   ${(profiles[leftElement].twitter !== "")?  `<a  target="_blank" href="${profiles[leftElement].twitter}" class="twitter">@</a> `: `` }  </div>`
+   ${(profiles[leftElement].email !== "")?  `<a   href="mailto:${profiles[leftElement].email}" class="twitter">@</a> `: `` }  </div>`
   div.appendChild(img);
   div.appendChild(div2);
   return div;
