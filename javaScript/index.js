@@ -251,8 +251,11 @@ const markerClicked = async(markerPosition, dataId, long, lat, status,  country)
       li.innerHTML = disasterType.name;
       ul.appendChild(li);
      })
-      
      const container = document.getElementById("container");
+
+     if(container.contains(document.getElementById("info_Window"))){
+       container.removeChild(document.getElementById("info_Window"));
+     }
      const contentString = document.createElement("div");
      contentString.id = "info_Window"
     const div1 = document.createElement("div");
@@ -263,27 +266,16 @@ const markerClicked = async(markerPosition, dataId, long, lat, status,  country)
     const h3 = document.createElement("h3");
     h3.innerHTML = `${(status ==="alert")?"ONGOING":"ALERT"} DISASTER TYPE`
     div3.appendChild(h3);
-    const longPx = (Math.abs(long)*window.innerWidth)/360
-    console.log(longPx);
-    const latPx = (Math.abs(lat)*window.innerHeight)/180
-
+ 
     div3.appendChild(ul);
     contentString.appendChild(div2);
     contentString.appendChild(div1);
     contentString.appendChild(div3)
     contentString.style.position = "absolute";
     contentString.style.zIndex = "5"
-    contentString.style.top = `${latPx}px`
-    contentString.style.left = `${longPx}px`
+    contentString.style.bottom = `0px`
+    contentString.style.left = `0px`
     container.appendChild(contentString);
-    //  const infowindow = new google.maps.InfoWindow({
-    //   content: contentString,
-    // });
-    //  infowindow.open({
-    //   anchor: markers[markerPosition],
-    //   map,
-    //   shouldFocus: false,
-    // })
    })
 
 }
