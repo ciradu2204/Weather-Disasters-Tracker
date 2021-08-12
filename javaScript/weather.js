@@ -87,7 +87,7 @@ async function getResults(city) {
              loading = false;
             isLoading(loading);
             const weeklyData = json.daily.filter((ele, index) => index > 0);
-            const iconURL = "http://openweathermap.org/img/w/"
+            const iconURL = "https://openweathermap.org/img/w/"
             const tbody = document.createElement("tbody");
             tbody.id = "tbody";
             let location = document.getElementById("location");
