@@ -97,7 +97,7 @@ input[type=email], select, textarea {
   }
  
  
-  form{
+  .formContainer form{
     width: 100%;
     position: relative;
    }
@@ -171,34 +171,11 @@ input[type=email], select, textarea {
       flex-direction: row;
     }
 
-    form {
+    .formContainer form {
         width: 100%;
     }
   }
   
-  ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-    background-color: white;
-  }
-  ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-  
-  }
-  ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "|\00a0";
-  }
-  ul.breadcrumb li a {
-    color: black;
-    text-decoration: none;
-  }
-  ul.breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
-  }
   
   /** team section css **/
 
@@ -295,7 +272,7 @@ input[type=email], select, textarea {
 
   @media screen and (max-width: 800px) {
 
-    form{
+    .formContainer form{
       width: 80%;
     }
 
