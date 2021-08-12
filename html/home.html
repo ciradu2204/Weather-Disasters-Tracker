@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="description" content="Natural Disasters Tracker">
     <meta name="keywords" content="Earthquakes, Natural Disasters, Weather, Flood">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Overview</title>
     <Link rel="stylesheet" href="../css/home.css">
     <Link rel="stylesheet" href="../css/general.css">
-     <script defer type='text/javascript' src="../javaScript/home.js"></script>
+    <script defer type='text/javascript' src="../javaScript/home.js"></script>
     <script defer type='text/javascript' src="../javaScript/general.js"></script>
     <script defer src="https://kit.fontawesome.com/05092c73e8.js" crossorigin="anonymous"></script>
     <script defer src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
@@ -19,35 +19,36 @@
 
     <nav>
         <div class="mobileView">
-        <div id="logo">
-            <a href="../index.html">
-                <span>WEATHER</span>
-                 <img src="../images/logo.png">
-                <span>DISASTERS</span>      
-            </a>        </div>
-        <div id="bars">
-            <i class="fa fa-bars"></i>
-        </div>
-        <div id="close">
-            <i class="fas fa-times"></i>
-        </div>
+            <div id="logo">
+                <a href="../index.html">
+                    <span>WEATHER</span>
+                    <img src="../images/logo.png">
+                    <span>DISASTERS</span>
+                </a>
+            </div>
+            <div id="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="close">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
         <div id="content">
-                <a class="active homePage" href="#">HOME</a>
-                <a class="authorPage" href="../html/author.html">AUTHOR</a>
-                <a class="weatherPage" href="../html/weather.html">WEATHER</a>
-                <div id="dropDown">
-                    <div>
+            <a class="active homePage" href="#">HOME</a>
+            <a class="authorPage" href="../html/author.html">AUTHOR</a>
+            <a class="weatherPage" href="../html/weather.html">WEATHER</a>
+            <div id="dropDown">
+                <div>
                     <a id="disastersPage">DISASTERS</a>
                     <a class="fa fa-angle-down" id="iconDown"></a>
                     <a class="fa fa-angle-up" id="iconUp"></a>
-                   </div>
-                    <div id="dropdownContent">
-                        <a href="../html/earthquake.html">EARTHQUAKE</a>
-                        <a href="../html/cyclone.html">CYCLONE</a>
-                        <a href="#">FLOOD</a>
-                    </div>
-             </div>
+                </div>
+                <div id="dropdownContent">
+                    <a href="../html/earthquake.html">EARTHQUAKE</a>
+                    <a href="../html/cyclone.html">CYCLONE</a>
+                    <a href="#">FLOOD</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -62,7 +63,9 @@
             <div class="missionContent">
                 <h1>WEATHER & DISASTERS</h1>
                 <h3>Our mission and vision</h3>
-                <p>Weather and Disaster is a web application designed to educate users on natural disaster mainly flood, cyclone and earthquake. Furthermore, it provides weather information including a 7 day forecast for any location of your choice</p>
+                <p>Weather and Disaster is a web application designed to educate users on natural disaster mainly flood,
+                    cyclone and earthquake. Furthermore, it provides weather information including a 7 day forecast for
+                    any location of your choice</p>
 
             </div>
         </div>
@@ -84,7 +87,9 @@
                 </div>
                 <div class="content">
                     <p>
-                        Earthquakes are caused by a sudden release of violent ground energy caused either by the shifting of the earth’s crust or volcanic/magmatic activity. Most earthquakes occur when two sides of a fault slide past each other.
+                        Earthquakes are caused by a sudden release of violent ground energy caused either by the
+                        shifting of the earth’s crust or volcanic/magmatic activity. Most earthquakes occur when two
+                        sides of a fault slide past each other.
                     </p>
                     <a href="../html/earthquake.html"><i class="fa fa-caret-right"></i></a>
                 </div>
@@ -104,7 +109,8 @@
 
                 <div class="content">
                     <p>
-                        Cyclones can be the most intense storms on Earth. A cyclone is a system of winds rotating counterclockwise in the Northern Hemisphere around a low pressure center.
+                        Cyclones can be the most intense storms on Earth. A cyclone is a system of winds rotating
+                        counterclockwise in the Northern Hemisphere around a low pressure center.
                     </p>
                     <a href="../html/cyclone.html"><i class="fa fa-caret-right"></i></a>
                 </div>
@@ -122,7 +128,9 @@
 
                 <div class="content">
                     <p>
-                        A Flood is an overflow of water that submerges land that is usually dry. Floods are an area of study in the discipline of hydrology. They are the most common and widespread natural severe weather event.
+                        A Flood is an overflow of water that submerges land that is usually dry. Floods are an area of
+                        study in the discipline of hydrology. They are the most common and widespread natural severe
+                        weather event.
                     </p>
                     <a href="../html/flood.html"><i class="fa fa-caret-right"></i></a>
                 </div>
@@ -138,38 +146,54 @@
     <section id="latestNews">
         <h1>LATEST NEWS</h1>
         <h3>Latest news on weather and other related topic bellow</h3>
-         <div id="loader">
-         <div></div>
-         <div></div>
-         <div></div>
-         </div>
+        <div id="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </section>
 
     <footer>
         <div class="explore">
-        <span>EXPLORE</span>
+            <span>EXPLORE</span>
             <ul>
-                <a href="#"><li>HOME</li></a>
-                <a href="../html/author.html"><li>AUTHOR</li></a>
-                <a href="../html/weather.html"><li>WEATHER</li></a>
-                <a href="../html/earthquake.html"><li>DISASTERS</li></a>
-                <a href="../html/geojson.html"><li>GEOJSON</li></a>
-             </ul>
+                <a href="#">
+                    <li>HOME</li>
+                </a>
+                <a href="../html/author.html">
+                    <li>AUTHOR</li>
+                </a>
+                <a href="../html/weather.html">
+                    <li>WEATHER</li>
+                </a>
+                <a href="../html/earthquake.html">
+                    <li>DISASTERS</li>
+                </a>
+                <a href="../html/geojson.html">
+                    <li>GEOJSON</li>
+                </a>
+            </ul>
         </div>
         <div class="data">
             <span>DATA RETRIEVED FROM</span>
-                 <ul>
-                 <a href="https://reliefweb.int/" target="_blank"><li>RELIEF WEB</li></a>
-                 <a href="http://www.environmentguide.org.nz/issues/natural-hazards/earthquakes/what-are-earthquakes/" target="_blank"><li>Enviroment Guide</li></a>
-                  </ul>
-         </div>
-       <div class="pageDetails">
-        <span>PAGE DETAILS</span>
+            <ul>
+                <a href="https://reliefweb.int/" target="_blank">
+                    <li>RELIEF WEB</li>
+                </a>
+                <a href="http://www.environmentguide.org.nz/issues/natural-hazards/earthquakes/what-are-earthquakes/"
+                    target="_blank">
+                    <li>Enviroment Guide</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pageDetails">
+            <span>PAGE DETAILS</span>
 
-           <p>This page provides you with an overview of what the web application provides.</p>
+            <p>This page provides you with an overview of what the web application provides.</p>
 
-       </div>
+        </div>
     </footer>
 
 </body>
+
 </html>
