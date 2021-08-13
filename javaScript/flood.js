@@ -20,7 +20,7 @@ const getFloodNews = async () => {
   addLoader();
   const status = document.getElementById("status").options[document.getElementById("status").selectedIndex].value;
   const country = document.getElementById("search").value;
-  await fetch("https://api.reliefweb.int/v1/disasters?appname=apidoc&filter[operator]=AND&filter[conditions][0][operator]=OR&filter[conditions][0][conditions][0][field]=name&filter[conditions][0][conditions][0][value][]=Flood&filter[conditions][0][conditions][0][value][]=Flash flood&filter[conditions][1][field]=status&filter[conditions][1][value]=" + status + "&filter[conditions][2][field]=country&filter[conditions][2][value]=" + country + "&profile=list&preset=latest")
+  await fetch("https://api.reliefweb.int/v1/disasters?appname=apidoc&filter[operator]=AND&filter[conditions][0][operator]=OR&filter[conditions][0][conditions][0][field]=name&filter[conditions][0][conditions][0][value][]=Floods&filter[conditions][0][conditions][0][value][]=Flash Floods&filter[conditions][1][field]=status&filter[conditions][1][value]=" + status + "&filter[conditions][2][field]=country&filter[conditions][2][value]=" + country + "&profile=list&preset=latest")
     .then((response) => { return response.json() })
     .then((data) => {
       loading = false;

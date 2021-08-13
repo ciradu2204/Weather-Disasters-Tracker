@@ -216,8 +216,12 @@ function initMap() {
         ]
       }
     ],
-    disableDefaultUI: true,
-  });
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_CENTER,
+    },  });
 } 
 
 
