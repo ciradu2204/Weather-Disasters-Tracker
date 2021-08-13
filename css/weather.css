@@ -101,6 +101,7 @@ table {
     border-collapse: collapse;
 }
 
+
 #foreCast h1 {
     text-align: left;
     padding-left: 20px;
@@ -136,6 +137,8 @@ table td {
     text-align: center;
     border: 0.2px solid white;
 }
+
+
 
 table th:nth-child(1) {
     padding-left: 20px;
