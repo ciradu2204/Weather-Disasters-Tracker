@@ -1,7 +1,7 @@
 /** Nav bar */
 includeHTML();
 
-const navBarOnClick = () =>{
+const navBarOnClick = () => {
    const iconUp = document.getElementById("iconUp");
    const iconDown = document.getElementById("iconDown");
    const dropDownContent = document.getElementById("dropdownContent");
@@ -10,51 +10,66 @@ const navBarOnClick = () =>{
    const mNavbarContent = document.getElementById("content");
    const mobileClose = document.getElementById("close");
    const dropdownContent = document.getElementById("dropdownContent");
-    
-   
+
+
    iconUp.addEventListener('click', () => {
       iconUp.style.display = "none";
       iconDown.style.display = "inline";
       dropDownContent.style.display = "block";
-   
+
    })
-   
+
    iconDown.addEventListener('click', () => {
       iconDown.style.display = "none";
       iconUp.style.display = "inline";
       dropDownContent.style.display = "none";
-   
+
    })
-   
-   
+
+
    mobileBar.addEventListener('click', () => {
       mNavbarContent.style.display = "grid";
       mobileClose.style.display = "block";
       dropdownContent.style.display = "none"
       mobileBar.style.display = "none";
    })
-   
+
    mobileClose.addEventListener('click', () => {
       mNavbarContent.style.display = "none";
       mobileClose.style.display = "none";
       mobileBar.style.display = "block";
-   
-   
+
+
    })
-   
-   disasterPage.addEventListener('click', () =>{
-      if(iconDown.style.display === "inline"){
-       iconDown.style.display = "none";
-       iconUp.style.display = "inline";
-       dropDownContent.style.display = "none";
-     }else{
-       iconUp.style.display = "none";
-       iconDown.style.display = "inline";
-       dropDownContent.style.display = "block";
-     }
+
+   disasterPage.addEventListener('click', () => {
+      if (iconDown.style.display === "inline") {
+         iconDown.style.display = "none";
+         iconUp.style.display = "inline";
+         dropDownContent.style.display = "none";
+      } else {
+         iconUp.style.display = "none";
+         iconDown.style.display = "inline";
+         dropDownContent.style.display = "block";
+      }
    })
-   
+
 }
+
+window.addEventListener('load', (event) => {
+   console.log(event);
+   let pathName = event.currentTarget.location.href;
+   const links = document.getElementsByTagName("a");
+    for(let i=0; i<links.length; i++){
+       if(links[i].href === pathName){
+        let current = document.getElementsByClassName("active");
+        if(current.length >0){
+         current[0].className.replace("active", "");
+        }
+         links[i].classList.add("active");
+      }
+   }
+})
 
 
 
@@ -133,40 +148,28 @@ autocomplete(document.getElementById("search"), countries);
 
 function includeHTML() {
    var z, i, elmnt, file, xhttp;
-    z = document.getElementsByTagName("*");
+   z = document.getElementsByTagName("*");
    for (i = 0; i < z.length; i++) {
-     elmnt = z[i];
+      elmnt = z[i];
       file = elmnt.getAttribute("w3-include-html");
-     if (file) {
-        xhttp = new XMLHttpRequest();
-       xhttp.onreadystatechange = function() {
-         if (this.readyState == 4) {
-           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            elmnt.removeAttribute("w3-include-html");
-           includeHTML();
+      if (file) {
+         xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+               if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+               if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+               elmnt.removeAttribute("w3-include-html");
+               includeHTML();
+            }
          }
-       }
-       xhttp.open("GET", file, true);
-       xhttp.send();
-        return;
-     }
+         xhttp.open("GET", file, true);
+         xhttp.send();
+         return;
+      }
    }
-  }
+}
 
-//   /** Add an active link to the navbar links */
-//    let btnContainer = document.getElementById("content");
-//    let aTags = btnContainer.getElementsByTagName("a");
-//      for(let i= 0; i<aTags.length; i++){
-//      aTags[i].addEventListener('click', () =>{
-//        console.log(aTags[i]);
-//        let current = document.getElementsByClassName("active");
-//        if(current.length >0){
-//          current[0].className = current[0].className.replace(" active", "");
 
-//        }
-//         this.className += "active"
-//     })
-//    }
-   
+
+
 
