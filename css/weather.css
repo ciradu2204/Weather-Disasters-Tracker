@@ -97,8 +97,7 @@ input[type="text"] {
     color: white;
 }
 table {
-    table-layout: fixed;
-    width: 100%;
+    width: calc(100%);
     border-collapse: separate;
     border-spacing: 0px;
 }
@@ -197,6 +196,11 @@ table td:nth-child(1) {
     background: rgba(55, 65, 64, 0.77);
     color: white;
     margin-left: 10px;
+}
+
+#foreCast div{
+    width: 100%;
+
 }
 
 .row2 {
