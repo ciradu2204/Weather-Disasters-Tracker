@@ -66,6 +66,7 @@ input[type="text"] {
 #forecastAndMap {
     width: 100%;
     position: absolute;
+    padding-top: 10px;
     bottom: 5px;
     display: flex;
     justify-content: space-between;
@@ -221,6 +222,9 @@ table td:nth-child(1) {
         position: initial;
     }
 
+    table{
+        display: table-cell;
+    }
    
     #forecastAndMap{
         flex-direction: column;
