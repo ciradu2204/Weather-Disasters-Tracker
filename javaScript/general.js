@@ -130,31 +130,43 @@ function autocomplete(inp, arr) {
 autocomplete(document.getElementById("search"), countries);
 
 /** Include from w3schoool  */
+
 function includeHTML() {
    var z, i, elmnt, file, xhttp;
-   /* Loop through a collection of all HTML elements: */
-   z = document.getElementsByTagName("*");
+    z = document.getElementsByTagName("*");
    for (i = 0; i < z.length; i++) {
      elmnt = z[i];
-     /*search for elements with a certain atrribute:*/
-     file = elmnt.getAttribute("w3-include-html");
+      file = elmnt.getAttribute("w3-include-html");
      if (file) {
-       /* Make an HTTP request using the attribute value as the file name: */
-       xhttp = new XMLHttpRequest();
+        xhttp = new XMLHttpRequest();
        xhttp.onreadystatechange = function() {
          if (this.readyState == 4) {
            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-           /* Remove the attribute, and call this function once more: */
-           elmnt.removeAttribute("w3-include-html");
+            elmnt.removeAttribute("w3-include-html");
            includeHTML();
          }
        }
        xhttp.open("GET", file, true);
        xhttp.send();
-       /* Exit the function: */
-       return;
+        return;
      }
    }
   }
+
+//   /** Add an active link to the navbar links */
+//    let btnContainer = document.getElementById("content");
+//    let aTags = btnContainer.getElementsByTagName("a");
+//      for(let i= 0; i<aTags.length; i++){
+//      aTags[i].addEventListener('click', () =>{
+//        console.log(aTags[i]);
+//        let current = document.getElementsByClassName("active");
+//        if(current.length >0){
+//          current[0].className = current[0].className.replace(" active", "");
+
+//        }
+//         this.className += "active"
+//     })
+//    }
+   
 
