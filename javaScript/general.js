@@ -1,57 +1,60 @@
 /** Nav bar */
-const iconUp = document.getElementById("iconUp");
-const iconDown = document.getElementById("iconDown");
-const dropDownContent = document.getElementById("dropdownContent");
-const mobileBar = document.getElementById("bars");
-const disasterPage = document.getElementById("disastersPage")
-const mNavbarContent = document.getElementById("content");
-const mobileClose = document.getElementById("close");
-const dropdownContent = document.getElementById("dropdownContent");
+includeHTML();
 
-
-iconUp.addEventListener('click', () => {
-   iconUp.style.display = "none";
-   iconDown.style.display = "inline";
-   dropDownContent.style.display = "block";
-
-})
-
-
-
-iconDown.addEventListener('click', () => {
-   iconDown.style.display = "none";
-   iconUp.style.display = "inline";
-   dropDownContent.style.display = "none";
-
-})
-
-
-mobileBar.addEventListener('click', () => {
-   mNavbarContent.style.display = "grid";
-   mobileClose.style.display = "block";
-   dropdownContent.style.display = "none"
-   mobileBar.style.display = "none";
-})
-
-mobileClose.addEventListener('click', () => {
-   mNavbarContent.style.display = "none";
-   mobileClose.style.display = "none";
-   mobileBar.style.display = "block";
-
-
-})
-
-disasterPage.addEventListener('click', () =>{
-   if(iconDown.style.display === "inline"){
-    iconDown.style.display = "none";
-    iconUp.style.display = "inline";
-    dropDownContent.style.display = "none";
-  }else{
-    iconUp.style.display = "none";
-    iconDown.style.display = "inline";
-    dropDownContent.style.display = "block";
-  }
-})
+const navBarOnClick = () =>{
+   const iconUp = document.getElementById("iconUp");
+   const iconDown = document.getElementById("iconDown");
+   const dropDownContent = document.getElementById("dropdownContent");
+   const mobileBar = document.getElementById("bars");
+   const disasterPage = document.getElementById("disastersPage")
+   const mNavbarContent = document.getElementById("content");
+   const mobileClose = document.getElementById("close");
+   const dropdownContent = document.getElementById("dropdownContent");
+    
+   
+   iconUp.addEventListener('click', () => {
+      iconUp.style.display = "none";
+      iconDown.style.display = "inline";
+      dropDownContent.style.display = "block";
+   
+   })
+   
+   iconDown.addEventListener('click', () => {
+      iconDown.style.display = "none";
+      iconUp.style.display = "inline";
+      dropDownContent.style.display = "none";
+   
+   })
+   
+   
+   mobileBar.addEventListener('click', () => {
+      mNavbarContent.style.display = "grid";
+      mobileClose.style.display = "block";
+      dropdownContent.style.display = "none"
+      mobileBar.style.display = "none";
+   })
+   
+   mobileClose.addEventListener('click', () => {
+      mNavbarContent.style.display = "none";
+      mobileClose.style.display = "none";
+      mobileBar.style.display = "block";
+   
+   
+   })
+   
+   disasterPage.addEventListener('click', () =>{
+      if(iconDown.style.display === "inline"){
+       iconDown.style.display = "none";
+       iconUp.style.display = "inline";
+       dropDownContent.style.display = "none";
+     }else{
+       iconUp.style.display = "none";
+       iconDown.style.display = "inline";
+       dropDownContent.style.display = "block";
+     }
+   })
+   
+}
 
 
 
@@ -125,3 +128,33 @@ function autocomplete(inp, arr) {
 }
 
 autocomplete(document.getElementById("search"), countries);
+
+/** Include from w3schoool  */
+function includeHTML() {
+   var z, i, elmnt, file, xhttp;
+   /* Loop through a collection of all HTML elements: */
+   z = document.getElementsByTagName("*");
+   for (i = 0; i < z.length; i++) {
+     elmnt = z[i];
+     /*search for elements with a certain atrribute:*/
+     file = elmnt.getAttribute("w3-include-html");
+     if (file) {
+       /* Make an HTTP request using the attribute value as the file name: */
+       xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+         if (this.readyState == 4) {
+           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+           /* Remove the attribute, and call this function once more: */
+           elmnt.removeAttribute("w3-include-html");
+           includeHTML();
+         }
+       }
+       xhttp.open("GET", file, true);
+       xhttp.send();
+       /* Exit the function: */
+       return;
+     }
+   }
+  }
+

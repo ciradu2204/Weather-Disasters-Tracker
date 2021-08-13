@@ -25,10 +25,10 @@
                         <span>DISASTERS</span>      
                     </a>
                 </div>
-                <div id="bars">
+                <div onclick="navBarOnClick()" id="bars">
                     <i class="fa fa-bars"></i>
                 </div>
-                <div id="close">
+                <div onclick="navBarOnClick()" id="close">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
@@ -38,9 +38,9 @@
                 <a class="weatherPage" href="./html/weather.html">WEATHER</a>
                 <div id="dropDown">
                     <div>
-                        <a id="disastersPage">DISASTERS</a>
-                        <a class="fa fa-angle-down" id="iconDown"></a>
-                        <a class="fa fa-angle-up" id="iconUp"></a>
+                        <a onclick="navBarOnClick()" id="disastersPage">DISASTERS</a>
+                        <a onclick="navBarOnClick()" class="fa fa-angle-down" id="iconDown"></a>
+                        <a onclick="navBarOnClick()" class="fa fa-angle-up" id="iconUp"></a>
                     </div>
                     <div id="dropdownContent">
                         <a href="./html/earthquake.html">EARTHQUAKE</a>

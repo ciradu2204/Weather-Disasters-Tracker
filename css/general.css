@@ -3,7 +3,6 @@ body,
 html {
     font-family: "Poppins", sans-serif;
 }
- 
 
 /** General Css **/
 * {
@@ -350,6 +349,8 @@ color: rgba(170, 169, 128, 0.6);
   }
 
 
+
+
  
   /* autocomplete css from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
 
@@ -382,3 +383,4 @@ color: rgba(170, 169, 128, 0.6);
     background-color: DodgerBlue !important;
     color: #ffffff;
 }
+

@@ -106,7 +106,7 @@ const getCycloneNews = async () => {
             row2_data2.innerHTML = `${date.getDate()} ${new Intl.DateTimeFormat('en-US', options).format(date)} ${date.getFullYear()}`;
             let row2_data3 = document.createElement("td");
             row2_data3.className = status;
-            row2_data3.innerHTML = `<span>${status.charAt(0).toUpperCase()}${status.slice(1)} </span>`;
+            row2_data3.innerHTML = `<span>${(status === "current")? "Ongoing" :`${status.charAt(0).toUpperCase()}${status.substring(1)}`}</span>`;
             // let row2_data4 = document.createElement("td");
             // row2_data4.innerHTML = `<a href="${link}"  target="_blank">Read More</a>`;
             row2.appendChild(row2_data0)

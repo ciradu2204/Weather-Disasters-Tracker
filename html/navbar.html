@@ -1,0 +1,32 @@
+<div class="mobileView">
+  <div id="logo">
+    <a href="../index.html">
+      <span>WEATHER</span>
+      <img src="../images/logo.png">
+      <span>DISASTERS</span>
+    </a>
+  </div>
+  <div onclick="navBarOnClick()" id="bars">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div onclick="navBarOnClick()" id="close">
+    <i class="fas fa-times"></i>
+  </div>
+</div>
+<div id="content">
+  <a class="homePage" href="../html/home.html">HOME</a>
+  <a class="active authorPage" href="./author.html">AUTHOR</a>
+  <a class="weatherPage" href="./weather.html">WEATHER</a>
+  <div id="dropDown">
+    <div>
+      <a onclick="navBarOnClick()" id="disastersPage">DISASTERS</a>
+      <a onclick="navBarOnClick()" class="fa fa-angle-down" id="iconDown"></a>
+      <a onclick="navBarOnClick()" class="fa fa-angle-up" id="iconUp"></a>
+    </div>
+    <div id="dropdownContent">
+      <a href="../html/earthquake.html">EARTHQUAKE</a>
+      <a href="../html/cyclone.html">CYCLONE</a>
+      <a href="../html/flood.html">FLOOD</a>
+    </div>
+  </div>
+</div>

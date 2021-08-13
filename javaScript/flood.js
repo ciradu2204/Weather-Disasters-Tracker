@@ -44,7 +44,7 @@ const getFloodNews = async () => {
             const countryArray = element.fields.country.map(element => {
               return element.name;
             }).join();
-            p.innerHTML = `<span id="span-1"><strong>Status</strong>: ${element.fields.status.charAt(0).toUpperCase()}${element.fields.status.substring(1)}</span> <span id="span-2"><strong>Affected Country</strong>: ${countryArray}</span>`
+            p.innerHTML = `<span id="span-1"><strong>Status</strong>: ${(element.fields.status === "current")? "Ongoing" :`${element.fields.status.charAt(0).toUpperCase()}${element.fields.status.substring(1)}`}</span> <span id="span-2"><strong>Affected Country</strong>: ${countryArray}</span>`
             div2.appendChild(h1);
             div2.appendChild(p);
             mainDiv.appendChild(div1);
