@@ -57,7 +57,6 @@ const navBarOnClick = () => {
 }
 
 window.addEventListener('load', (event) => {
-   console.log(event);
    let pathName = event.currentTarget.location.href;
    const links = document.getElementsByTagName("a");
     for(let i=0; i<links.length; i++){

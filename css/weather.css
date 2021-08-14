@@ -97,8 +97,7 @@ input[type="text"] {
     color: white;
 }
 table {
-
-    max-width: 1000px;
+     max-width: 1000px;
      border-collapse: separate;
     border-spacing: 0px;
 }
