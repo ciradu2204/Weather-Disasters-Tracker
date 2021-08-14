@@ -243,7 +243,6 @@ const removeInfoWindow = () => {
 
   const container = document.getElementById("container");
   const contentString = document.getElementById("info_Window");
-  map.setCenter(new google.maps.LatLng(0, 0));
   container.removeChild(contentString);
 }
 
@@ -251,6 +250,7 @@ const markerClicked = async (markerPosition, dataId, long, lat, status, country)
   await fetch(`${api.base}weather?lat=${lat}&lon=${long}&units=metric&appid=${api.openWeatherApiKey}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(result[dataId]);
       const ul = document.createElement("ul");
       result[dataId].fields.type.forEach((disasterType) => {
         let li = document.createElement("li");
@@ -270,14 +270,16 @@ const markerClicked = async (markerPosition, dataId, long, lat, status, country)
       div1.innerHTML = `<div id="alertWeather"><h2>WEATHER</h2><h2>${Math.round(data.main.temp)}°C</h2> </div> <div id="alertLocation"><h3>${country}</h3></div> <div id="alertDate"><h3>${dateBuilder()}</h3></div> `
       const div3 = document.createElement("div");
       const h3 = document.createElement("h3");
-      h3.innerHTML = `${(status === "alert") ? "ONGOING" : "ALERT"} DISASTER TYPE`
+      h3.innerHTML = `${(status === "alert") ? "ALERT" : "ONGOING"} DISASTER TYPE`
       div3.appendChild(h3);
       div3.appendChild(ul);
+      const div4   = document.createElement("div");
+      div4.innerHTML = `<a href="${result[dataId].href}">READ MORE</a>`
       contentString.appendChild(div2);
       contentString.appendChild(div1);
-      contentString.appendChild(div3)
-      map.setCenter(new google.maps.LatLng(lat, long));
-      let scale = Math.pow(2, map.getZoom());
+      contentString.appendChild(div3);
+      contentString.appendChild(div4);
+       let scale = Math.pow(2, map.getZoom());
       let nw = new google.maps.LatLng(
         map.getBounds().getNorthEast().lat(),
         map.getBounds().getSouthWest().lng()

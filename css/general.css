@@ -158,8 +158,9 @@ nav span{
 
 #content{
     display: grid;
-    grid-template-columns: 8em 8em 8em 8em;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
+    gap: 30px;
     justify-content: end;
     margin-right: 7em;
 }
@@ -218,13 +219,14 @@ nav span{
     }
     
  
-    #content > a::after{
+    #content > a::after, #dropDown::after{
         content: "";
         display: block;
         width: 100%;
         height: 0.05em;
         background-color: #f3f3f36e;
     }
+
 
     #disastersPage {
         display: inline;

@@ -115,7 +115,7 @@ h3 img {
         z-index: 1;
     }
 
-    #content > a::after {
+    #content > a::after, #dropDown::after {
         content: "";
         display: block;
         width: 100%;
@@ -230,5 +230,16 @@ ul li{
     right: 0;
      border-bottom: 1px solid #d9cb9e;
     z-index: -1;
+}
+
+#info_Window > div:nth-child(4) a{
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #d9cb9e;
+    text-decoration: none;
+}
+
+#info_Window > div:nth-child(4){
+    padding: 10px;
 }
  
