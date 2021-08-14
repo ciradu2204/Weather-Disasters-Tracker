@@ -310,7 +310,7 @@ const createMarkers = (country, markerPosition, i, status) => {
       let long = data.results[0].geometry.location.lng
       let lat = data.results[0].geometry.location.lat
       let marker = '';
-      if (status === "alert") {
+      if (status === "current") {
         marker = new google.maps.Marker({
           position: { lat: parseFloat(lat), lng: parseFloat(long) },
           map,
