@@ -97,8 +97,9 @@ input[type="text"] {
     color: white;
 }
 table {
-    width: calc(100%);
-    border-collapse: separate;
+
+    max-width: 1000px;
+     border-collapse: separate;
     border-spacing: 0px;
 }
 
@@ -198,11 +199,6 @@ table td:nth-child(1) {
     margin-left: 10px;
 }
 
-#foreCast div{
-    width: 100%;
-
-}
-
 .row2 {
     display: flex;
     flex-direction: row;
@@ -230,10 +226,7 @@ table td:nth-child(1) {
         height: auto;
         position: initial;
     }
-
-    table{
-        display: table-cell;
-    }
+    
    
     #forecastAndMap{
         flex-direction: column;
