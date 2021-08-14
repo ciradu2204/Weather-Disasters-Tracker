@@ -280,20 +280,20 @@ const markerClicked = async (markerPosition, dataId, long, lat, status, country)
       contentString.appendChild(div3);
       contentString.appendChild(div4);
        let scale = Math.pow(2, map.getZoom());
-      let nw = new google.maps.LatLng(
-        map.getBounds().getNorthEast().lat(),
-        map.getBounds().getSouthWest().lng()
-      );
-      let worldCoordinateNW = map.getProjection().fromLatLngToPoint(nw);
-      let worldCoordinate = map.getProjection().fromLatLngToPoint(markers[markerPosition].getPosition());
-      let pixelOffset = new google.maps.Point(
-        Math.floor((worldCoordinate.x - worldCoordinateNW.x) * scale),
-        Math.floor((worldCoordinate.y - worldCoordinateNW.y) * scale)
-      )
+      // let nw = new google.maps.LatLng(
+      //   map.getBounds().getNorthEast().lat(),
+      //   map.getBounds().getSouthWest().lng()
+      // );
+      // let worldCoordinateNW = map.getProjection().fromLatLngToPoint(nw);
+      // let worldCoordinate = map.getProjection().fromLatLngToPoint(markers[markerPosition].getPosition());
+      // let pixelOffset = new google.maps.Point(
+      //   Math.floor((worldCoordinate.x - worldCoordinateNW.x) * scale),
+      //   Math.floor((worldCoordinate.y - worldCoordinateNW.y) * scale)
+      // )
       contentString.style.position = "absolute";
       contentString.style.zIndex = "9"
-      contentString.style.top = `${pixelOffset.y}px`
-      contentString.style.left = `${pixelOffset.x}px`
+      contentString.style.bottom = "0px"
+      contentString.style.left = `0px`
       container.appendChild(contentString);
     })
 
