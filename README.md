@@ -4,4 +4,4 @@ Weather & Disasters Tracker is a website developed as part of a group assigment 
 
 ## Description
 
-The flood, earthquake, and cyclone are the only natural disasters covered on this website. It also gives you weather information. You can use the search button to look up weather information for different countries and see an 8-day forecast for each specific country.
+Floods, earthquakes, and cyclones are the mostly covered disasters in this website as they occur a lot in Africa. The website also gives you weather information. You can use the search button to look up weather information for different countries and see an 8-day forecast for each specific country.
