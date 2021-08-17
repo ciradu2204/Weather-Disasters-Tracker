@@ -274,7 +274,7 @@ const markerClicked = async (markerPosition, dataId, long, lat, status, country)
       div3.appendChild(h3);
       div3.appendChild(ul);
       const div4   = document.createElement("div");
-      div4.innerHTML = `<a href="${result[dataId].href}">READ MORE</a>`
+      div4.innerHTML = `<a target="_blank" href="${result[dataId].href}">READ MORE</a>`
       contentString.appendChild(div2);
       contentString.appendChild(div1);
       contentString.appendChild(div3);
