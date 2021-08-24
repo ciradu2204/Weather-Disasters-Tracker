@@ -138,6 +138,8 @@ const isLoading = (loading) => {
 
 isLoading(loading);
 
+/** validating and sending emails using https://smtpjs.com/ */
+
 const formValidation = () => {
 
   let fullName = document.getElementById("fname").value;

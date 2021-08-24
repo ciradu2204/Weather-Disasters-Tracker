@@ -17,15 +17,23 @@ const fetchData = (async () => {
                    let countries = disaster.fields.country.map(value =>{
                     return value.name;
                    }).join(",");
-
-                    let div = document.createElement("div"); 
+                   console.log(types);
+                     let div = document.createElement("div"); 
                     let div1 = document.createElement("div");
                     let div2 = document.createElement("div");
                     div.setAttribute("class", "news")
                     div1.setAttribute("class", "div1")
                     div2.setAttribute("class", "div2")
                     let img = document.createElement("img");
-                     img.src= (types[0] == "Flood" || "Flash Flood")? "../images/overview/Flood.png": (types[0]== "Earthquake")? "../images/overview/earthquakes.png":"../images/Cyclone.png"
+                     
+                     if(types[0] === "Flood" ||  types[0] === "Flash Flood"){
+                        img.src="../images/overview/Flood.png"
+
+                     }else if(types[0]=== "Earthquake"){
+                        img.src="../images/overview/earthquakes.png"
+                     }else{
+                         img.src= "../images/Cyclone.png"
+                     }
                     div1.appendChild(img);
                     let status = capitalizeFirstLetter(disaster.fields.status);
                     let h3 = document.createElement('h3');
