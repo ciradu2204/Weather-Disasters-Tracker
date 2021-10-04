@@ -1,6 +1,6 @@
 # Project Title
 
-Weather & Disasters Tracker is a website developed as part of a group assigment that informs students and scientists on the various natural disasters that occur throughout the world.
+Weather & Disasters Tracker is a web app developed as part of a group assigment that informs students and scientists on the various natural disasters that occur throughout the world.
 
 ## Description
 
